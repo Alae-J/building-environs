@@ -1,32 +1,67 @@
 import ArticleRenderer from '@/app/components/ArticleRenderer';
-import whatMelbournesBestInConstructionProperty from '@/app/data/news/articles/2025-05-01--what-melbournes-best-in-construction-property-do-to-get-the-guernsey.json';
-import salaryReviewArticle from '@/app/data/news/articles/2025-06-26--salary-review-season-where-everyones-underpaid-just-ask-them.json';
-import hiddenCostsChasing from '@/app/data/news/articles/2025-07-04--the-hidden-costs-of-chasing-the-money.json';
-import testArticle from '@/app/data/test-article.json';
+import { articleMap } from '@/app/data/news'; // ← point at your barrel
+import index from '@/app/data/news/index.json';
+import { Article } from '@/app/types/article';
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-interface PageProps {
-  params: { slug: string }
+// build a flat list of every slug in your index.json:
+const allEntries = [
+  ...index.featured,
+  ...index.articles,
+] as Array<{
+  slug: string
+  title: string
+  excerpt: string
+  featuredImage: string
+  imageAlt: string
+  publishDate: string
+}>
+
+export function generateStaticParams() {
+  return allEntries.map((entry) => ({
+    slug: entry.slug,
+  }))
 }
 
-export default function ArticlePage({ params }: PageProps) {
-  // Check for both articles
-  if (params.slug === 'test-article-dynamic-layout') {
-    return <ArticleRenderer article={testArticle} />;
-  }
-  
-  if (params.slug === 'salary-review-season-where-everyones-underpaid-just-ask-them') {
-    return <ArticleRenderer article={salaryReviewArticle} />;
-  }
+export async function generateMetadata(
+  { params }: { params: { slug: string } }
+): Promise<Metadata> {
+  const { slug } = params
+  const meta = allEntries.find((e) => e.slug === slug)
+  if (!meta) notFound()
 
-  if (params.slug === 'the-hidden-costs-of-chasing-the-money') {
-    return <ArticleRenderer article={hiddenCostsChasing} />;
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+  const pageUrl = `${baseUrl}/news/${slug}`
+
+  return {
+    title:       meta.title,
+    description: meta.excerpt,
+    metadataBase: new URL(baseUrl),
+    alternates: { canonical: pageUrl },
+    openGraph: {
+      title:         meta.title,
+      description:   meta.excerpt,
+      url:           pageUrl,
+      type:          'article',
+      publishedTime: meta.publishDate,
+      images: [{
+        url: meta.featuredImage,
+        alt: meta.imageAlt || meta.title,
+      }],
+    },
+    twitter: {
+      card:        'summary_large_image',
+      title:       meta.title,
+      description: meta.excerpt,
+      images:      [meta.featuredImage],
+    },
   }
-  
-  if (params.slug === 'what-melbournes-best-in-construction-property') {
-    return <ArticleRenderer article={whatMelbournesBestInConstructionProperty} />;
-  }
-  
-  // Return 404 for other slugs
-  notFound();
+}
+
+export default function ArticlePage({ params }: { params: { slug: string } }) {
+  // ← use articleMap here
+  const article = articleMap[params.slug] as Article
+  if (!article) notFound()
+  return <ArticleRenderer article={article} />
 }

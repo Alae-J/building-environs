@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: [
+      'cdn-01.cms-ap-v2i.applyflow.com'
+    ],
+  },
 };
 
 export default nextConfig;

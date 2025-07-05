@@ -1,25 +1,35 @@
 {
   "id": "19280",
-  "title": "What Melbourne's Best in Construction & Property Do to Get the Guernsey",
+  "title": "What Melbourne’s Best in Construction & Property Do to Get the Guernsey",
   "slug": "what-melbournes-best-in-construction-property-do-to-get-the-guernsey",
-  "excerpt": "In footy, it's the guernsey that matters. Not just because it says, 'You're in the side,' but because it says, 'We back you.' And in recruitment, especially in Melbourne's construction and property sector, it's not all that different. After 20 years of interviews, briefings, debriefings, and coffees, I reckon I've got a pretty good idea who makes the cut.",
-  "featuredImage": "/images/news/cover-photo-blog-may-2025.png",
-  "imageAlt": "What Melbourne's Best in Construction & Property Do to Get the Guernsey cover image",
-  "publishDate": "2025-05-01",
+  "excerpt": "In footy, it’s the guernsey that matters. Not just because it says, “You’re in the side,” but because it says, “We back you.”",
+  "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2025/05/Cover-photo-Blog-May-2025-1024x724.png",
+  "imageAlt": "",
+  "publishDate": "2025-05-26",
   "author": "Martin Building Environs",
-  "category": "recruitment",
-  "readTime": "8 min read",
+  "category": "uncategorized",
+  "readTime": "7 min read",
   "content": {
     "sections": [
       {
         "type": "hero_image",
-        "src": "/images/news/cover-photo-blog-may-2025.png",
-        "alt": "What Melbourne's Best in Construction & Property Do to Get the Guernsey cover image",
+        "src": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2025/05/Cover-photo-Blog-May-2025-1024x724.png",
+        "alt": "",
         "layout": "full_width"
       },
       {
         "type": "paragraph",
-        "content": "In footy, it's the guernsey that matters. Not just because it says, \"You're in the side,\" but because it says, \"We back you.\"\n\nAnd in recruitment, especially in Melbourne's construction and property sector, it's not all that different. When hiring managers are shortlisting, when senior leaders are assembling project teams, when developers are building out their delivery teams… who gets the guernsey?\n\nIt's the question that keeps coming up. And after 20 years of interviews, briefings, debriefings, and coffees that slowly cooled while someone rehashed their CV for the fourth time, I reckon I've got a pretty good idea who makes the cut.",
+        "content": "In footy, it’s the guernsey that matters. Not just because it says, “You’re in the side,” but because it says, “We back you.”",
+        "layout": "full_width"
+      },
+      {
+        "type": "paragraph",
+        "content": "And in recruitment, especially in Melbourne’s construction and property sector, it’s not all that different. When hiring managers are shortlisting, when senior leaders are assembling project teams, when developers are building out their delivery teams… who gets the guernsey?",
+        "layout": "full_width"
+      },
+      {
+        "type": "paragraph",
+        "content": "It’s the question that keeps coming up. And after 20 years of interviews, briefings, debriefings, and coffees that slowly cooled while someone rehashed their CV for the fourth time, I reckon I’ve got a pretty good idea who makes the cut.",
         "layout": "full_width"
       },
       {
@@ -32,12 +42,12 @@
         "type": "image_with_text",
         "layout": "image_left_text_right",
         "image": {
-          "src": "/images/news/no-one-admits-to-being-a-grade-c-performer2.png",
-          "alt": "Grade C performer illustration",
+          "src": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2025/05/No-One-Admits-to-Being-a-Grade-C-Performer2.png",
+          "alt": "",
           "width": "45%"
         },
         "text": {
-          "content": "Here's the thing: **no one admits to being a Grade C performer**. Ask any bloke if he's a good driver – I guarantee you he'll tell you he's the best (I know I am). Same is true in career's – everyone thinks they're a high performer, a gun operator, an A-grader, just ask them. But it's not about what you say. It's about what you've done. And what others say about you when you're not in the room.\n\nThe candidates who get the guernsey, they've got runs on the board. Not just tenure or fancy logos on their resume, but outcomes:",
+          "content": "Here’s the thing: **no one admits to being a Grade C performer**. Ask any bloke if he’s a good driver – I guarantee you he’ll tell you he’s the best (I know I am). Same is true in careers – everyone thinks they’re a high performer, a gun operator, an A-grader, just ask them. But it’s not about what you say. It’s about what you’ve done. And what others say about you when you’re not in the room.\n\nThe candidates who get the guernsey, they’ve got runs on the board. Not just tenure or fancy logos on their resume, but outcomes:",
           "width": "55%"
         }
       },
@@ -47,13 +57,14 @@
           "Delivered complex builds through chaos (not just posted about it after).",
           "Kept margin in check while scope crept out of control.",
           "Brought calm to consultant teams who were one RFIs away from a breakdown.",
-          "Mentored juniors who **actually stayed** longer than one project.",
+          "Mentored juniors who actually stayed longer than one project.",
           "Found ways to reduce risk, increase opportunity, and either make or save their employer money — and could articulate how."
-        ]
+        ],
+        "layout": "full_width"
       },
       {
         "type": "paragraph",
-        "content": "They don't just survive projects. They lift them. They make the people around them better. And most importantly, they understand that their success is inseparable from the success of the business.",
+        "content": "They don’t just survive projects. They lift them. They make the people around them better. And most importantly, they understand that their success is inseparable from the success of the business.",
         "layout": "full_width"
       },
       {
@@ -64,42 +75,102 @@
       },
       {
         "type": "paragraph",
-        "content": "Here's what I see from the recruiter's perspective, and through conversations with business leaders (in my day job, and from the podcast conversations I have):",
+        "content": "Here’s what I see from the recruiter’s perspective, and through conversations with business leaders (in my day job, and from the podcast conversations I have):",
         "layout": "full_width"
       },
       {
         "type": "paragraph",
-        "content": "**1. Time on the Field Matters**\n\nEmployers want someone who's had a few seasons under their belt. They want scars. They want wisdom. They want the person who's learned from mistakes (admits to making them, and the learning from how to avoid them in future) not someone who keeps repeating the same ones and calling it \"experience\" and blaming someone else.",
+        "content": "**1. Time on the Field Matters**",
         "layout": "full_width"
       },
       {
         "type": "paragraph",
-        "content": "**2. You've Played for Great Clubs**\n\nIt doesn't have to be Tier 1. You could be in fit-out, Tier 3, apartments, industrial; it doesn't matter. What stands out is that you've worked for one of the best operators in that space – or you've been one of the best operators in a lesser business in the same space. A business known for quality, structure, and a strong reputation. That means you've had good mentorship, you've learned within a high-performing team, and you've absorbed solid systems and processes that have helped you succeed in that specialist sector. That's what great clubs do, they sharpen your game.",
+        "content": "Employers want someone who’s had a few seasons under their belt. They want scars. They want wisdom. They want the person who’s learned from mistakes (admits to making them, and the learning from how to avoid them in future) not someone who keeps repeating the same ones and calling it “experience” and blaming someone else.",
+        "layout": "full_width"
+      },
+      {
+        "type": "paragraph",
+        "content": "**2. You’ve Played for Great Clubs**",
+        "layout": "full_width"
+      },
+      {
+        "type": "paragraph",
+        "content": "It doesn’t have to be Tier 1. You could be in fit-out, Tier 3, apartments, industrial; it doesn’t matter. What stands out is that you’ve worked for one of the best operators in that space – or you’ve been one of the best operators in a lesser business in the same space. A business known for quality, structure, and a strong reputation. That means you’ve had good mentorship, you’ve learned within a high-performing team, and you’ve absorbed solid systems and processes that have helped you succeed in that specialist sector. That’s what great clubs do, they sharpen your game.",
         "layout": "full_width"
       },
       {
         "type": "text_with_image",
         "layout": "text_left_image_right",
         "text": {
-          "content": "**3. You Don't Blame the Coach**\n\nIf every job you've left was because the boss was a flog, the culture was toxic, or the project was \"doomed from the start\", maybe, just maybe, it wasn't them.\n\nLet me tell you a quick one from about six months ago, I interviewed a young CA. In person, presented and communicated really well (must have done to secure roles with the businesses he had done). On paper, it looked like he had range but (more than a bit) jumpy: head contractor, client-side, a few different sectors, but all good reputable employers. But the timeline? All over the shop. Something like 8 employers (7 listed on the resume, I picked up that one had been removed when cross referencing old resumes I had received off him) since around 2018.\n\nNow, I like to give people the benefit of the doubt. Life happens. But this bloke had a reason for everything, bad manager, Covid, bad project, company going under, toxic culture (used that phrase three times in under ten minutes). Every single job.\n\nBut here's the kicker: I took a few backdoor references (quiet chats with former employers). And the story was very different. Turns out it wasn't the projects, or the managers, or the company health. It was him. Performance, attitude, consistency – or lack thereof. He thought he was a Grade A operator. Truth is, he wasn't even playing the right sport. Well presented, great comms, but run out of rope to continue in the top end of the industry.\n\nSometimes you've got to stop pointing fingers and ask yourself: what am I actually bringing to the table? Because at some point, the excuses run out. And people start telling the truth about you – whether you like it or not.",
+          "content": "**3. You Don’t Blame the Coach**\n\nIf every job you’ve left was because the boss was a flog, the culture was toxic, or the project was “doomed from the start”, maybe, just maybe, it wasn’t them.\n\nLet me tell you a quick one from about six months ago, I interviewed a young CA. In person, presented and communicated really well (must have done to secure roles with the businesses he had done). On paper, it looked like he had range but (more than a bit) jumpy: head contractor, client-side, a few different sectors, but all good reputable employers. But the timeline? All over the shop. Something like 8 employers (7 listed on the resume, I picked up that one had been removed when cross referencing old resumes I had received off him) since around 2018.\n\nNow, I like to give people the benefit of the doubt. Life happens. But this bloke had a reason for everything, bad manager, Covid, bad project, company going under, toxic culture (used that phrase three times in under ten minutes). Every single job.\n\nBut here’s the kicker: I took a few backdoor references (quiet chats with former employers). And the story was very different. Turns out it wasn’t the projects, or the managers, or the company health. It was him. Performance, attitude, consistency – or lack thereof. He thought he was a Grade A operator. Truth is, he wasn’t even playing the right sport. Well presented, great comms, but run out of rope to continue in the top end of the industry.",
           "width": "55%"
         },
         "image": {
-          "src": "/images/news/so-what-gets-you-selected.png",
-          "alt": "Selection criteria illustration",
+          "src": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2025/05/So-What-Gets-You-Selected-.png",
+          "alt": "",
           "width": "45%"
         }
       },
       {
         "type": "paragraph",
-        "content": "**4. You've Got the Engine, Not Just the Flash**\n\nGeorge Abraham (MD at Hickory Group) said it best on the [The Building Talks Podcast](https://www.buildingenvirons.com.au/podcast/s3-ep-45-talking-with-george-abraham-about-leadership-innovation-and-building-culture-in-construction/) last year, when I spoke with him:\n\n*\"You're going to get good, bad and negative feedback at any point in time. The trick is to not be emotionally attached to what that feedback is… take the feedback, consider it, and apply it. Don't take it as: my boss says I could do better at this, so I must not be getting that promotion.\"*\n\n*\"You have to reflect on yourself before you can grow. Feedback is a gift, even when it's uncomfortable.\"*\n\nAnd as Justin McGrath (Construction Director at DeLuca Corp) said when he came on the show (check out the episode [here](https://www.buildingenvirons.com.au/podcast/s3-ep-27-talking-with-justin-mcgrath-about-growing-leadership-skills-crafting-a-career-and-progressing-and-mastering-capability/)):\n\n*\"If you're in the early stages, you have to work in the time you've got. You have to work more efficiently, be more productive… because the only way to get ahead, if you want more money and you want progression, is to be better.\"*\n\n*\"High performers affect outcomes…. they don't just turn up, they shape what happens next.\"*",
+        "content": "**4. You’ve Got the Engine, Not Just the Flash**",
         "layout": "full_width"
       },
       {
         "type": "paragraph",
-        "content": "That means they look for how to create opportunity. They work out how to deliver ahead of time. They find ways to protect margin, de-risk the project, and ultimately put the business in a better place because they were involved.\n\nJustin also added:\n\n*\"When they say I'm a coordinator now, I'm going to be a CA, I want to be a Project Manager, that would suggest to me that they're not aware of how much they need to learn and how much time it takes to repeat project performance enough times to be good at something… You've got to do it a lot, repetitively, to build that strength in…. and that's the same as a career.\"*\n\nIn other words, every new role is your next apprenticeship. If you don't put in the reps, learn the ropes, and really embed what the role demands, you'll eventually get found out (perhaps when you're at a more senior level). You might climb quickly, but when the pressure hits, the gaps will show. That's when the trajectory stops being up… and starts going sideways. Sometimes permanently. And as my old mate Jono Conley said when he came on the podcast the first time (episode [here](https://www.buildingenvirons.com.au/podcast/s2-ep21-talking-with-jono-conley-about-all-things-built-environment-recruitment/)), that's when careers end up on the *\"shit builder merry go round!\"*\n\nThe guernsey doesn't go to the loudest. It goes to the most coachable. The most switched on. The ones who don't repeat task errors and can run their lane with intent.",
+        "content": "George Abraham (MD at Hickory Group) said it best on [The Building Talks Podcast](https://www.buildingenvirons.com.au/podcast/s3-ep-45-talking-with-george-abraham-about-leadership-innovation-and-building-culture-in-construction/) last year, when I spoke with him:",
         "layout": "full_width"
       },
+      {
+        "type": "paragraph",
+        "content": "*“You’re going to get good, bad and negative feedback at any point in time. The trick is to not be emotionally attached to what that feedback is… take the feedback, consider it, and apply it. Don’t take it as: my boss says I could do better at this, so I must not be getting that promotion.”*",
+        "layout": "full_width"
+      },
+      {
+        "type": "paragraph",
+        "content": "*“You have to reflect on yourself before you can grow. Feedback is a gift, even when it’s uncomfortable.”*",
+        "layout": "full_width"
+      },
+      {
+        "type": "paragraph",
+        "content": "And as Justin McGrath (Construction Director at DeLuca Corp) said when he came on the show (check out the episode [here](https://www.buildingenvirons.com.au/podcast/s3-ep-27-talking-with-justin-mcgrath-about-growing-leadership-skills-crafting-a-career-and-progressing-and-mastering-capability/)):",
+        "layout": "full_width"
+      },
+      {
+        "type": "paragraph",
+        "content": "*“If you’re in the early stages, you have to work in the time you’ve got. You have to work more efficiently, be more productive… because the only way to get ahead, if you want more money and you want progression, is to be better.”*",
+        "layout": "full_width"
+      },
+      {
+        "type": "paragraph",
+        "content": "*“High performers affect outcomes… they don’t just turn up, they shape what happens next.”*",
+        "layout": "full_width"
+      },
+      {
+        "type": "paragraph",
+        "content": "That means they look for how to create opportunity. They work out how to deliver ahead of time. They find ways to protect margin, de-risk the project, and ultimately put the business in a better place because they were involved.",
+        "layout": "full_width"
+      },
+      {
+        "type": "paragraph",
+        "content": "Justin also added:",
+        "layout": "full_width"
+      },
+      {
+        "type": "paragraph",
+        "content": "*“When they say I’m a coordinator now, I’m going to be a CA, I want to be a Project Manager, that would suggest to me that they’re not aware of how much they need to learn and how much time it takes to repeat project performance enough times to be good at something… You’ve got to do it a lot, repetitively, to build that strength in…. and that’s the same as a career.”*",
+        "layout": "full_width"
+      },
+      {
+        "type": "paragraph",
+        "content": "In other words, every new role is your next apprenticeship. If you don’t put in the reps, learn the ropes, and really embed what the role demands, you’ll eventually get found out (perhaps when you’re at a more senior level). You might climb quickly, but when the pressure hits, the gaps will show. That’s when the trajectory stops being up… and starts going sideways. Sometimes permanently. And as my old mate Jono Conley said when he came on the podcast the first time (episode [here](https://www.buildingenvirons.com.au/podcast/s2-ep21-talking-with-jono-conley-about-all-things-built-environment-recruitment/)), that’s when careers end up on the *“shit builder merry go round!”*",
+        "layout": "full_width"
+      },
+      {
+        "type": "paragraph",
+        "content": "The guernsey doesn’t go to the loudest. It goes to the most coachable. The most switched on. The ones who don’t repeat task errors and can run their lane with intent.",
+        "layout": "full_width"
+      },      
       {
         "type": "heading",
         "level": 3,
@@ -110,14 +181,25 @@
         "type": "image_with_text",
         "layout": "image_left_text_right",
         "image": {
-          "src": "/images/news/what-the-best-managers-look-for-1-1.png",
-          "alt": "Best managers criteria illustration",
+          "src": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2025/05/What-the-Best-Managers-Look-For-1-1.png",
+          "alt": "",
           "width": "45%"
         },
         "text": {
-          "content": "When I talk to clients across commercial builders, consultancies, and developers, here's what keeps coming up:\n\n• **End-to-end experience**: not just ticking off handover but owning the whole process and improving it.\n• **Emotional intelligence**: reading the room, managing stakeholders, and knowing when to speak, when to push, and when to get on with it.\n• **Staying power**: 18 months in a role isn't tenure – it's a warm-up.\n• **Commercial thinking**: you don't need to be a CFO, but if you don't know where the job makes money or loses it, you're flying blind.\n• **Initiative**: be the person who looks for improvement, not just direction.",
+          "content": "When I talk to clients across commercial builders, consultancies, and developers, here’s what keeps coming up:",
           "width": "55%"
         }
+      },
+      {
+        "type": "bullet_list",
+        "items": [
+          "End-to-end experience: not just ticking off handover but owning the whole process and improving it.",
+          "Emotional intelligence: reading the room, managing stakeholders, and knowing when to speak, when to push, and when to get on with it.",
+          "Staying power: 18 months in a role isn’t tenure – it’s a warm-up.",
+          "Commercial thinking: you don’t need to be a CFO, but if you don’t know where the job makes money or loses it, you’re flying blind.",
+          "Initiative: be the person who looks for improvement, not just direction."
+        ],
+        "layout": "full_width"
       },
       {
         "type": "heading",
@@ -129,34 +211,55 @@
         "type": "text_with_image",
         "layout": "text_left_image_right",
         "text": {
-          "content": "Sean Ryan (Former Director of Development at Greystar) – another awesome guest who joined me on [The Building Talks Podcast](https://www.buildingenvirons.com.au/podcast/s3-ep6-talking-with-sean-about-his-career-journey-into-property-development-and-all-things-build-to-rent-btr/) — nailed it:\n\n*\"Resilience isn't gritting your teeth. It's understanding the bigger picture…..\"*\n\nThe industry will test you. Projects go sideways. Budgets blow out. Teams implode. The ones who still show up, solve problems, and hold the line when it gets ugly? They get the guernsey.\n\nAnd finally, as Justin said in the pod:\n\n*\"The best success I've seen comes from people who just consistently turn up and perform. You've got to be patient. The flash stuff doesn't last.\"*\n\nIt's something I've come to believe strongly in myself — *consistency trumps intensity, over the course of a career*!",
+          "content": "Sean Ryan (Former Director of Development at Greystar) – another awesome guest who joined me on [The Building Talks Podcast](https://www.buildingenvirons.com.au/podcast/s3-ep6-talking-with-sean-about-his-career-journey-into-property-development-and-all-things-build-to-rent-btr/) — nailed it:\n\n*“Resilience isn’t gritting your teeth. It’s understanding the bigger picture…..”*\n\nThe industry will test you. Projects go sideways. Budgets blow out. Teams implode. The ones who still show up, solve problems, and hold the line when it gets ugly? They get the guernsey.\n\nAnd finally, as Justin said in the pod:\n\n*“The best success I’ve seen comes from people who just consistently turn up and perform. You’ve got to be patient. The flash stuff doesn’t last.”*\n\nIt’s something I’ve come to believe strongly in myself — *consistency trumps intensity, over the course of a career*!",
           "width": "55%"
         },
         "image": {
-          "src": "/images/news/a-word-on-resilience.png",
-          "alt": "Resilience illustration",
+          "src": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2025/05/A-Word-on-Resilience-.png",
+          "alt": "",
           "width": "45%"
         }
       },
       {
         "type": "heading",
         "level": 3,
-        "content": "Want the Guernsey? Here's the Wrap:",
+        "content": "Want the Guernsey? Here’s the Wrap:",
         "layout": "full_width"
       },
       {
         "type": "bullet_list",
         "items": [
           "Be consistent. Deliver. Improve.",
-          "Don't just talk outcomes — make them happen.",
+          "Don’t just talk outcomes — make them happen.",
           "Know your impact on time, budget, and opportunity.",
           "Communicate well. Solve problems. Run hard.",
-          "And stop telling me (your Manager's) you're a high performer – just deliver!"
-        ]
+          "And stop telling me (your Manager’s) you’re a high performer – just deliver!"
+        ],
+        "layout": "full_width"
       },
       {
         "type": "paragraph",
-        "content": "If you're hiring and want a team of guernsey-wearing operators, I've got a network full of them.\n\nAnd if you're a candidate wondering why you keep missing selection… maybe it's time for a bit of self-reflection, some honest coaching, and a new game plan.\n\nYou bring the engine. I'll find you the right jumper…..(erm, if you know what I mean?!?)\n\nCheers,\n\nMartin",
+        "content": "If you’re hiring and want a team of guernsey-wearing operators, I’ve got a network full of them.",
+        "layout": "full_width"
+      },
+      {
+        "type": "paragraph",
+        "content": "And if you’re a candidate wondering why you keep missing selection… maybe it’s time for a bit of self-reflection, some honest coaching, and a new game plan.",
+        "layout": "full_width"
+      },
+      {
+        "type": "paragraph",
+        "content": "You bring the engine. I’ll find you the right jumper…..(erm, if you know what I mean?!?)",
+        "layout": "full_width"
+      },
+      {
+        "type": "paragraph",
+        "content": "Cheers,",
+        "layout": "full_width"
+      },
+      {
+        "type": "paragraph",
+        "content": "Martin",
         "layout": "full_width"
       }
     ]

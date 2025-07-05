@@ -1,67 +1,537 @@
 {
     "featured": [
-      {
-        "id": "19280",
-        "order": 2,
-        "title": "What Melbourne's Best in Construction & Property Do to Get the Guernsey",
-        "slug": "what-melbournes-best-in-construction-property-do-to-get-the-guernsey",
-        "excerpt": "In footy, it's the guernsey that matters. Not just because it says, 'You're in the side,' but because it says, 'We back you.' And in recruitment, especially in Melbourne's construction and property sector, it's not all that different…",
-        "featuredImage": "/images/news/cover-photo-blog-may-2025.png",
-        "imageAlt": "What Melbourne's Best in Construction & Property Do to Get the Guernsey cover image",
-        "publishDate": "2025-05-01"
-      },
-      {
-        "id": "19347",
-        "order": 1,
-        "title": "Salary Review Season: Where Everyone's Underpaid (Just Ask Them)",
-        "slug": "salary-review-season-where-everyones-underpaid-just-ask-them",
-        "excerpt": "Every year like clockwork, the same thing happens. We hit the end of financial year, and suddenly the air thickens with passive-aggressive calendar invites titled 'Annual Review'…",
-        "featuredImage": "/images/news/cover-photo-june-2025-blog-1.png",
-        "imageAlt": "Cover photo - June 2025 blog",
-        "publishDate": "2025-06-26"
-      },
-      {
-        "id": "19348",
-        "order": 8,
-        "title": "The Hidden Costs of Chasing the Money",
-        "slug": "the-hidden-costs-of-chasing-the-money",
-        "excerpt": "There's been a lot of noise on social media lately, debating whether Gen Z is wrong for changing jobs early and often, all in pursuit of higher pay…",
-        "featuredImage": "/images/news/october-blog-cover-photo-cropped.png",
-        "imageAlt": "The Hidden Costs of Chasing the Money cover image",
-        "publishDate": "2025-07-04"
-      }
+        {
+            "id": "19347",
+            "order": 1,
+            "title": "Salary Review Season: Where Everyone’s Underpaid (Just Ask Them)",
+            "slug": "salary-review-season-where-everyones-underpaid-just-ask-them",
+            "excerpt": "Every year like clockwork, the same thing happens. We hit the end of financial year, and suddenly the air thickens with passive-aggressive calendar invites titled \"Annual Review\". It's Salary Season. And if there's one thing I've learnt over 20 years in recruitment and about 4,000 face-to-face interviews, it's this: Almost no one thinks they're overpaid.…",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2025/06/Cover-photo-June-2025-blog-1.png",
+            "imageAlt": "Cover photo - June 2025 blog",
+            "publishDate": "2025-06-26"
+        },
+        {
+            "id": "19280",
+            "order": 2,
+            "title": "What Melbourne’s Best in Construction & Property Do to Get the Guernsey",
+            "slug": "what-melbournes-best-in-construction-property-do-to-get-the-guernsey",
+            "excerpt": "In footy, it’s the guernsey that matters. Not just because it says, “You’re in the side,” but because it says, “We back you.” And in recruitment, especially in Melbourne’s construction and property sector, it’s not all that different. After 20 years of interviews, briefings, debriefings, and coffees, I reckon I’ve got a pretty good idea who makes the cut.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2025/05/Cover-photo-Blog-May-2025.png",
+            "imageAlt": "What Melbourne’s Best in Construction & Property Do to Get the Guernsey cover image",
+            "publishDate": "2025-05-01"
+        },
+        {
+            "id": "19156",
+            "order": 3,
+            "title": "20 Years, 5 Lessons, and a Hell of a Lot of Coffee: A Recruiter’s Survival Guide for Construction & Property!",
+            "slug": "20-years-5-lessons-and-a-hell-of-a-lot-of-coffee-a-recruiters-survival-guide-for-construction-property",
+            "excerpt": "It’s April 2025. I’ve officially been in recruitment for two decades! That’s 20 years of dodgy CVs, nearly 4,000 candidate interviews, around 1,500 client meetings, panicked Monday-morning phone calls, clients asking for “unicorns but on a budget,” and candidates ghosting like I’d asked them to help me move house on a long weekend…",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2025/04/Cover-photo-Article-April-2025-1.png",
+            "imageAlt": "",
+            "publishDate": "2025-04-01"
+        },
+        {
+            "id": "19058",
+            "order": 4,
+            "title": "Inside the Mind of a Recruiter: 20 Years of Lessons, Lies & Laughs",
+            "slug": "inside-the-mind-of-a-recruiter-20-years-of-lessons-lies-laughs",
+            "excerpt": "Recruitment is a funny old game. I've spent 20 years placing high performers into top-tier construction and property companies, witnessing hiring trends come and go, watching businesses thrive (or implode), and listening to more job-hunting stories than I care to count. In that time, I've come to one unavoidable truth: people don't always tell the full story.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2025/03/March-Article-Cover-Photo.png",
+            "imageAlt": "",
+            "publishDate": "2025-03-01"
+        },
+        {
+            "id": "18957",
+            "order": 5,
+            "title": "Stop Whining & Start Winning: Why Leadership (Not Complaints) Will Make or Break Your Career",
+            "slug": "stop-whining-start-winning-why-leadership-not-complaints-will-make-or-break-your-career",
+            "excerpt": "If I had a dollar for every time a hiring manager complained about ‘entitled’ employees, I’d be on a yacht right now, sipping something expensive. But instead, I’m here to tell you why leadership—not whining—is the real game-changer.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2025/02/Article-Cover-Photo-Stop-Whining.png",
+            "imageAlt": "Stop Whining & Start Winning: Why Leadership (Not Complaints) Will Make or Break Your Career cover image",
+            "publishDate": "2025-02-01"
+        },
+        {
+            "id": "18846",
+            "order": 6,
+            "title": "Unlocking Potential: A Recruiter’s Guide to Spotting It and an Employee’s Guide to Fulfilling It",
+            "slug": "unlocking-potential-a-recruiters-guide-to-spotting-it-and-an-employees-guide-to-fulfilling-it",
+            "excerpt": "Potential. It’s that magical word sprinkled over resumes and whispered in boardrooms. Employers claim they want it, candidates say they have it, and recruiters like me? Well, we’re often the ones tasked with unearthing it like archaeologists digging through a desert of generic CVs.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2025/01/January-Article-Cover-Image-Unlocking-Potential.png",
+            "imageAlt": "",
+            "publishDate": "2025-01-15"
+        },
+        {
+            "id": "18621",
+            "order": 7,
+            "title": "AI in Recruitment: A Blessing, A Curse, or Just the New Normal?",
+            "slug": "ai-in-recruitment-a-blessing-a-curse-or-just-the-new-normal",
+            "excerpt": "AI is everywhere. From helping us navigate morning traffic to crafting Instagram-worthy captions, it’s revolutionising industries, and recruitment is no exception.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/11/Nov-2024The-Build-Up-Cover-Photo.png",
+            "imageAlt": "",
+            "publishDate": "2024-11-01"
+        },
+        {
+            "id": "18544",
+            "order": 8,
+            "title": "The Hidden Costs of Chasing the Money",
+            "slug": "the-hidden-costs-of-chasing-the-money",
+            "excerpt": "There's been a lot of noise on social media lately, debating whether Gen Z is wrong for changing jobs early and often, all in pursuit of higher pay. Some say this is the natural way of the world now—why shouldn't they be chasing the coin? After all, we all work for money, right?",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/10/October-Blog-Cover-photo-cropped.png",
+            "imageAlt": "The Hidden Costs of Chasing the Money cover photo",
+            "publishDate": "2024-10-26"
+        },
+        {
+            "id": "18428",
+            "order": 9,
+            "title": "Perspective Discrepancy – What Employers Really Think About Your Reasons for Wanting to Change Jobs",
+            "slug": "perspective-discrepancy-what-employers-really-think-about-your-reasons-for-wanting-to-change-jobs",
+            "excerpt": "One of the most common questions employers ask when I present a candidate for a role is, 'Why are they open to a new opportunity?' As a recruiter, I've learned that the reasons candidates give for seeking new roles often differ greatly from how employers interpret those reasons.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/09/September-Newsletter-Cover-Image-1.png",
+            "imageAlt": "Perspective Discrepancy cover photo",
+            "publishDate": "2024-09-26"
+        },
+        {
+            "id": "18324",
+            "order": 10,
+            "title": "The Law of Attraction (in Recruitment): Are You attractive \"Top Talent\"? Is your business attractive to Top Talent?",
+            "slug": "the-law-of-attraction-in-recruitment-are-you-attractive-top-talent-is-your-business-attractive-to-top-talent",
+            "excerpt": "Attractiveness in recruitment is far more than skin deep. When I talk about being attractive in the recruitment process, I'm not referring to physical appearances or superficial traits. Instead, I'm talking about the broader concept of attractiveness in the recruitment world, which involves a three-way street: candidates, employers, and recruitment companies.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/08/Cover-photo-August-2024-blog.png",
+            "imageAlt": "The Law of Attraction (in Recruitment) cover photo",
+            "publishDate": "2024-08-26"
+        }
     ],
     "articles": [
-      {
-        "id": "19280",
-        "order": 2,
-        "title": "What Melbourne's Best in Construction & Property Do to Get the Guernsey",
-        "slug": "what-melbournes-best-in-construction-property-do-to-get-the-guernsey",
-        "excerpt": "In footy, it's the guernsey that matters. Not just because it says, 'You're in the side,' but because it says, 'We back you.' And in recruitment, especially in Melbourne's construction and property sector, it's not all that different…",
-        "featuredImage": "/images/news/cover-photo-blog-may-2025.png",
-        "imageAlt": "What Melbourne's Best in Construction & Property Do to Get the Guernsey cover image",
-        "publishDate": "2025-05-01"
-      },
-      {
-        "id": "19347",
-        "order": 1,
-        "title": "Salary Review Season: Where Everyone's Underpaid (Just Ask Them)",
-        "slug": "salary-review-season-where-everyones-underpaid-just-ask-them",
-        "excerpt": "Every year like clockwork, the same thing happens. We hit the end of financial year, and suddenly the air thickens with passive-aggressive calendar invites titled 'Annual Review'…",
-        "featuredImage": "/images/news/cover-photo-june-2025-blog-1.png",
-        "imageAlt": "Cover photo - June 2025 blog",
-        "publishDate": "2025-06-26"
-      },
-      {
-        "id": "19348",
-        "order": 8,
-        "title": "The Hidden Costs of Chasing the Money",
-        "slug": "the-hidden-costs-of-chasing-the-money",
-        "excerpt": "There's been a lot of noise on social media lately, debating whether Gen Z is wrong for changing jobs early and often, all in pursuit of higher pay…",
-        "featuredImage": "/images/news/october-blog-cover-photo-cropped.png",
-        "imageAlt": "The Hidden Costs of Chasing the Money cover image",
-        "publishDate": "2025-07-04"
-      }
+        {
+            "id": "19347",
+            "order": 1,
+            "title": "Salary Review Season: Where Everyone’s Underpaid (Just Ask Them)",
+            "slug": "salary-review-season-where-everyones-underpaid-just-ask-them",
+            "excerpt": "Every year like clockwork, the same thing happens. We hit the end of financial year, and suddenly the air thickens with passive-aggressive calendar invites titled \"Annual Review\". It's Salary Season. And if there's one thing I've learnt over 20 years in recruitment and about 4,000 face-to-face interviews, it's this: Almost no one thinks they're overpaid.…",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2025/06/Cover-photo-June-2025-blog-1.png",
+            "imageAlt": "Cover photo - June 2025 blog",
+            "publishDate": "2025-06-26"
+        },
+        {
+            "id": "19280",
+            "order": 2,
+            "title": "What Melbourne’s Best in Construction & Property Do to Get the Guernsey",
+            "slug": "what-melbournes-best-in-construction-property-do-to-get-the-guernsey",
+            "excerpt": "In footy, it’s the guernsey that matters. Not just because it says, “You’re in the side,” but because it says, “We back you.” And in recruitment, especially in Melbourne’s construction and property sector, it’s not all that different. After 20 years of interviews, briefings, debriefings, and coffees, I reckon I’ve got a pretty good idea who makes the cut.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2025/05/Cover-photo-Blog-May-2025.png",
+            "imageAlt": "What Melbourne’s Best in Construction & Property Do to Get the Guernsey cover image",
+            "publishDate": "2025-05-01"
+        },
+        {
+            "id": "19156",
+            "order": 3,
+            "title": "20 Years, 5 Lessons, and a Hell of a Lot of Coffee: A Recruiter’s Survival Guide for Construction & Property!",
+            "slug": "20-years-5-lessons-and-a-hell-of-a-lot-of-coffee-a-recruiters-survival-guide-for-construction-property",
+            "excerpt": "It’s April 2025. I’ve officially been in recruitment for two decades! That’s 20 years of dodgy CVs, nearly 4,000 candidate interviews, around 1,500 client meetings, panicked Monday-morning phone calls, clients asking for “unicorns but on a budget,” and candidates ghosting like I’d asked them to help me move house on a long weekend…",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2025/04/Cover-photo-Article-April-2025-1.png",
+            "imageAlt": "",
+            "publishDate": "2025-04-01"
+        },
+        {
+            "id": "19058",
+            "order": 4,
+            "title": "Inside the Mind of a Recruiter: 20 Years of Lessons, Lies & Laughs",
+            "slug": "inside-the-mind-of-a-recruiter-20-years-of-lessons-lies-laughs",
+            "excerpt": "Recruitment is a funny old game. I've spent 20 years placing high performers into top-tier construction and property companies, witnessing hiring trends come and go, watching businesses thrive (or implode), and listening to more job-hunting stories than I care to count. In that time, I've come to one unavoidable truth: people don't always tell the full story.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2025/03/March-Article-Cover-Photo.png",
+            "imageAlt": "",
+            "publishDate": "2025-03-01"
+        },
+        {
+            "id": "18957",
+            "order": 5,
+            "title": "Stop Whining & Start Winning: Why Leadership (Not Complaints) Will Make or Break Your Career",
+            "slug": "stop-whining-start-winning-why-leadership-not-complaints-will-make-or-break-your-career",
+            "excerpt": "If I had a dollar for every time a hiring manager complained about ‘entitled’ employees, I’d be on a yacht right now, sipping something expensive. But instead, I’m here to tell you why leadership—not whining—is the real game-changer.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2025/02/Article-Cover-Photo-Stop-Whining.png",
+            "imageAlt": "Stop Whining & Start Winning: Why Leadership (Not Complaints) Will Make or Break Your Career cover image",
+            "publishDate": "2025-02-01"
+        },
+        {
+            "id": "18846",
+            "order": 6,
+            "title": "Unlocking Potential: A Recruiter’s Guide to Spotting It and an Employee’s Guide to Fulfilling It",
+            "slug": "unlocking-potential-a-recruiters-guide-to-spotting-it-and-an-employees-guide-to-fulfilling-it",
+            "excerpt": "Potential. It’s that magical word sprinkled over resumes and whispered in boardrooms. Employers claim they want it, candidates say they have it, and recruiters like me? Well, we’re often the ones tasked with unearthing it like archaeologists digging through a desert of generic CVs.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2025/01/January-Article-Cover-Image-Unlocking-Potential.png",
+            "imageAlt": "",
+            "publishDate": "2025-01-15"
+        },
+        {
+            "id": "18621",
+            "order": 7,
+            "title": "AI in Recruitment: A Blessing, A Curse, or Just the New Normal?",
+            "slug": "ai-in-recruitment-a-blessing-a-curse-or-just-the-new-normal",
+            "excerpt": "AI is everywhere. From helping us navigate morning traffic to crafting Instagram-worthy captions, it’s revolutionising industries, and recruitment is no exception.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/11/Nov-2024The-Build-Up-Cover-Photo.png",
+            "imageAlt": "",
+            "publishDate": "2024-11-01"
+        },
+        {
+            "id": "18544",
+            "order": 8,
+            "title": "The Hidden Costs of Chasing the Money",
+            "slug": "the-hidden-costs-of-chasing-the-money",
+            "excerpt": "There's been a lot of noise on social media lately, debating whether Gen Z is wrong for changing jobs early and often, all in pursuit of higher pay. Some say this is the natural way of the world now—why shouldn't they be chasing the coin? After all, we all work for money, right?",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/10/October-Blog-Cover-photo-cropped.png",
+            "imageAlt": "The Hidden Costs of Chasing the Money cover photo",
+            "publishDate": "2024-10-26"
+        },
+        {
+            "id": "18428",
+            "order": 9,
+            "title": "Perspective Discrepancy – What Employers Really Think About Your Reasons for Wanting to Change Jobs",
+            "slug": "perspective-discrepancy-what-employers-really-think-about-your-reasons-for-wanting-to-change-jobs",
+            "excerpt": "One of the most common questions employers ask when I present a candidate for a role is, 'Why are they open to a new opportunity?' As a recruiter, I've learned that the reasons candidates give for seeking new roles often differ greatly from how employers interpret those reasons.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/09/September-Newsletter-Cover-Image-1.png",
+            "imageAlt": "Perspective Discrepancy cover photo",
+            "publishDate": "2024-09-26"
+        },
+        {
+            "id": "18324",
+            "order": 10,
+            "title": "The Law of Attraction (in Recruitment): Are You attractive \"Top Talent\"? Is your business attractive to Top Talent?",
+            "slug": "the-law-of-attraction-in-recruitment-are-you-attractive-top-talent-is-your-business-attractive-to-top-talent",
+            "excerpt": "Attractiveness in recruitment is far more than skin deep. When I talk about being attractive in the recruitment process, I'm not referring to physical appearances or superficial traits. Instead, I'm talking about the broader concept of attractiveness in the recruitment world, which involves a three-way street: candidates, employers, and recruitment companies.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/08/Cover-photo-August-2024-blog.png",
+            "imageAlt": "The Law of Attraction (in Recruitment) cover photo",
+            "publishDate": "2024-08-26"
+        },
+        {
+            "id": "18261",
+            "order": 11,
+            "title": "Think Not What Your Employer Should Do for You, But What You Can Do for Your Employer (and Your Career Development)",
+            "slug": "think-not-what-your-employer-should-do-for-you-but-what-you-can-do-for-your-employer-and-your-career-development",
+            "excerpt": "As a recruiter, I often hear the same questions from ambitious professionals: 'How do I make a more successful career?' 'What do I need to do to get that promotion?' 'How do I stand out from my peers?' Having thought about these questions and reflected on conversations I've had with business leaders and high achievers across the built environment, I've identified six key areas that are essential for career development.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/07/The-Build-Up-7312024-cover-image.png",
+            "imageAlt": "Think Not What Your Employer Should Do for You cover photo",
+            "publishDate": "2024-07-31"
+        },
+        {
+            "id": "18125",
+            "order": 12,
+            "title": "Reflecting on the 2023 Financial Year and Insights for 2024",
+            "slug": "reflecting-on-the-2023-financial-year-and-insights-for-2024",
+            "excerpt": "As we close the books on the 2023 financial year, it is time to reflect on the challenges and developments that have shaped Melbourne's built environment. This year has been marked by a myriad of well-publicised issues—labour shortages, a housing crisis, planning challenges, government overspends, design/redesign delays, construction delays, Union hostility, wage growth, and of course inflation and higher interest rates.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/06/Cover-Image-Reflecting.png",
+            "imageAlt": "Cover Image Reflecting",
+            "publishDate": "2024-06-01"
+        },
+        {
+            "id": "18049",
+            "order": 13,
+            "title": "The top 5 challenges facing Victorian developers in 2024",
+            "slug": "the-top-5-challenges-facing-victorian-developers-in-2024",
+            "excerpt": "Labour shortages. Price hikes. Project delays. You've likely heard these phrases thrown around the media – and the job site – quite a bit. But what's really challenging Victorian developers in 2024? We sat down with Illan Samuel, Managing Director at Samuel Property, to find out.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/05/Cover-Image-The-top-5-challenges-facing-Victorian-developers-in-2024.png",
+            "imageAlt": "The top 5 challenges facing Victorian developers in 2024 cover photo",
+            "publishDate": "2024-05-26"
+        },
+        {
+            "id": "17953",
+            "order": 14,
+            "title": "Take these 5 tiny actions today for big career gains tomorrow",
+            "slug": "take-these-5-tiny-actions-today-for-big-career-gains-tomorrow",
+            "excerpt": "Think you need to make bold, sweeping changes to experience a career leap? Think again. It's the clever mini-moves that can truly turbocharge your professional path. We're talking smart, subtle tactics that create a solid platform for sustained success.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/04/Cover-Image-Take-these-5-tiny-actions-today-for-big-career-gains-tomorrow.png",
+            "imageAlt": "Cover Image - Take these 5 tiny actions today for big career gains tomorrow",
+            "publishDate": "2024-04-01"
+        },
+        {
+            "id": "17711",
+            "order": 15,
+            "title": "Anglesea ecotourism project takes the next step",
+            "slug": "anglesea-ecotourism-project-takes-the-next-step",
+            "excerpt": "The long-awaited, $150 million Eden Project at Anglesea is one step closer to delivery after the initiation of design work. But local councillors remain sceptical that the project at the former Alcoa mine site will ever come to life.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/02/Anglesea-ecotourism-project-takes-the-next-step.png",
+            "imageAlt": "Anglesea ecotourism project Eden Project visualization",
+            "publishDate": "2024-02-26"
+        },
+        {
+            "id": "17699",
+            "order": 16,
+            "title": "Hamton Hawthorn wins ministerial approval",
+            "slug": "hamton-hawthorn-wins-ministerial-approval",
+            "excerpt": "Melbourne University's Hawthorn campus will be replaced by 350 luxury apartments, following approval of the site's development plan by state planning minister Sonya Kilkenny.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/02/Hamton-Hawthorn-wins-ministerial-approval.jpg",
+            "imageAlt": "Melbourne University's Hawthorn campus will be replaced by 350 luxury apartments, following approval of the site's development plan by state planning minister Sonya Kilkenny.",
+            "publishDate": "2024-02-01"
+        },
+        {
+            "id": "17685",
+            "order": 17,
+            "title": "Rosebud Plaza sells for $135 million",
+            "slug": "rosebud-plaza-sells-for-135-million",
+            "excerpt": "Who said retail was dead? It's certainly not in Rosebud, where Charter Hall has just sold Rosebud Plaza for $134.5 million.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/02/Rosebud-Plaza-sells-for-135-million.png",
+            "imageAlt": "Who said retail was dead? It's certainly not in Rosebud, where Charter Hall has just sold Rosebud Plaza for $134.5 million.",
+            "publishDate": "2024-02-01"
+        },
+        {
+            "id": "17676",
+            "order": 18,
+            "title": "Salta puts 63 Exhibition Street back on the market",
+            "slug": "salta-puts-63-exhibition-street-back-on-the-market",
+            "excerpt": "63 Exhibition Street is officially for sale again, after Salta relisted the 894 sq m property located in the heart of Melbourne. This will be Salta's second attempt at selling the site.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/02/Salta-puts-63-Exhibition-Street-back-on-the-market.jpg",
+            "imageAlt": "63 Exhibition Street property visualization",
+            "publishDate": "2024-02-26"
+        },
+        {
+            "id": "17667",
+            "order": 19,
+            "title": "Heritage Victoria greenlights Gurrowa Place Towers at Queen Vic Market",
+            "slug": "heritage-victoria-greenlights-gurrowa-place-towers-at-queen-vic-market",
+            "excerpt": "Heritage Victoria has approved the construction of Gurrowa Place, a multi-tower project by Lendlease located at the historic Queen Victoria Market.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/02/Heritage-Victoria-greenlights-Gurrowa-Place-Towers-at-Queen-Vic-Market.jpg",
+            "imageAlt": "Heritage Victoria has approved the construction of Gurrowa Place, a multi-tower project by Lendlease located at the historic Queen Victoria Market.",
+            "publishDate": "2024-02-01"
+        },
+        {
+            "id": "17615",
+            "order": 20,
+            "title": "Pay gap – or opportunity? How to bring more diversity into your business",
+            "slug": "pay-gap-or-opportunity-how-to-bring-more-diversity-into-your-business",
+            "excerpt": "New Australian regulations are forcing private companies to publicly disclose their gender pay gap data. So, it's time to ask: how will your business rise to the occasion?",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/02/Cover-Photo-7.png",
+            "imageAlt": "Pay gap and diversity in business cover photo",
+            "publishDate": "2024-02-20"
+        },
+        {
+            "id": "17540",
+            "order": 21,
+            "title": "Long-awaited modelling reveals serious flooding threat for Docklands, Southbank and Fishermans Bend",
+            "slug": "long-awaited-modelling-reveals-serious-flooding-threat-for-docklands-southbank-and-fishermans-bend",
+            "excerpt": "In news that nobody wants to hear, a government study recently released under an FOI request has unveiled the severe risks that climate change poses to homes, infrastructure, and beaches around Port Phillip Bay.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/01/Long-awaited-modelling-reveals-serious-flooding-threat-for-Docklands-Southbank-and-Fishermans-Bend.jpg",
+            "imageAlt": "In news that nobody wants to hear, a government study recently released under an FOI request has unveiled the severe risks that climate change poses to homes, infrastructure, and beaches around Port Phillip Bay.",
+            "publishDate": "2024-01-01"
+        },
+        {
+            "id": "17532",
+            "order": 22,
+            "title": "Yarra Council turns off the gas taps",
+            "slug": "yarra-council-turns-off-the-gas-taps",
+            "excerpt": "In a significant move towards a sustainable future, Yarra City Council is supporting the Yarra Energy Foundation's (YEF) Wired for Tomorrow initiative – which will create a model other communities can use to transition away from gas.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/01/Yarra-Council-turns-off-the-gas-taps.jpg",
+            "imageAlt": "Yarra Council gas transition initiative",
+            "publishDate": "2024-01-26"
+        },
+        {
+            "id": "17523",
+            "order": 23,
+            "title": "Nexus and AMA scoop up North East Link tenders",
+            "slug": "nexus-and-ama-scoop-up-north-east-link-tenders",
+            "excerpt": "The Victorian Government has announced the two consortiums that will deliver the multibillion-dollar North East Link project.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/01/Nexus-and-AMA-scoop-up-North-East-Link-tenders.jpg",
+            "imageAlt": "The Victorian Government has announced the two consortiums that will deliver the multibillion-dollar North East Link project.",
+            "publishDate": "2024-01-01"
+        },
+        {
+            "id": "17516",
+            "order": 24,
+            "title": "City of Bayside rejects Golden Age Group's big plans for Brighton",
+            "slug": "city-of-bayside-rejects-golden-age-groups-big-plans-for-brighton",
+            "excerpt": "The City of Bayside has rejected its own internal advice and refused Golden Age Group's applications to build 84 townhouses in Brighton – a decision the developer will now fight in court.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/01/City-of-Bayside-rejects-Golden-Age-Groups-big-plans-for-Brighton.png",
+            "imageAlt": "City of Bayside rejects Golden Age Group development plans",
+            "publishDate": "2024-01-26"
+        },
+        {
+            "id": "17506",
+            "order": 25,
+            "title": "The AFL and the Vic Government pair up to reinvigorate Docklands",
+            "slug": "the-afl-and-the-vic-government-pair-up-to-reinvigorate-docklands",
+            "excerpt": "Development Victoria and the AFL have teamed up to revitalise two pivotal Docklands sites on Harbour Esplanade. Their goal? To bring new life to the area through a mix of housing, commercial, and entertainment spaces.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/01/The-AFL-and-the-Vic-Government-pair-up-to-reinvigorate-Docklands.jpg",
+            "imageAlt": "Development Victoria and the AFL have teamed up to revitalise two pivotal Docklands sites on Harbour Esplanade. Their goal? To bring new life to the area through a mix of housing, commercial, and entertainment spaces.",
+            "publishDate": "2024-01-01"
+        },
+        {
+            "id": "17457",
+            "order": 26,
+            "title": "'Avoid the sh*t builder merry-go-round!'and other end-of-year insights",
+            "slug": "avoid-the-shit-builder-merry-go-round-and-other-end-of-year-insights",
+            "excerpt": "This month, fellow recruiter Jonathan (Jono) Conley rejoined me on 'The Building Talks Podcast' (brought to you by Building Environs Recruitment). Our main topic of conversation? The ins and outs of construction recruiting in 2023.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/12/Cover-photo-1221.png",
+            "imageAlt": "End-of-year construction recruiting insights cover photo",
+            "publishDate": "2023-12-21"
+        },
+        {
+            "id": "17433",
+            "order": 27,
+            "title": "Significant sale kickstarts $1 billion portfolio",
+            "slug": "significant-sale-kickstarts-1-billion-portfolio",
+            "excerpt": "News from the industrial sector: An estate containing Catch.com.au's fulfilment centre has sold for $94.1 million to Barings. Its plans for the site? To use it to seed a $1 billion portfolio with superannuation fund Rest.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/12/Significant-sale-kickstarts-1-billion-portfolio.png",
+            "imageAlt": "News from the industrial sector: An estate containing Catch.com.au's fulfilment centre has sold for $94.1 million to Barings. Its plans for the site? To use it to seed a $1 billion portfolio with superannuation fund Rest.",
+            "publishDate": "2023-12-01"
+        },
+        {
+            "id": "17424",
+            "order": 28,
+            "title": "Gamuda wins approval for St Kilda Road office tower",
+            "slug": "gamuda-wins-approval-for-st-kilda-road-office-tower",
+            "excerpt": "VCAT has approved Gamuda Land's application for an 18-storey residential tower on St Kilda Road, overriding a permit amendment from the City of Port Phillip to cut the tower's height by two storeys.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/12/Gamuda-wins-approval-for-St-Kilda-Road-office-tower.jpg",
+            "imageAlt": "Gamuda St Kilda Road office tower approval",
+            "publishDate": "2023-12-15"
+        },
+        {
+            "id": "17415",
+            "order": 29,
+            "title": "RMIT BTR gets approval – and a warning",
+            "slug": "rmit-btr-gets-approval-and-a-warning",
+            "excerpt": "Earlier this month, the City of Melbourne approved the demolition of the RMIT Village in North Melbourne to make way for a 19-storey, student build-to-rent development.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/12/RMIT-BTR-gets-approval-–-and-a-warning.jpg",
+            "imageAlt": "Earlier this month, the City of Melbourne approved the demolition of the RMIT Village in North Melbourne to make way for a 19-storey, student build-to-rent development.",
+            "publishDate": "2023-12-01"
+        },
+        {
+            "id": "17406",
+            "order": 30,
+            "title": "Time & Place secures approval for Hotel Lindrum redevelopment",
+            "slug": "time-and-place-secures-approval-for-hotel-lindrum-redevelopment",
+            "excerpt": "In 2022, developer Time & Place bought the Hotel Lindrum for $50 million. It came with a planning permit for a 30-storey mixed-use project. Some 18 months later, the firm has received approval from the City of Melbourne to amend that permit.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/12/Time-Place-secures-approval-for-Hotel-Lindrum-redevelopment.png",
+            "imageAlt": "Time & Place Hotel Lindrum redevelopment approval",
+            "publishDate": "2023-12-10"
+        },
+        {
+            "id": "17395",
+            "order": 31,
+            "title": "Nightingale Brunswick wins Premier's Sustainability Award",
+            "slug": "nightingale-brunswick-wins-premiers-sustainability-award",
+            "excerpt": "Nightingale Village added another award to its pool room in November: Industry Leader in the Sustainable Places category at the 2023 Premier's Sustainability Awards.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/12/Nightingale-Brunswick-wins-Premiers-Sustainability-Award.jpg",
+            "imageAlt": "Nightingale Village added another award to its pool room in November: Industry Leader in the Sustainable Places category at the 2023 Premier's Sustainability Awards.",
+            "publishDate": "2023-12-01"
+        },
+        {
+            "id": "17365",
+            "order": 32,
+            "title": "'Commensurate with experience': what does that really mean?",
+            "slug": "commensurate-with-experience-what-does-that-really-mean",
+            "excerpt": "The phrase 'commensurate with experience' appears often in job board jargon, leaving candidates scratching their heads. But what does this cryptic mantra really mean? After almost two decades in recruitment, I thought it high time I broke down this ambiguous term – and demystified its meaning to both job seekers and employers.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/11/Cover-photo-Commensurate-with-experience.png",
+            "imageAlt": "Commensurate with experience",
+            "publishDate": "2023-11-15"
+        },
+        {
+            "id": "17289",
+            "order": 33,
+            "title": "Golden Age delivers a golden handshake to Residential",
+            "slug": "golden-age-delivers-a-golden-handshake-to-residential",
+            "excerpt": "Hot news out of Melbourne's build-to-rent (BTR) sector: Golden Age Group has struck a deal with Residential, which will expedite the delivery of Box Hill's first BTR project.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/11/Golden-Age-delivers-a-golden-handshake-to-Residential.jpg",
+            "imageAlt": "Hot news out of Melbourne's build-to-rent (BTR) sector: Golden Age Group has struck a deal with Residential, which will expedite the delivery of Box Hill's first BTR project.",
+            "publishDate": "2023-11-01"
+        },
+        {
+            "id": "17279",
+            "order": 34,
+            "title": "Jam Factory redevelopment one step closer after planning win",
+            "slug": "jam-factory-redevelopment-one-step-closer-after-planning-win",
+            "excerpt": "The Jam Factory – once a buzzing playground, now a veritable ghost town – is getting closer to a glow up after the City of Stonnington approved amendments to the original planning application.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/11/Jam-Factory-redevelopment-one-step-closer-after-planning-win.jpg",
+            "imageAlt": "The Jam Factory – once a buzzing playground, now a veritable ghost town – is getting closer to a glow up after the City of Stonnington approved amendments to the original planning application.",
+            "publishDate": "2023-11-01"
+        },
+        {
+            "id": "17271",
+            "order": 35,
+            "title": "Australia's first skyscraper sells for $155 million",
+            "slug": "australias-first-skyscraper-sells-for-155-million",
+            "excerpt": "Charter Hall has sold Orica House – which is considered Australia's first skyscraper – to Harry Stamoulis for $155 million. The building was completed in 1958 and was originally called ICI House after its first tenant, Imperial Chemical Industries.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/11/Australias-first-skyscraper-sells-for-155-million.jpg",
+            "imageAlt": "Charter Hall has sold Orica House – which is considered Australia's first skyscraper – to Harry Stamoulis for $155 million.",
+            "publishDate": "2023-11-10"
+        },
+        {
+            "id": "17263",
+            "order": 36,
+            "title": "Vic Gov names 10 suburbs to receive thousands of new homes",
+            "slug": "vic-gov-names-10-suburbs-to-receive-thousands-of-new-homes",
+            "excerpt": "Last month, we shared news of the Victorian Government's housing statement – which promises to deliver more than 800,000 new homes over the next 10 years.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/11/Vic-Gov-names-10-suburbs-to-receive-thousands-of-new-homes.jpg",
+            "imageAlt": "Last month, we shared news of the Victorian Government's housing statement – which promises to deliver more than 800,000 new homes over the next 10 years.",
+            "publishDate": "2023-11-01"
+        },
+        {
+            "id": "17253",
+            "order": 37,
+            "title": "Developer to rebuild historic Corkman Hotel after planning defeat",
+            "slug": "developer-to-rebuild-historic-corkman-hotel-after-planning-defeat",
+            "excerpt": "If you follow some of Melbourne's more unfortunate planning adventures, you may be well acquainted with the saga of the historic Corkman Hotel in Carlton. Developers Stefce Kutlesovski and Raman Shaqiri were fined $1.1 million and served jail time for razing the heritage-listed pub in 2016 without a permit.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/11/Corkman-hotel-The-Urban-Developer.jpg",
+            "imageAlt": "If you follow some of Melbourne's more… unfortunate planning adventures, you may be well acquainted with the saga of the historic Corkman Hotel in Carlton.",
+            "publishDate": "2023-11-08"
+        },
+        {
+            "id": "17200",
+            "order": 38,
+            "title": "Recruitment: we keep it exclusive. Here's why you should, too.",
+            "slug": "recruitment-we-keep-it-exclusive-heres-why-you-should-too",
+            "excerpt": "As Melbourne's employment market gets tighter, it's tempting to get all the help you can by engaging with multiple recruiters. But after 15+ years in the industry, I've learned that spreading yourself thin never ends well – whether you're an employer or a job seeker.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/10/Cover-photo-10-26.png",
+            "imageAlt": "Recruitment: we keep it exclusive. Here's why you should, too.",
+            "publishDate": "2023-10-26"
+        },
+        {
+            "id": "17120",
+            "order": 39,
+            "title": "Younghusband redevelopment receives approval recommendation",
+            "slug": "younghusband-redevelopment-receives-approval-recommendation",
+            "excerpt": "The City of Melbourne (MCC) has unanimously recommended approval for the third and final stage of the redevelopment of the Younghusband site in Kensington. The first stage, already underway, will transform a heritage-listed wool store into a contemporary commercial office and retail space.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/10/Younghusband-redevelopment-receives-approval-recommendation.jpg",
+            "imageAlt": "The City of Melbourne (MCC) has unanimously recommended approval for the third and final stage of the redevelopment of the Younghusband site in Kensington.",
+            "publishDate": "2023-10-25"
+        },
+        {
+            "id": "17111",
+            "order": 40,
+            "title": "Salter Brothers set a new vision for historic Collins Street address",
+            "slug": "salter-brothers-set-a-new-vision-for-historic-collins-street-address",
+            "excerpt": "Salter Brothers has put forward an ambitious plan to construct a 32-storey skyscraper above the existing InterContinental Hotel, beside the Rialto Towers.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/10/Salter-Brothers-set-a-new-vision-for-historic-Collins-Street-address.jpg",
+            "imageAlt": "Salter Brothers has put forward an ambitious plan to construct a 32-storey skyscraper above the existing InterContinental Hotel, beside the Rialto Towers.",
+            "publishDate": "2023-10-01"
+        },
+        {
+            "id": "17103",
+            "order": 41,
+            "title": "Prime Cremorne development site hits the market",
+            "slug": "prime-cremorne-development-site-hits-the-market",
+            "excerpt": "The Ronen family has listed the ex-Stitches building in Cremorne for sale through an expression of interest process expected to net more than $80 million. Located at 167-169 Cremorne Street, the impressive site has four street frontages on Cremorne, Dover and Bent Streets and the CityLink Freeway.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/10/Prime-Cremorne-development-site-hits-the-market.jpg",
+            "imageAlt": "The Ronen family has listed the ex-Stitches building in Cremorne for sale through an expression of interest process expected to net more than $80 million.",
+            "publishDate": "2023-10-20"
+        },
+        {
+            "id": "17094",
+            "order": 42,
+            "title": "Central Pier saga enters a new phase",
+            "slug": "central-pier-saga-enters-a-new-phase",
+            "excerpt": "The sorry saga of Central Pier continues, with Development Victoria announcing that works are underway to remove the heritage-listed asset from Victoria Harbour.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/10/Central-Pier-saga-enters-a-new-phase.jpg",
+            "imageAlt": "The sorry saga of Central Pier continues, with Development Victoria announcing that works are underway to remove the heritage-listed asset from Victoria Harbour.",
+            "publishDate": "2023-10-01"
+        },
+        {
+            "id": "17084",
+            "order": 43,
+            "title": "Victoria sets ambitious target to replace 44 public housing towers",
+            "slug": "victoria-sets-ambitious-target-to-replace-44-public-housing-towers",
+            "excerpt": "The Victorian Government has announced it will replace all 44 of Melbourne's public housing towers in what will be Australia's biggest-ever urban renewal project. Ten thousand people currently live across the 44 towers. The government anticipates that number will rise to 30,000 people across all sites once the project is complete in 2051.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/10/Victoria-sets-ambitious-target-to-replace-44-public-housing-towers.jpg",
+            "imageAlt": "The Victorian Government has announced it will replace all 44 of Melbourne's public housing towers in what will be Australia's biggest-ever urban renewal project.",
+            "publishDate": "2023-10-15"
+        }
     ]
   }
   

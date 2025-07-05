@@ -1,166 +1,210 @@
 // components/ArticleRenderer.tsx
-import { Article } from '@/app/types/article';
+import { Article, ArticleSection } from '@/app/types/article';
 import Image from 'next/image';
+import React, { Fragment } from 'react';
 
 interface ArticleRendererProps {
   article: Article;
 }
 
 export default function ArticleRenderer({ article }: ArticleRendererProps) {
-  // Universal function to parse bold and italic text
-  const parseFormattedText = (text: string) => {
-    // First handle bold text (double asterisks)
-    let parts = text.split(/(\*\*[^*]+\*\*)/g);
-    
-    return parts.map((part, i) => {
-      if (part.startsWith('**') && part.endsWith('**')) {
-        return <strong key={i}>{part.slice(2, -2)}</strong>;
+  // Parse Markdown links, bold (**text**) and italics (*text*) with configurable link style
+  const parseFormattedText = (
+    text: string,
+    linkClass = 'text-blue-600 underline hover:text-blue-800'
+  ): React.ReactNode => {
+    const linkRegex = /(\[[^\]]+\]\([^)]*\))/g;
+    const segments = text.split(linkRegex).filter(Boolean);
+
+    return segments.map((seg, i) => {
+      // Link?
+      const linkMatch = seg.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+      if (linkMatch) {
+        const [, label, url] = linkMatch;
+        return (
+          <a
+            key={i}
+            href={url}
+            className={linkClass}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {label}
+          </a>
+        );
       }
-      
-      // Then handle italic text (single asterisks) in remaining parts
-      const italicParts = part.split(/(\*[^*]+\*)/g);
-      return italicParts.map((italicPart, j) => {
-        if (italicPart.startsWith('*') && italicPart.endsWith('*') && !italicPart.startsWith('**')) {
-          return <em key={`${i}-${j}`}>{italicPart.slice(1, -1)}</em>;
+
+      // Bold / Italic with nested support
+      const parts = seg.split(/(\*\*[^*]*(?:\*[^*]*\*[^*]*)*\*\*|\*[^*]+\*)/g).filter(Boolean);
+      return parts.map((part, j) => {
+        if (/^\*\*.*\*\*$/.test(part)) {
+          // Handle bold with potential nested italic
+          const boldContent = part.slice(2, -2);
+          const nestedParts = boldContent.split(/(\*[^*]+\*)/g).filter(Boolean);
+          return (
+            <strong key={`${i}-${j}`}>
+              {nestedParts.map((nestedPart, k) => {
+                if (/^\*[^*]+\*$/.test(nestedPart)) {
+                  return <em key={k}>{nestedPart.slice(1, -1)}</em>;
+                }
+                return <Fragment key={k}>{nestedPart}</Fragment>;
+              })}
+            </strong>
+          );
         }
-        return italicPart;
+        if (/^\*[^*]+\*$/.test(part)) {
+          return <em key={`${i}-${j}`}>{part.slice(1, -1)}</em>;
+        }
+        return <Fragment key={`${i}-${j}`}>{part}</Fragment>;
       });
-    }).flat();
+    });
   };
 
-  // Universal function to render text content with bullets and bold
-  const renderTextContent = (content: string) => {
-    return content.split('\n\n').map((paragraph: string, i: number) => {
-      // Check if this paragraph is a bullet point
-      if (paragraph.startsWith('• ')) {
-        const bulletText = paragraph.substring(2); // Remove the bullet
+  // Render paragraphs and manual bullets (•)
+  const renderTextContent = (
+    content: string,
+    linkClass?: string
+  ): React.ReactNode =>
+    content.split('\n\n').map((block, i) => {
+      if (/^•\s+/.test(block)) {
+        const txt = block.replace(/^•\s+/, '');
         return (
           <div key={i} className="flex mb-4 last:mb-0">
-            <span className="inline-block w-1.5 h-1.5 bg-gray-600 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
-            <div className="text-gray-700 leading-relaxed flex-1">
-              {parseFormattedText(bulletText)}
+            <span className="inline-block w-1.5 h-1.5 bg-gray-600 rounded-full mt-2.5 mr-3 flex-shrink-0" />
+            <div className="leading-relaxed">
+              {parseFormattedText(txt, linkClass)}
             </div>
           </div>
         );
       }
-      
-      // Regular paragraph
       return (
         <p key={i} className="mb-4 last:mb-0">
-          {parseFormattedText(paragraph)}
+          {parseFormattedText(block, linkClass)}
         </p>
       );
     });
-  };
 
-  const renderSection = (section: any, index: number) => {
+  const renderSection = (section: ArticleSection, idx: number): React.ReactNode => {
     switch (section.type) {
-      case 'paragraph':
-        return (
-          <div key={index} className="mb-6 text-gray-700 leading-relaxed">
-            {renderTextContent(section.content)}
-          </div>
-        );
+      case 'hero_image': {
+        const figWidth = section.width || '800px'
+        const imgWidth = parseInt(figWidth, 10)
+        const imgHeight = section.height
+          ? parseInt(section.height, 10)
+          : Math.round((imgWidth / 800) * 400)
       
-      case 'heading':
-        switch (section.level) {
-          case 1:
-            return (
-              <h1 key={index} className="text-3xl font-bold text-gray-900 mb-4">
-                {section.content}
-              </h1>
-            );
-          case 2:
-            return (
-              <h2 key={index} className="text-2xl font-bold text-gray-900 mb-4">
-                {section.content}
-              </h2>
-            );
-          case 3:
-            return (
-              <h3 key={index} className="text-xl font-bold text-gray-900 mb-4">
-                {section.content}
-              </h3>
-            );
-          default:
-            return (
-              <h2 key={index} className="text-2xl font-bold text-gray-900 mb-4">
-                {section.content}
-              </h2>
-            );
-        }
+        // Build a class string that only includes the
+        // border + background + padding if caption exists.
+        const baseClasses = 'mx-auto mb-8'
+        const captionBoxClasses = section.caption
+          ? 'bg-gray-100 border border-gray-300 px-2 py-2'
+          : ''
       
-      case 'hero_image':
         return (
-          <div key={index} className="w-full mb-8">
+          <figure
+            key={idx}
+            style={{ width: figWidth }}
+            className={`${baseClasses} ${captionBoxClasses}`}
+          >
             <Image
-              src={section.src}
-              alt={section.alt}
-              width={800}
-              height={400}
+              src={section.src!}
+              alt={section.alt || ''}
+              width={imgWidth}
+              height={imgHeight}
               className="w-full h-auto rounded-lg"
             />
+      
+            {section.caption && (
+              <figcaption className="mt-1 text-xs text-gray-400 text-center">
+                {section.caption}
+              </figcaption>
+            )}
+          </figure>
+        )
+      }
+      
+      
+      
+           
+
+      case 'heading': {
+        const tag = section.level === 1 ? 'h1' : section.level === 2 ? 'h2' : 'h3';
+        const sizeClass =
+          section.level === 1
+            ? 'text-3xl'
+            : section.level === 2
+            ? 'text-2xl'
+            : 'text-xl';
+        return React.createElement(
+          tag,
+          { key: idx, className: `${sizeClass} font-bold mb-4` },
+          parseFormattedText(
+            section.content || '',
+            'text-red-600 underline hover:text-red-700'
+          )
+        );
+      }
+
+      case 'paragraph':
+        // All paragraph links in red now:
+        return (
+          <div key={idx} className="mb-6 leading-relaxed">
+            {renderTextContent(
+              section.content || '',
+              'text-red-600 underline hover:text-red-700'
+            )}
           </div>
+        );
+
+      case 'bullet_list':
+        return (
+          <ul key={idx} className="mb-6 space-y-3 list-none">
+            {section.items?.map((item, i) => (
+              <li key={i} className="flex">
+                <span className="inline-block w-1.5 h-1.5 bg-gray-600 rounded-full mt-2.5 mr-3 flex-shrink-0" />
+                <div className="leading-relaxed">
+                  {/* bullet-list links are now RED */}
+                  {parseFormattedText(
+                    item,
+                    'text-red-600 underline hover:text-red-700'
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
         );
 
       case 'image_with_text':
         return (
-          <div key={index} className="mb-8">
-            {/* Mobile: Stack vertically */}
+          <div key={idx} className="mb-8">
+            {/* Mobile */}
             <div className="lg:hidden flex flex-col gap-6">
               <Image
-                src={section.image.src}
-                alt={section.image.alt}
+                src={section.image!.src}
+                alt={section.image!.alt}
                 width={300}
                 height={212}
                 className="w-full h-auto rounded-lg"
               />
-              <div className="text-gray-700 leading-relaxed">
-                {renderTextContent(section.text.content)}
+              <div className="leading-relaxed">
+                {renderTextContent(
+                  section.text!.content,
+                  'text-red-600 underline hover:text-red-700'
+                )}
               </div>
             </div>
-
-            {/* Desktop: CSS Float for text wrapping */}
+            {/* Desktop */}
             <div className="hidden lg:block">
-              <div 
-                className="text-gray-700 leading-relaxed"
-                style={{
-                  overflow: 'hidden' // Creates block formatting context
-                }}
-              >
+              <div className="leading-relaxed">
                 <img
-                  src={section.image.src}
-                  alt={section.image.alt}
-                  className="rounded-lg"
-                  style={{
-                    float: 'left',
-                    width: '300px',
-                    height: '212px',
-                    objectFit: 'cover',
-                    marginRight: '1.5rem',
-                    marginBottom: '1rem',
-                    shapeOutside: 'margin-box'
-                  }}
+                  src={section.image!.src}
+                  alt={section.image!.alt}
+                  className="rounded-lg float-left w-[300px] h-[212px] object-cover mr-6 mb-4"
                 />
-                <div dangerouslySetInnerHTML={{
-                  __html: section.text.content
-                    .split('\n')
-                    .map(line => {
-                      if (line.startsWith('• ')) {
-                        const bulletText = line.substring(2);
-                        return `<div style="display: flex; margin-bottom: 1rem;">
-                          <span style="display: inline-block; width: 8px; height: 8px; background-color: #4b5563; border-radius: 50%; margin-top: 8px; margin-right: 12px; flex-shrink: 0;"></span>
-                          <div>${bulletText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*([^*]+)\*/g, '<em>$1</em>')}</div>
-                        </div>`;
-                      } else if (line.trim() === '') {
-                        return '<br>';
-                      } else if (line.trim() !== '') {
-                        return `<p style="margin-bottom: 1rem;">${line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*([^*]+)\*/g, '<em>$1</em>')}</p>`;
-                      }
-                      return '';
-                    })
-                    .join('')
-                }} />
+                {renderTextContent(
+                  section.text!.content,
+                  'text-red-600 underline hover:text-red-700'
+                )}
               </div>
             </div>
           </div>
@@ -168,123 +212,84 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
 
       case 'text_with_image':
         return (
-          <div key={index} className="mb-8">
-            {/* Mobile: Stack vertically */}
+          <div key={idx} className="mb-8">
             <div className="lg:hidden flex flex-col gap-6">
-              <div className="text-gray-700 leading-relaxed">
-                {renderTextContent(section.text.content)}
+              <div className="leading-relaxed">
+                {renderTextContent(
+                  section.text!.content,
+                  'text-red-600 underline hover:text-red-700'
+                )}
               </div>
               <Image
-                src={section.image.src}
-                alt={section.image.alt}
+                src={section.image!.src}
+                alt={section.image!.alt}
                 width={300}
                 height={212}
                 className="w-full h-auto rounded-lg"
               />
             </div>
-
-            {/* Desktop: CSS Float for text wrapping */}
             <div className="hidden lg:block">
-              <div 
-                className="text-gray-700 leading-relaxed"
-                style={{
-                  overflow: 'hidden' // Creates block formatting context
-                }}
-              >
+              <div className="leading-relaxed">
                 <img
-                  src={section.image.src}
-                  alt={section.image.alt}
-                  className="rounded-lg"
-                  style={{
-                    float: 'right',
-                    width: '300px',
-                    height: '212px',
-                    objectFit: 'cover',
-                    marginLeft: '1.5rem',
-                    marginBottom: '1rem',
-                    shapeOutside: 'margin-box'
-                  }}
+                  src={section.image!.src}
+                  alt={section.image!.alt}
+                  className="rounded-lg float-right w-[300px] h-[212px] object-cover ml-6 mb-4"
                 />
-                <div dangerouslySetInnerHTML={{
-                  __html: section.text.content
-                    .split('\n')
-                    .map(line => {
-                      if (line.startsWith('• ')) {
-                        const bulletText = line.substring(2);
-                        return `<div style="display: flex; margin-bottom: 1rem;">
-                          <span style="display: inline-block; width: 8px; height: 8px; background-color: #4b5563; border-radius: 50%; margin-top: 8px; margin-right: 12px; flex-shrink: 0;"></span>
-                          <div>${bulletText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*([^*]+)\*/g, '<em>$1</em>')}</div>
-                        </div>`;
-                      } else if (line.trim() === '') {
-                        return '<br>';
-                      } else if (line.trim() !== '') {
-                        return `<p style="margin-bottom: 1rem;">${line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*([^*]+)\*/g, '<em>$1</em>')}</p>`;
-                      }
-                      return '';
-                    })
-                    .join('')
-                }} />
+                {renderTextContent(
+                  section.text!.content,
+                  'text-red-600 underline hover:text-red-700'
+                )}
               </div>
             </div>
           </div>
         );
 
-      case 'statistics_block':
+      case 'call_to_action':
         return (
-          <div key={index} className="mb-6 text-gray-700 leading-relaxed">
-            {renderTextContent(section.content)}
+          <p key={idx} className="mb-6 leading-relaxed">
+            {parseFormattedText(
+              section.content || '',
+              'text-red-600 underline hover:text-red-700'
+            )}
+          </p>
+        );
+
+      case 'centered_content':
+        return (
+          <div key={idx} className="mb-6 text-center">
+            {section.content?.split('\n\n').map((block, i) => {
+              // Check if this is a bold heading (standalone **text** on its own line)
+              if (/^\*\*[^*]+\*\*$/.test(block.trim())) {
+                const headingText = block.trim().slice(2, -2);
+                // First bold text is H2, subsequent ones are H3
+                const isMainHeading = i === 0;
+                const headingClass = isMainHeading 
+                  ? "text-2xl font-bold mb-4" 
+                  : "text-lg font-semibold mb-3";
+                const HeadingTag = isMainHeading ? 'h2' : 'h3';
+                
+                return React.createElement(
+                  HeadingTag,
+                  { key: i, className: headingClass },
+                  headingText
+                );
+              }
+              return (
+                <p key={i} className="mb-4 last:mb-0">
+                  {parseFormattedText(block, 'text-red-600 underline hover:text-red-700')}
+                </p>
+              );
+            })}
           </div>
         );
 
-      case 'bullet_list':
-        return (
-          <ul key={index} className="mb-6 space-y-3">
-            {section.items.map((item: string, i: number) => (
-              <li key={i} className="flex">
-                <span className="inline-block w-1.5 h-1.5 bg-gray-600 rounded-full mt-2.5 mr-3 flex-shrink-0"></span>
-                <div className="text-gray-700 leading-relaxed flex-1">{parseFormattedText(item)}</div>
-              </li>
-            ))}
-          </ul>
-        );
-
-      case 'call_to_action':
-        // Function to parse markdown-style links
-        const parseLink = (content: string) => {
-          const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-          const parts = content.split(linkRegex);
-          
-          const result = [];
-          for (let i = 0; i < parts.length; i += 3) {
-            if (parts[i]) result.push(parts[i]); // Text before link
-            if (parts[i + 1] && parts[i + 2]) { // Link text and URL
-              result.push(
-                <a 
-                  key={i} 
-                  href={parts[i + 2]} 
-                  className="text-red-600 underline hover:text-red-700"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {parts[i + 1]}
-                </a>
-              );
-            }
-          }
-          return result;
-        };
-
-        return (
-          <p key={index} className="mb-6 text-gray-700 leading-relaxed">
-            {parseLink(section.content)}
-          </p>
-        );
-      
       default:
         return (
-          <div key={index} className="p-4 bg-red-100 border border-red-300 rounded mb-4">
-            <p className="text-red-700">Unknown section type: {section.type}</p>
-            <pre className="text-xs text-gray-600 mt-2">
+          <div key={idx} className="p-4 bg-red-100 border border-red-300 rounded mb-4">
+            <p className="text-red-700 mb-2">
+              Unknown section type: {section.type}
+            </p>
+            <pre className="text-xs text-gray-600">
               {JSON.stringify(section, null, 2)}
             </pre>
           </div>
@@ -294,7 +299,6 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      {/* Article Header */}
       <header className="mb-8">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
           {article.title}
@@ -306,8 +310,7 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
         </div>
       </header>
 
-      {/* Article Content */}
-      <div className="prose prose-lg max-w-none">
+      <div className="prose prose-lg max-w-none text-gray-700">
         {article.content.sections.map(renderSection)}
       </div>
     </div>
