@@ -1,0 +1,65 @@
+{
+    "id": "16820",
+    "title": "The University of Melbourne unveils new master plan",
+    "slug": "the-university-of-melbourne-unveils-new-master-plan",
+    "excerpt": "The University of Melbourne has launched its new Estate Master Plan, a blueprint to guide the redevelopment of the university's campuses. Key components of the vision outlined in the master plan include more pedestrian-friendly thoroughfares, inter-connected green spaces, and renewal of education and research facilities.",
+    "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/08/The-University-of-Melbourne-unveils-new-master-plan.png",
+    "imageAlt": "The University of Melbourne has launched its new Estate Master Plan, a blueprint to guide the redevelopment of the university's campuses.",
+    "publishDate": "2023-08-15",
+    "author": "Building Environs",
+    "category": "construction",
+    "readTime": "3 min read",
+    "content": {
+      "sections": [
+        {
+          "type": "hero_image",
+          "src": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/08/The-University-of-Melbourne-unveils-new-master-plan.png",
+          "alt": "The University of Melbourne has launched its new Estate Master Plan, a blueprint to guide the redevelopment of the university's campuses.",
+          "layout": "full_width",
+          "width": "812px",
+          "height": "545px",
+          "caption": "Image credit: University of Melbourne"
+        },
+        {
+          "type": "paragraph",
+          "content": "The University of Melbourne has launched its new [Estate Master Plan](https://www.unimelb.edu.au/master-planning), a blueprint to guide the redevelopment of the university's campuses.",
+          "layout": "full_width"
+        },
+        {
+          "type": "paragraph",
+          "content": "Key components of the vision outlined in the master plan include more pedestrian-friendly thoroughfares, inter-connected green spaces, and renewal of education and research facilities.",
+          "layout": "full_width"
+        },
+        {
+          "type": "paragraph",
+          "content": "Public space is the big winner, with the University to create some 22,000 square metres of green space at Parkville, to be shared by students and the community.",
+          "layout": "full_width"
+        },
+        {
+          "type": "paragraph",
+          "content": "The master plan comes after an 18-month consultation with University and community stakeholders.",
+          "layout": "full_width"
+        },
+        {
+          "type": "paragraph",
+          "content": "Other features of the master plan include:",
+          "layout": "full_width"
+        },
+        {
+          "type": "bullet_list",
+          "items": [
+            "Revitalization of medical and health sciences research facilities in line with the State Government's Royal Melbourne Hospital redevelopment initiative",
+            "Upgrading outdated science and engineering facilities for teaching and research",
+            "Conserving and enlarging vital open spaces, gardens, and tree canopies to lessen urban heat island effects and air pollution, and enhance carbon sequestration and storage",
+            "Safeguarding and adaptive reuse of multiple heritage-listed structures to maintain and enrich the campus ambience and wider community identity"
+          ],
+          "layout": "full_width"
+        },
+        {
+          "type": "centered_content",
+          "content": "**Want more planning and construction news?**\n\n*[Visit our news and articles page.](https://www.buildingenvirons.com.au/news/)*",
+          "layout": "full_width"
+        }
+      ]
+    }
+  }

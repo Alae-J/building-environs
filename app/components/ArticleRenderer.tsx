@@ -13,49 +13,82 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
     text: string,
     linkClass = 'text-blue-600 underline hover:text-blue-800'
   ): React.ReactNode => {
+    // First, handle italic links specifically: *[text](url)*
+    const italicLinkRegex = /(\*\[[^\]]+\]\([^)]*\)\*)/g;
     const linkRegex = /(\[[^\]]+\]\([^)]*\))/g;
-    const segments = text.split(linkRegex).filter(Boolean);
-
-    return segments.map((seg, i) => {
-      // Link?
-      const linkMatch = seg.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
-      if (linkMatch) {
-        const [, label, url] = linkMatch;
-        return (
-          <a
-            key={i}
-            href={url}
-            className={linkClass}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {label}
-          </a>
-        );
-      }
-
-      // Bold / Italic with nested support
-      const parts = seg.split(/(\*\*[^*]*(?:\*[^*]*\*[^*]*)*\*\*|\*[^*]+\*)/g).filter(Boolean);
-      return parts.map((part, j) => {
-        if (/^\*\*.*\*\*$/.test(part)) {
-          // Handle bold with potential nested italic
-          const boldContent = part.slice(2, -2);
-          const nestedParts = boldContent.split(/(\*[^*]+\*)/g).filter(Boolean);
+    
+    // Split by italic links first
+    const italicLinkSegments = text.split(italicLinkRegex).filter(Boolean);
+    
+    return italicLinkSegments.map((seg, i) => {
+      // Check for italic link pattern: *[text](url)*
+      const italicLinkMatch = seg.match(/^\*(\[[^\]]+\]\([^)]*\))\*$/);
+      if (italicLinkMatch) {
+        const linkPart = italicLinkMatch[1];
+        const linkMatch = linkPart.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (linkMatch) {
+          const [, label, url] = linkMatch;
           return (
-            <strong key={`${i}-${j}`}>
-              {nestedParts.map((nestedPart, k) => {
-                if (/^\*[^*]+\*$/.test(nestedPart)) {
-                  return <em key={k}>{nestedPart.slice(1, -1)}</em>;
-                }
-                return <Fragment key={k}>{nestedPart}</Fragment>;
-              })}
-            </strong>
+            <a
+              key={i}
+              href={url}
+              className={`${linkClass} italic`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {label}
+            </a>
           );
         }
-        if (/^\*[^*]+\*$/.test(part)) {
-          return <em key={`${i}-${j}`}>{part.slice(1, -1)}</em>;
+      }
+      
+      // Handle regular content (which may contain regular links and formatting)
+      const segments = seg.split(linkRegex).filter(Boolean);
+      
+      return segments.map((subSeg, j) => {
+        // Regular link?
+        const linkMatch = subSeg.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (linkMatch) {
+          const [, label, url] = linkMatch;
+          return (
+            <a
+              key={`${i}-${j}`}
+              href={url}
+              className={linkClass}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {label}
+            </a>
+          );
         }
-        return <Fragment key={`${i}-${j}`}>{part}</Fragment>;
+
+        // Bold / Italic / Superscript with nested support
+        const parts = subSeg.split(/(\*\*[^*]*(?:\*[^*]*\*[^*]*)*\*\*|\*[^*]+\*|\^[^^]+\^)/g).filter(Boolean);
+        return parts.map((part, k) => {
+          if (/^\*\*.*\*\*$/.test(part)) {
+            // Handle bold with potential nested italic
+            const boldContent = part.slice(2, -2);
+            const nestedParts = boldContent.split(/(\*[^*]+\*)/g).filter(Boolean);
+            return (
+              <strong key={`${i}-${j}-${k}`}>
+                {nestedParts.map((nestedPart, l) => {
+                  if (/^\*[^*]+\*$/.test(nestedPart)) {
+                    return <em key={l}>{nestedPart.slice(1, -1)}</em>;
+                  }
+                  return <Fragment key={l}>{nestedPart}</Fragment>;
+                })}
+              </strong>
+            );
+          }
+          if (/^\*[^*]+\*$/.test(part)) {
+            return <em key={`${i}-${j}-${k}`}>{part.slice(1, -1)}</em>;
+          }
+          if (/^\^[^^]+\^$/.test(part)) {
+            return <sup key={`${i}-${j}-${k}`}>{part.slice(1, -1)}</sup>;
+          }
+          return <Fragment key={`${i}-${j}-${k}`}>{part}</Fragment>;
+        });
       });
     });
   };
@@ -88,10 +121,23 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
     switch (section.type) {
       case 'hero_image': {
         const figWidth = section.width || '800px'
-        const imgWidth = parseInt(figWidth, 10)
-        const imgHeight = section.height
-          ? parseInt(section.height, 10)
-          : Math.round((imgWidth / 800) * 400)
+        const figHeight = section.height || '400px'
+        
+        let imgWidth = parseInt(figWidth, 10)
+        let imgHeight = parseInt(figHeight, 10)
+        
+        // Apply max width and height constraints
+        const maxWidth = 1020
+        const maxHeight = 720
+        
+        if (imgWidth > maxWidth || imgHeight > maxHeight) {
+          const widthRatio = maxWidth / imgWidth
+          const heightRatio = maxHeight / imgHeight
+          const ratio = Math.min(widthRatio, heightRatio)
+          
+          imgWidth = Math.round(imgWidth * ratio)
+          imgHeight = Math.round(imgHeight * ratio)
+        }
       
         // Build a class string that only includes the
         // border + background + padding if caption exists.
@@ -103,7 +149,7 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
         return (
           <figure
             key={idx}
-            style={{ width: figWidth }}
+            style={{ width: `${imgWidth}px` }}
             className={`${baseClasses} ${captionBoxClasses}`}
           >
             <Image
@@ -122,10 +168,6 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
           </figure>
         )
       }
-      
-      
-      
-           
 
       case 'heading': {
         const tag = section.level === 1 ? 'h1' : section.level === 2 ? 'h2' : 'h3';
@@ -254,13 +296,14 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
           </p>
         );
 
-      case 'centered_content':
+        case 'centered_content':
         return (
           <div key={idx} className="mb-6 text-center">
             {section.content?.split('\n\n').map((block, i) => {
-              // Check if this is a bold heading (standalone **text** on its own line)
-              if (/^\*\*[^*]+\*\*$/.test(block.trim())) {
-                const headingText = block.trim().slice(2, -2);
+              // Check if this is a bold heading (standalone **text** with no links)
+              const trimmedBlock = block.trim();
+              if (/^\*\*[^*\[\]]+\*\*$/.test(trimmedBlock)) {
+                const headingText = trimmedBlock.slice(2, -2);
                 // First bold text is H2, subsequent ones are H3
                 const isMainHeading = i === 0;
                 const headingClass = isMainHeading 

@@ -1,5 +1,36 @@
 // app/data/news/articles/index.ts
 
+import heritageControlsDerail from './articles/2023-04-01--heritage-controls-derail-preston-market-redevelopment.json'
+import constructionBegins from './articles/2023-05-01--construction-begins-on-1-billion-solar-skin-tower.json'
+import lendleaseFiles from './articles/2023-05-01--lendlease-files-plans-for-collins-wharf-project.json'
+import victorianGovernment from './articles/2023-05-01--victorian-government-endorses-development-on-iconic-intersection.json'
+import foregoingTheGlossy from './articles/2023-05-12--foregoing-the-glossy-why-choosing-mastery-over-progression-builds-better-careers.json'
+import mccorkellWins from './articles/2023-05-15--mccorkell-wins-remediation-contract-for-425-collins.json'
+import vcatApporves from './articles/2023-05-18--vcat-approves-multi-billion-dollar-forest-hill-project.json'
+import alchemyConstructWins from './articles/2023-06-01--alchemy-construct-wins-contract-for-330-collins-upgrade.json'
+import cityOfMelbourne from './articles/2023-06-01--city-of-melbourne-council-adopts-carlton-heritage-review.json'
+import paulaFoxMelanoma from './articles/2023-06-01--paula-fox-melanoma-and-cancer-centre-reaches-final-stages.json'
+import albaneseGovernment from './articles/2023-06-15--albanese-government-announces-2-billion-social-housing-accelerator.json'
+import canTheBuild from './articles/2023-06-20--can-the-build-to-rent-boom-solve-our-rental-crisis.json'
+import conceptDesignsForNewInfectiousDiseases from './articles/2023-06-20--concept-designs-for-new-infectious-diseases-centre-unveiled.json'
+import farEastConsortium from './articles/2023-07-01--far-east-consortium-to-sell-ritz-carlton-assets.json'
+import lendleaseToDeliver from './articles/2023-07-01--lendlease-to-deliver-queen-victoria-market-revitalisation.json'
+import planningMinister from './articles/2023-07-01--planning-minister-approves-docklands-development-with-australias-longest-escalator.json'
+import employerGone from './articles/2023-07-15--employer-gone-into-administration-heres-what-to-do-next.json'
+import lendleaseToCut from './articles/2023-07-20--lendlease-to-cut-740-jobs-globally.json'
+import developmentVictoria from './articles/2023-07-25--development-victoria-calls-on-developers-to-help-renew-wodonga.json'
+import getEmWhile from './articles/2023-08-01--get-em-while-theyre-young-the-rise-of-construction-companies-working-with-teens.json'
+import logosPartners from './articles/2023-08-01--logos-partners-with-amazon-to-deliver-australias-largest-warehouse.json'
+import piccoloMakes35million from './articles/2023-08-01--piccolo-makes-35-million-kew-park-precinct-purchase.json'
+import theUniversityOfMelbourne from './articles/2023-08-15--the-university-of-melbourne-unveils-new-master-plan.json'
+import cremaConstructions from './articles/2023-08-20--crema-constructions-appointed-to-deliver-110-million-apartment-development.json'
+import geelongsFutureConvention from './articles/2023-08-25--geelongs-future-convention-centre-finally-gets-a-name.json'
+import geelongArtsCentre from './articles/2023-09-01--geelong-arts-centre-opens.json'
+import gurnerAnnounces from './articles/2023-09-01--gurner-announces-armidale-mega-mansions.json'
+import whatHiringManagersLookFor from './articles/2023-09-01--what-hiring-managers-look-for-at-every-stage-of-your-career.json'
+import portPhillip from './articles/2023-09-10--port-phillip-council-proposes-live-music-venue-for-st-kilda-triangle.json'
+import thePrinceOfWales from './articles/2023-09-15--the-prince-of-wales-hotel-hits-the-market.json'
+import hickoryDeliversItsFirstAustralianDataCentre from './articles/2023-09-20--hickory-delivers-its-first-australian-data-centre.json'
 import centralPierSaga from './articles/2023-10-01--central-pier-saga-enters-a-new-phase.json'
 import salterBrothersSet from './articles/2023-10-01--salter-brothers-set-a-new-vision-for-historic-collins-street-address.json'
 import victoriaSetsAmbitiousTarget from './articles/2023-10-15--victoria-sets-ambitious-target-to-replace-44-public-housing-towers.json'
@@ -90,4 +121,35 @@ export const articleMap: Record<string, Article> = {
   [primeCremorneDevelopment.slug]: primeCremorneDevelopment,
   [centralPierSaga.slug]: centralPierSaga,
   [victoriaSetsAmbitiousTarget.slug]: victoriaSetsAmbitiousTarget,
+  [whatHiringManagersLookFor.slug]: whatHiringManagersLookFor,
+  [hickoryDeliversItsFirstAustralianDataCentre.slug]: hickoryDeliversItsFirstAustralianDataCentre,
+  [geelongArtsCentre.slug]: geelongArtsCentre,
+  [thePrinceOfWales.slug]: thePrinceOfWales,
+  [gurnerAnnounces.slug]: gurnerAnnounces,
+  [portPhillip.slug]: portPhillip,
+  [geelongsFutureConvention.slug]: geelongsFutureConvention,
+  [piccoloMakes35million.slug]: piccoloMakes35million,
+  [cremaConstructions.slug]: cremaConstructions,
+  [logosPartners.slug]: logosPartners,
+  [theUniversityOfMelbourne.slug]: theUniversityOfMelbourne,
+  [getEmWhile.slug]: getEmWhile,
+  [planningMinister.slug]: planningMinister,
+  [developmentVictoria.slug]: developmentVictoria,
+  [farEastConsortium.slug]: farEastConsortium,
+  [lendleaseToCut.slug]: lendleaseToCut,
+  [lendleaseToDeliver.slug]: lendleaseToDeliver,
+  [employerGone.slug]: employerGone,
+  [cityOfMelbourne.slug]: cityOfMelbourne,
+  [conceptDesignsForNewInfectiousDiseases.slug]: conceptDesignsForNewInfectiousDiseases,
+  [paulaFoxMelanoma.slug]: paulaFoxMelanoma,
+  [albaneseGovernment.slug]: albaneseGovernment,
+  [alchemyConstructWins.slug]: alchemyConstructWins,
+  [canTheBuild.slug]: canTheBuild,
+  [constructionBegins.slug]: constructionBegins,
+  [vcatApporves.slug]: vcatApporves,
+  [lendleaseFiles.slug]: lendleaseFiles,
+  [mccorkellWins.slug]: mccorkellWins,
+  [victorianGovernment.slug]: victorianGovernment,
+  [foregoingTheGlossy.slug]: foregoingTheGlossy,
+  [heritageControlsDerail.slug]: heritageControlsDerail,
 }

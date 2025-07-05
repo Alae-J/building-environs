@@ -1,0 +1,55 @@
+{
+    "id": "16960",
+    "title": "Hickory delivers its first Australian data centre",
+    "slug": "hickory-delivers-its-first-australian-data-centre",
+    "excerpt": "Hickory has delivered its first hyperscale data centre in West Melbourne in partnership with STACK Infrastructure. The facility, known as MEL01, is located on a 3.6-hectare site and is powered by a 105MW dedicated, onsite substation.",
+    "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/09/Hickory-delivers-its-first-Australian-data-centre.jpg",
+    "imageAlt": "Hickory has delivered its first hyperscale data centre in West Melbourne in partnership with STACK Infrastructure.",
+    "publishDate": "2023-09-20",
+    "author": "Building Environs",
+    "category": "construction",
+    "readTime": "2 min read",
+    "content": {
+      "sections": [
+        {
+          "type": "hero_image",
+          "src": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/09/Hickory-delivers-its-first-Australian-data-centre.jpg",
+          "alt": "Hickory has delivered its first hyperscale data centre in West Melbourne in partnership with STACK Infrastructure.",
+          "layout": "full_width",
+          "width": "900px",
+          "height": "540px",
+          "caption": "Image credit: STACK Infrastructure"
+        },
+        {
+          "type": "paragraph",
+          "content": "Hickory has delivered its first hyperscale data centre in West Melbourne in partnership with [STACK Infrastructure](https://www.stackinfra.com/).",
+          "layout": "full_width"
+        },
+        {
+          "type": "paragraph",
+          "content": "The facility, known as MEL01, is located on a 3.6-hectare site and is powered by a 105MW dedicated, onsite substation. It has a 72MW capacity split between two 36MW facilities.",
+          "layout": "full_width"
+        },
+        {
+          "type": "paragraph",
+          "content": "Each facility has its own access points and fibre entry points, enabling multiple tenants to use the site while maintaining separate security and services.",
+          "layout": "full_width"
+        },
+        {
+          "type": "paragraph",
+          "content": "Data centres are growing in number across Australia, fuelled by the growing use of technology at home and work, and national data sovereignty laws. Hickory, being owned and operated within Australia, meets the sovereignty data centre criteria – enabling it to deliver the project.",
+          "layout": "full_width"
+        },
+        {
+          "type": "paragraph",
+          "content": "STACK Infrastructure partners with some of the world's most innovative companies, and is a leading global developer and operator of data centres. It operates two other Australian data centres in Perth and Canberra.",
+          "layout": "full_width"
+        },
+        {
+          "type": "centered_content",
+          "content": "**Want to get a piece of the action on some of Melbourne's most iconic builds?**\n\n**Head to the Building Environs website to** [view exciting – and available – positions in some of Melbourne's biggest firms.](https://www.buildingenvirons.com.au/jobs/)",
+          "layout": "full_width"
+        }
+      ]
+    }
+  }
