@@ -1,0 +1,36 @@
+{
+    "id": "test-1",
+    "title": "Test Article: Dynamic Layout System",
+    "slug": "test-article-dynamic-layout",
+    "excerpt": "Testing our new JSON-based article system",
+    "featuredImage": "/images/news/cover-photo-june-2025-blog-1.png",
+    "imageAlt": "Test article",
+    "publishDate": "2025-01-01",
+    "author": "Test Author",
+    "content": {
+      "sections": [
+        {
+          "type": "paragraph",
+          "content": "This is a test paragraph to see if our basic text rendering works.",
+          "layout": "full_width"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "content": "This is a Test Heading",
+          "layout": "full_width"
+        },
+        {
+          "type": "hero_image",
+          "src": "/images/news/cover-photo-june-2025-blog-1.png",
+          "alt": "Test hero image",
+          "layout": "full_width"
+        },
+        {
+          "type": "paragraph",
+          "content": "Another paragraph after the image to test the flow.",
+          "layout": "full_width"
+        }
+      ]
+    }
+  }

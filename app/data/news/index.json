@@ -1,0 +1,67 @@
+{
+    "featured": [
+      {
+        "id": "19280",
+        "order": 2,
+        "title": "What Melbourne's Best in Construction & Property Do to Get the Guernsey",
+        "slug": "what-melbournes-best-in-construction-property-do-to-get-the-guernsey",
+        "excerpt": "In footy, it's the guernsey that matters. Not just because it says, 'You're in the side,' but because it says, 'We back you.' And in recruitment, especially in Melbourne's construction and property sector, it's not all that different…",
+        "featuredImage": "/images/news/cover-photo-blog-may-2025.png",
+        "imageAlt": "What Melbourne's Best in Construction & Property Do to Get the Guernsey cover image",
+        "publishDate": "2025-05-01"
+      },
+      {
+        "id": "19347",
+        "order": 1,
+        "title": "Salary Review Season: Where Everyone's Underpaid (Just Ask Them)",
+        "slug": "salary-review-season-where-everyones-underpaid-just-ask-them",
+        "excerpt": "Every year like clockwork, the same thing happens. We hit the end of financial year, and suddenly the air thickens with passive-aggressive calendar invites titled 'Annual Review'…",
+        "featuredImage": "/images/news/cover-photo-june-2025-blog-1.png",
+        "imageAlt": "Cover photo - June 2025 blog",
+        "publishDate": "2025-06-26"
+      },
+      {
+        "id": "19348",
+        "order": 8,
+        "title": "The Hidden Costs of Chasing the Money",
+        "slug": "the-hidden-costs-of-chasing-the-money",
+        "excerpt": "There's been a lot of noise on social media lately, debating whether Gen Z is wrong for changing jobs early and often, all in pursuit of higher pay…",
+        "featuredImage": "/images/news/october-blog-cover-photo-cropped.png",
+        "imageAlt": "The Hidden Costs of Chasing the Money cover image",
+        "publishDate": "2025-07-04"
+      }
+    ],
+    "articles": [
+      {
+        "id": "19280",
+        "order": 2,
+        "title": "What Melbourne's Best in Construction & Property Do to Get the Guernsey",
+        "slug": "what-melbournes-best-in-construction-property-do-to-get-the-guernsey",
+        "excerpt": "In footy, it's the guernsey that matters. Not just because it says, 'You're in the side,' but because it says, 'We back you.' And in recruitment, especially in Melbourne's construction and property sector, it's not all that different…",
+        "featuredImage": "/images/news/cover-photo-blog-may-2025.png",
+        "imageAlt": "What Melbourne's Best in Construction & Property Do to Get the Guernsey cover image",
+        "publishDate": "2025-05-01"
+      },
+      {
+        "id": "19347",
+        "order": 1,
+        "title": "Salary Review Season: Where Everyone's Underpaid (Just Ask Them)",
+        "slug": "salary-review-season-where-everyones-underpaid-just-ask-them",
+        "excerpt": "Every year like clockwork, the same thing happens. We hit the end of financial year, and suddenly the air thickens with passive-aggressive calendar invites titled 'Annual Review'…",
+        "featuredImage": "/images/news/cover-photo-june-2025-blog-1.png",
+        "imageAlt": "Cover photo - June 2025 blog",
+        "publishDate": "2025-06-26"
+      },
+      {
+        "id": "19348",
+        "order": 8,
+        "title": "The Hidden Costs of Chasing the Money",
+        "slug": "the-hidden-costs-of-chasing-the-money",
+        "excerpt": "There's been a lot of noise on social media lately, debating whether Gen Z is wrong for changing jobs early and often, all in pursuit of higher pay…",
+        "featuredImage": "/images/news/october-blog-cover-photo-cropped.png",
+        "imageAlt": "The Hidden Costs of Chasing the Money cover image",
+        "publishDate": "2025-07-04"
+      }
+    ]
+  }
+  
