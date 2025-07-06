@@ -15,9 +15,6 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
   ): React.ReactNode => {
     // First, handle italic links specifically: *[text](url)*
     const italicLinkRegex = /(\*\[[^\]]+\]\([^)]*\)\*)/g;
-    const linkRegex = /(\[[^\]]+\]\([^)]*\))/g;
-    
-    // Split by italic links first
     const italicLinkSegments = text.split(italicLinkRegex).filter(Boolean);
     
     return italicLinkSegments.map((seg, i) => {
@@ -42,52 +39,91 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
         }
       }
       
-      // Handle regular content (which may contain regular links and formatting)
-      const segments = seg.split(linkRegex).filter(Boolean);
+      // Handle bold FIRST, before processing links
+      const boldParts = seg.split(/(\*\*[^*]+(?:\*[^*]*\*[^*]*)*[^*]*\*\*)/g).filter(Boolean);
       
-      return segments.map((subSeg, j) => {
-        // Regular link?
-        const linkMatch = subSeg.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
-        if (linkMatch) {
-          const [, label, url] = linkMatch;
+      return boldParts.map((boldPart, j) => {
+        if (/^\*\*.*\*\*$/.test(boldPart)) {
+          // This is bold text - extract content and handle links within it
+          const boldContent = boldPart.slice(2, -2);
+          
+          // Process links within bold content
+          const linkRegex = /(\[[^\]]+\]\([^)]*\))/g;
+          const linkSegments = boldContent.split(linkRegex).filter(Boolean);
+          
           return (
-            <a
-              key={`${i}-${j}`}
-              href={url}
-              className={linkClass}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {label}
-            </a>
+            <strong key={`${i}-${j}`}>
+              {linkSegments.map((linkSeg, k) => {
+                const linkMatch = linkSeg.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+                if (linkMatch) {
+                  const [, label, url] = linkMatch;
+                  return (
+                    <a
+                      key={k}
+                      href={url}
+                      className={linkClass}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {label}
+                    </a>
+                  );
+                }
+                // Handle italic within bold
+                const parts = linkSeg.split(/(\*[^*]+\*|\^[^^]+\^)/g).filter(Boolean);
+                return (
+                  <Fragment key={k}>
+                    {parts.map((part, l) => {
+                      if (/^\*[^*]+\*$/.test(part)) {
+                        return <em key={l}>{part.slice(1, -1)}</em>;
+                      }
+                      if (/^\^[^^]+\^$/.test(part)) {
+                        return <sup key={l}>{part.slice(1, -1)}</sup>;
+                      }
+                      return <Fragment key={l}>{part}</Fragment>;
+                    })}
+                  </Fragment>
+                );
+              })}
+            </strong>
           );
         }
-
-        // Bold / Italic / Superscript with nested support
-        const parts = subSeg.split(/(\*\*[^*]*(?:\*[^*]*\*[^*]*)*\*\*|\*[^*]+\*|\^[^^]+\^)/g).filter(Boolean);
-        return parts.map((part, k) => {
-          if (/^\*\*.*\*\*$/.test(part)) {
-            // Handle bold with potential nested italic
-            const boldContent = part.slice(2, -2);
-            const nestedParts = boldContent.split(/(\*[^*]+\*)/g).filter(Boolean);
+        
+        // Handle non-bold content - process links and other formatting
+        const linkRegex = /(\[[^\]]+\]\([^)]*\))/g;
+        const segments = boldPart.split(linkRegex).filter(Boolean);
+        
+        return segments.map((subSeg, k) => {
+          const linkMatch = subSeg.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+          if (linkMatch) {
+            const [, label, url] = linkMatch;
             return (
-              <strong key={`${i}-${j}-${k}`}>
-                {nestedParts.map((nestedPart, l) => {
-                  if (/^\*[^*]+\*$/.test(nestedPart)) {
-                    return <em key={l}>{nestedPart.slice(1, -1)}</em>;
-                  }
-                  return <Fragment key={l}>{nestedPart}</Fragment>;
-                })}
-              </strong>
+              <a
+                key={`${i}-${j}-${k}`}
+                href={url}
+                className={linkClass}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {label}
+              </a>
             );
           }
-          if (/^\*[^*]+\*$/.test(part)) {
-            return <em key={`${i}-${j}-${k}`}>{part.slice(1, -1)}</em>;
-          }
-          if (/^\^[^^]+\^$/.test(part)) {
-            return <sup key={`${i}-${j}-${k}`}>{part.slice(1, -1)}</sup>;
-          }
-          return <Fragment key={`${i}-${j}-${k}`}>{part}</Fragment>;
+  
+          const parts = subSeg.split(/(\*[^*]+\*|\^[^^]+\^)/g).filter(Boolean);
+          return (
+            <Fragment key={`${i}-${j}-${k}`}>
+              {parts.map((part, l) => {
+                if (/^\*[^*]+\*$/.test(part)) {
+                  return <em key={l}>{part.slice(1, -1)}</em>;
+                }
+                if (/^\^[^^]+\^$/.test(part)) {
+                  return <sup key={l}>{part.slice(1, -1)}</sup>;
+                }
+                return <Fragment key={l}>{part}</Fragment>;
+              })}
+            </Fragment>
+          );
         });
       });
     });
@@ -169,6 +205,56 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
         )
       }
 
+      case 'standalone_image': {
+        const figWidth = section.width || '800px'
+        const figHeight = section.height || '400px'
+      
+        let imgWidth = parseInt(figWidth, 10)
+        let imgHeight = parseInt(figHeight, 10)
+      
+        // Apply max width and height constraints
+        const maxWidth = 1020
+        const maxHeight = 720
+      
+        if (imgWidth > maxWidth || imgHeight > maxHeight) {
+          const widthRatio = maxWidth / imgWidth
+          const heightRatio = maxHeight / imgHeight
+          const ratio = Math.min(widthRatio, heightRatio)
+      
+          imgWidth = Math.round(imgWidth * ratio)
+          imgHeight = Math.round(imgHeight * ratio)
+        }
+      
+        // no float, full block-level figure, left-aligned by default
+        const baseClasses = 'mb-8 w-full'
+        const captionBoxClasses = section.caption
+          ? 'bg-gray-100 border border-gray-300 px-2 py-2'
+          : ''
+      
+        return (
+          <figure
+            key={idx}
+            style={{ maxWidth: `${imgWidth}px` }}
+            className={`${baseClasses} ${captionBoxClasses}`}
+          >
+            <Image
+              src={section.src!}
+              alt={section.alt || ''}
+              width={imgWidth}
+              height={imgHeight}
+              className="w-full h-auto rounded-lg"
+            />
+      
+            {section.caption && (
+              <figcaption className="mt-1 text-xs text-gray-400 text-center">
+                {section.caption}
+              </figcaption>
+            )}
+          </figure>
+        )
+      }
+      
+
       case 'heading': {
         const tag = section.level === 1 ? 'h1' : section.level === 2 ? 'h2' : 'h3';
         const sizeClass =
@@ -188,9 +274,18 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
       }
 
       case 'paragraph':
-        // All paragraph links in red now:
         return (
           <div key={idx} className="mb-6 leading-relaxed">
+            {renderTextContent(
+              section.content || '',
+              'text-red-600 underline hover:text-red-700'
+            )}
+          </div>
+        );
+
+      case 'italic_text':
+        return (
+          <div key={idx} className="mb-6 leading-relaxed italic text-gray-600">
             {renderTextContent(
               section.content || '',
               'text-red-600 underline hover:text-red-700'
@@ -205,7 +300,6 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
               <li key={i} className="flex">
                 <span className="inline-block w-1.5 h-1.5 bg-gray-600 rounded-full mt-2.5 mr-3 flex-shrink-0" />
                 <div className="leading-relaxed">
-                  {/* bullet-list links are now RED */}
                   {parseFormattedText(
                     item,
                     'text-red-600 underline hover:text-red-700'
@@ -214,6 +308,50 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
               </li>
             ))}
           </ul>
+        );
+
+      case 'ordered_list':
+        return (
+          <ol key={idx} className="mb-6 space-y-3 list-decimal list-inside">
+            {section.items?.map((item, i) => (
+              <li key={i} className="leading-relaxed pl-2">
+                {parseFormattedText(
+                  item,
+                  'text-red-600 underline hover:text-red-700'
+                )}
+              </li>
+            ))}
+          </ol>
+        );
+
+      case 'bold_text':
+        return (
+          <p key={idx} className="text-base font-bold mb-4 text-center">
+            {parseFormattedText(
+              section.content || '',
+              'text-red-600 underline hover:text-red-700'
+            )}
+          </p>
+        );
+
+        case 'centered_italic':
+          return (
+            <div key={idx} className="mb-6 text-center italic text-gray-600">
+              {parseFormattedText(
+                section.content || '',
+                'text-red-600 underline hover:text-red-700'
+              )}
+            </div>
+          );        
+
+      case 'bold_paragraph':
+        return (
+          <h2 key={idx} className="text-2xl font-bold mb-4 leading-relaxed">
+            {parseFormattedText(
+              section.content || '',
+              'text-red-600 underline hover:text-red-700'
+            )}
+          </h2>
         );
 
       case 'image_with_text':
@@ -296,14 +434,14 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
           </p>
         );
 
-        case 'centered_content':
+      case 'centered_content':
         return (
           <div key={idx} className="mb-6 text-center">
             {section.content?.split('\n\n').map((block, i) => {
-              // Check if this is a bold heading (standalone **text** with no links)
+              // Check if this is a bold heading (standalone **text** that may contain links)
               const trimmedBlock = block.trim();
-              if (/^\*\*[^*\[\]]+\*\*$/.test(trimmedBlock)) {
-                const headingText = trimmedBlock.slice(2, -2);
+              if (/^\*\*.*\*\*$/.test(trimmedBlock)) {
+                const headingContent = trimmedBlock.slice(2, -2);
                 // First bold text is H2, subsequent ones are H3
                 const isMainHeading = i === 0;
                 const headingClass = isMainHeading 
@@ -314,7 +452,7 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
                 return React.createElement(
                   HeadingTag,
                   { key: i, className: headingClass },
-                  headingText
+                  parseFormattedText(headingContent, 'text-red-600 underline hover:text-red-700')
                 );
               }
               return (
@@ -323,6 +461,16 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
                 </p>
               );
             })}
+          </div>
+        );
+
+      case 'contact_info':
+        return (
+          <div key={idx} className="mb-6 leading-relaxed text-center bg-gray-50 p-4 rounded-lg">
+            {renderTextContent(
+              section.content || '',
+              'text-red-600 underline hover:text-red-700'
+            )}
           </div>
         );
 
@@ -350,6 +498,18 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
           <span>{article.publishDate}</span>
           <span className="mx-2">•</span>
           <span>{article.author}</span>
+          {article.category && (
+            <>
+              <span className="mx-2">•</span>
+              <span className="capitalize">{article.category}</span>
+            </>
+          )}
+          {article.readTime && (
+            <>
+              <span className="mx-2">•</span>
+              <span>{article.readTime}</span>
+            </>
+          )}
         </div>
       </header>
 

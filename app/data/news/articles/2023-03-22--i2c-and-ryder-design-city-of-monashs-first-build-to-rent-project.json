@@ -1,0 +1,65 @@
+{
+    "id": "16102",
+    "title": "i2C and Ryder design City of Monash's first build-to-rent project",
+    "slug": "i2c-and-ryder-design-city-of-monashs-first-build-to-rent-project",
+    "excerpt": "Oakleigh will soon be home to the City of Monash's first build-to-rent (BTR) development, to be known as Fieldworks House.",
+    "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/03/i2C-and-Ryder-design-City-of-Monashs-first-build-to-rent-project.jpg",
+    "imageAlt": "Oakleigh will soon be home to the City of Monash's first build-to-rent (BTR) development, to be known as Fieldworks House.",
+    "publishDate": "2023-03-22",
+    "author": "Building Environs",
+    "category": "development",
+    "readTime": "3 min read",
+    "content": {
+      "sections": [
+        {
+          "type": "hero_image",
+          "src": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/03/i2C-and-Ryder-design-City-of-Monashs-first-build-to-rent-project.jpg",
+          "alt": "Oakleigh will soon be home to the City of Monash's first build-to-rent (BTR) development, to be known as Fieldworks House.",
+          "layout": "full_width",
+          "width": "850px",
+          "height": "564px",
+          "caption": "Image credit: i2C"
+        },
+        {
+          "type": "paragraph",
+          "content": "Oakleigh will soon be home to the City of Monash's first build-to-rent (BTR) development, to be known as Fieldworks House.",
+          "layout": "full_width"
+        },
+        {
+          "type": "paragraph",
+          "content": "Designed for Pellicano, the $250 million development will feature an abundance of indoor and outdoor amenities servicing 171 apartments, including:",
+          "layout": "full_width"
+        },
+        {
+          "type": "bullet_list",
+          "items": [
+            "12 retail spaces",
+            "A co-working space",
+            "A private health and wellness rooftop retreat",
+            "Locally inspired artwork on the building's exterior."
+          ],
+          "layout": "full_width"
+        },
+        {
+          "type": "paragraph",
+          "content": "[i2C](https://i2c.com.au/) and [Ryder](https://www.ryderarchitecture.com/) have honoured Oakleigh's history in the design of the build through a considered selection of exterior finishes. This includes the use of exposed brick to salute Oakleigh South's strong bricklaying history and industrial aesthetic.",
+          "layout": "full_width"
+        },
+        {
+          "type": "paragraph",
+          "content": "As the first BTR development in the municipality, i2C hopes Fieldworks House will 'set the standard for future development in the area.'",
+          "layout": "full_width"
+        },
+        {
+          "type": "paragraph",
+          "content": "Fieldworks House is not the architecture firm's first BTR project. They're also involved in Boyd Southbank, which encompasses 434 BTR apartments – 40 of which are affordable units.",
+          "layout": "full_width"
+        },
+        {
+          "type": "centered_content",
+          "content": "**Want more planning and construction news?**\n\n**[Visit our news and articles page.](https://www.buildingenvirons.com.au/news/)**",
+          "layout": "full_width"
+        }
+      ]
+    }
+  }

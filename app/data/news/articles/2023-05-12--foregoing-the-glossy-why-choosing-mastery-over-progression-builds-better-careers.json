@@ -233,8 +233,13 @@
           }
         },
         {
-          "type": "centered_content",
-          "content": "**If you need advice on how to master your profession – and create a plan for progression – get in touch with me, Martin Preece. You can [send an online message](https://www.buildingenvirons.com.au/contact-us/), or call directly on 0400 934 025.**\n\n**To hear my full interview on This Working life, [head to the ABC website](https://www.abc.net.au/radionational/programs/this-working-life/glossy-work/102232188).**",
+          "type": "bold_paragraph",
+          "content": "**If you need advice on how to master your profession – and create a plan for progression – get in touch with me, Martin Preece. You can [send an online message](https://www.buildingenvirons.com.au/contact-us/), or call directly on 0400 934 025.**",
+          "layout": "full_width"
+        },
+        {
+          "type": "bold_paragraph", 
+          "content": "**To hear my full interview on This Working life, [head to the ABC website](https://www.abc.net.au/radionational/programs/this-working-life/glossy-work/102232188).**",
           "layout": "full_width"
         }
       ]

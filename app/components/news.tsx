@@ -1,10 +1,10 @@
 // pages/news.tsx
 import { GetStaticProps } from 'next';
 import React from 'react';
-import Banner from '../components/Banner';
 import MainContent from '../components/MainContent';
 import PostsSlider, { BlogPost } from '../components/PostsSlider';
 import SearchFilter from '../components/SearchFilter';
+import Banner from './NewsBanner';
 
 // You would typically have a Navbar component as well
 // import Navbar from '../components/Navbar';

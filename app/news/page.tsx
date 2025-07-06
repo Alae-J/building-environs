@@ -2,9 +2,9 @@
 "use client";
 
 import ArticlesGrid from '../components/ArticlesGrid';
-import Banner from '../components/Banner';
 import FeaturedSlider, { BlogPost } from '../components/FeaturedSlider';
 import PageLayout from '../components/Layout/PageLayout';
+import Banner from '../components/NewsBanner';
 import SearchFilter from '../components/SearchFilter';
 import indexData from '../data/news/index.json';
 

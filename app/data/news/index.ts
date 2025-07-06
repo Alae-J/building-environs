@@ -1,6 +1,93 @@
 // app/data/news/articles/index.ts
 
+import dontBaseYourDecisions from './articles/2020-06-15--don-t-base-your-decisions-on-the-advice-of-those-who-don-t-have-to-deal-with-the-results.json'
+import commensurateWithExperienceSo from './articles/2020-06-18--commensurate-with-experience-so-what-does-it-mean.json'
+import wantToKnow from './articles/2020-07-22--want-to-know-you-market-value-in-a-pandemic.json'
+import zoomInterviewTips from './articles/2020-07-26--zoom-interview-tips.json'
+import yourLinkedinProfile from './articles/2020-07-29--your-linkedin-profile-key-items-to-assist-with-your-job-search.json'
+import howToEngageWith from './articles/2020-07-30--how-to-engage-with-a-recruiter-during-the-pandemic.json'
+import theProsAndCons from './articles/2021-01-20--the-pro-s-and-con-s-of-contingent-recruitment-no-placement-no-fee.json'
+import hasYourBusiness from './articles/2021-03-16--has-your-business-fully-considered-all-elements-of-wfh.json'
+import announcingBuilding from './articles/2021-03-25--announcing-building-environs-recruitment-headway-dna-partnership.json'
+import whyARetainedSearch from './articles/2021-03-26--why-a-retained-search-is-the-better-solution-for-hiring.json'
+import equalityDiscrimination from './articles/2021-07-06--equality-discrimination-in-the-recruitment-process.json'
+import useImmigration from './articles/2021-08-10--use-immigration-to-solve-skills-shortages.json'
+import processOfRetained from './articles/2021-09-21--process-of-retained-assignments.json'
+import itsComing from './articles/2021-10-17--it-s-coming-the-great-resignation.json'
+import retainReTrain from './articles/2021-11-17--retain-re-train-and-entice-the-best.json'
+import employeeValueProposition from './articles/2021-12-16--employee-value-proposition-evp.json'
+import offeringFlexibility from './articles/2022-01-31--offering-flexibility-in-the-workplace-not-yoga-related.json'
+import whyExclusivity from './articles/2022-03-25--why-exclusivity-is-better.json'
+import cityOfMelbourneEmbraces from './articles/2022-07-01--city-of-melbourne-embraces-the-most-ambitious-planning-policy-since-melbourne-3000.json'
+import gurnerWins from './articles/2022-07-01--gurner-wins-approval-for-40m-club-maison-project.json'
+import latestDevelopments from './articles/2022-07-01--latest-developments-in-the-greater-melbourne-commercial-construction-and-property-sector.json'
+import singaporeanFirm from './articles/2022-07-01--singaporean-firm-hthree-city-buys-melbourne-office-tower-for-236m.json'
+import viclandLodges from './articles/2022-07-01--vicland-lodges-plans-for-12-storey-office-building-in-cremorne.json'
+import findingThePerfect from './articles/2022-07-03--finding-the-perfect-hybrid-work-arrangement-for-the-construction-industry.json'
+import kaneConstructions from './articles/2022-07-05--kane-constructions-appointed-to-deliver-the-paula-fox-melanoma-and-cancer-centre.json'
+import pomeroyPacific from './articles/2022-07-08--pomeroy-pacific-appointed-to-deliver-11-new-government-schools.json'
+import workOfficially from './articles/2022-07-15--work-officially-begins-on-the-melbourne-arts-precinct-project.json'
+import brookfieldLodges from './articles/2022-08-01--brookfield-lodges-plans-for-470-bed-student-accommodation-tower-in-carlton.json'
+import buildingTheRoad from './articles/2022-08-01--building-the-road-less-travelled.json'
+import charterHallSnaps from './articles/2022-08-01--charter-hall-snaps-up-collins-place-in-65-million-deal.json'
+import seeingDouble from './articles/2022-08-10--seeing-double-the-victorian-government-launches-digital-twin.json'
+import forwardThinking from './articles/2022-08-15--forward-thinking-solar-skin-building-by-cbus-gets-the-go-ahead.json'
+import onboardingNewHires from './articles/2022-08-22--onboarding-new-hires-seven-steps-to-getting-it-right-and-one-common-mistake-to-avoid.json'
+import constructinoManagers from './articles/2022-08-24--construction-managers-and-civil-engineers-top-the-list-of-most-in-demand-jobs.json'
+import buildingEnvirons from './articles/2022-09-01--building-environs-and-widac-partner-for-upcoming-luncheon.json'
+import hinesDoublesDown from './articles/2022-09-01--hines-doubles-down-on-cbd-office-strategy-announcing-1-billion-tower-at-600-collins.json'
+import melbourneCityCouncilRejects from './articles/2022-09-01--melbourne-city-council-rejects-development-plans-for-former-cancer-council-site.json'
+import melbourneCouncilEndorses from './articles/2022-09-01--melbourne-council-endorses-300-million-greenline-project.json'
+import philanthropyTakesCentre from './articles/2022-09-01--philanthropy-takes-centre-stage-as-hickory-breaks-ground-at-melbourne-walk.json'
+import robertCoAwarded from './articles/2022-09-01--roberts-co-awarded-contract-for-92-million-oasis-residences.json'
+import theThreeGhosts from './articles/2022-09-01--the-three-ghosts-of-recruitment-a-cautionary-tale.json'
+import threeContractors from './articles/2022-09-01--three-contractors-compete-for-hawthorn-fc-kennedy-centre-contract.json'
+import melbourneCityCouncil from './articles/2022-09-30--melbourne-city-council-approves-plans-for-acciona-geotechs-new-31-storey-headquarters.json'
+import delwpApproves from './articles/2022-10-01--delwp-approves-plans-for-fitzroy-gasworks.json'
+import masterBuilders from './articles/2022-10-01--master-builders-victoria-kicks-off-post-covid-research-project.json'
+import melbourneCity from './articles/2022-10-01--melbourne-city-council-urges-developers-to-contribute-to-net-zero-strategy.json'
+import oreanaGroupSubmits from './articles/2022-10-01--oreana-group-submits-plans-for-250-million-south-yarra-development.json'
+import oneSizeDoesNotFit from './articles/2022-10-06--one-size-does-not-fit-all-contingent-recruitment-vs-retained-recruitment-models.json'
+import iconWinsConstruction from './articles/2022-10-18--icon-wins-construction-contract-for-600-lonsdale.json'
+import gurnerAdds from './articles/2022-10-20--gurner-adds-1-75billion-dockland-precinct-to-his-portfolio.json'
+import buildingEngineering from './articles/2022-10-25--building-engineering-donald-cant-watts-corke-break-ground-at-40-million-melbourne-polytechnic-project.json'
+import loweLivingSubmitsPlans from './articles/2022-10-28--lowe-living-submits-plans-for-160-million-south-melbourne-development.json'
+import cityOfMelbourneApproves from './articles/2022-11-01--city-of-melbourne-approves-bolte-build-to-rent-project.json'
+import demolitionCommeces from './articles/2022-11-01--demolition-commences-for-the-aikenhead-centre-for-medical-discovery-acmd.json'
+import whyExitInterviews from './articles/2022-11-20--why-exit-interviews-are-important-and-how-to-get-them-right.json'
+import plansFiledForSite from './articles/2022-11-25--plans-filed-for-site-of-the-former-corkman-pub.json'
+import constructionComplete from './articles/2022-11-30--construction-complete-on-the-victorian-heart-hospital-in-clayton.json'
+import seventyMillionInDebt from './articles/2022-12-01--70-million-in-debt-finance-granted-to-hines-t3-collingwood-project.json'
+import futureCommittee from './articles/2022-12-01--future-melbourne-committee-approves-nine-storey-towers-behind-young-jackson-hotel.json'
+import getYourEvpOn from './articles/2022-12-01--get-your-evp-on.json'
+import severalCbdTowers from './articles/2022-12-05--several-cbd-towers-win-ctbuh-awards.json'
+import donaldCantWatts from './articles/2022-12-1--donald-cant-watts-corke-wins-melbourne-university-contract.json'
+import gurnerEntersTheWellness from './articles/2022-12-15--gurner-enters-the-wellness-market-with-saint-haven-concept.json'
+import suspiciousMindsHowTrustIssues from './articles/2023-01-28--suspicious-minds-how-trust-issues-are-jeopardising-workplace-flexibility.json'
+import hinesSubmitsPlans from './articles/2023-02-18--hines-submits-plans-for-build-to-rent-tower-in-south-melbourne.json'
+import riverleeWinsApproval from './articles/2023-02-20--riverlee-wins-approval-for-2-billion-mini-city-in-epping.json'
+import twoNewResdential from './articles/2023-02-22--two-new-residential-communities-slated-for-melbournes-north-west.json'
+import newAndImproved from './articles/2023-02-25--new-and-improved-wonthaggi-hospital-opens-its-doors.json'
+import planGroupWrapsUp from './articles/2023-02-25--plan-group-wraps-up-construction-of-cardiac-catheter-lab-at-royal-melbourne-hospital.json'
+import multiplexReaches from './articles/2023-02-28--multiplex-reaches-practical-completion-of-anmf-hotel-5-weeks-ahead-of-schedule.json'
+import tooBigTooSmall from './articles/2023-02-28--too-big-too-small-or-just-right-5-questions-to-help-you-decide-which-construction-tier-to-work-next.json'
+import millionApartmentSale from './articles/2023-03-08--38-million-apartment-sale-smashes-melbourne-record.json'
+import multiplexAwarded from './articles/2023-03-10--multiplex-awarded-contract-for-moderna-mrna-facility.json'
+import victorianGovernmentReleasesNewPlanning from './articles/2023-03-12--victorian-government-releases-new-planning-controls-for-djilang-geelong.json'
+import millions from './articles/2023-03-15--900 million urban village set for Victoria Gardens.json'
+import wantBetterJobOffers from './articles/2023-03-15--want-better-job-offers-heres-how-linkedin-profile-optimisation-can-help.json'
+import terraceHouseWins from './articles/2023-03-18--terrace-house-wins-archdaily-2023-building-of-the-year-award-for-housing.json'
+import fairbrotherAppointed from './articles/2023-03-20--fairbrother-appointed-to-deliver-werribee-zoo-expansion.json'
+import i2cAndRyderDesign from './articles/2023-03-22--i2c-and-ryder-design-city-of-monashs-first-build-to-rent-project.json'
+import eppingPrivateHospital from './articles/2023-03-25--epping-private-hospital-reaches-practical-completion.json'
+import timePlacePartner from './articles/2023-03-25--time-place-partner-with-corsair-for-500-million-alphington-project.json'
+import melbourneCouncil from './articles/2023-03-28--melbourne-council-unanimously-approves-carlton-student-tower.json'
 import heritageControlsDerail from './articles/2023-04-01--heritage-controls-derail-preston-market-redevelopment.json'
+import itsTime from './articles/2023-04-08--its-time-to-re-think-your-reluctance-to-hire-overseas-talent.json'
+import grimshawAndAspectStudios from './articles/2023-04-10--grimshaw-and-aspect-studios-appointed-for-twelve-apostles-visitor-centre-design.json'
+import constructionBeginsOn from './articles/2023-04-12--construction-begins-on-fitzroy-vertical-sports-centre.json'
+import avalonGets from './articles/2023-04-22--avalon-gets-new-motorsport-precinct.json'
+import victorianGovernmentReleases from './articles/2023-04-25--victorian-government-releases-advance-tender-notice-for-eureka-stadium.json'
 import constructionBegins from './articles/2023-05-01--construction-begins-on-1-billion-solar-skin-tower.json'
 import lendleaseFiles from './articles/2023-05-01--lendlease-files-plans-for-collins-wharf-project.json'
 import victorianGovernment from './articles/2023-05-01--victorian-government-endorses-development-on-iconic-intersection.json'
@@ -152,4 +239,91 @@ export const articleMap: Record<string, Article> = {
   [victorianGovernment.slug]: victorianGovernment,
   [foregoingTheGlossy.slug]: foregoingTheGlossy,
   [heritageControlsDerail.slug]: heritageControlsDerail,
+  [constructionBeginsOn.slug]: constructionBeginsOn,
+  [victorianGovernmentReleases.slug]: victorianGovernmentReleases,
+  [grimshawAndAspectStudios.slug]: grimshawAndAspectStudios,
+  [avalonGets.slug]: avalonGets,
+  [itsTime.slug]: itsTime,
+  [melbourneCouncil.slug]: melbourneCouncil,
+  [timePlacePartner.slug]: timePlacePartner,
+  [eppingPrivateHospital.slug]: eppingPrivateHospital,
+  [fairbrotherAppointed.slug]: fairbrotherAppointed,
+  [i2cAndRyderDesign.slug]: i2cAndRyderDesign,
+  [wantBetterJobOffers.slug]: wantBetterJobOffers,
+  [terraceHouseWins.slug]: terraceHouseWins,
+  [multiplexAwarded.slug]: multiplexAwarded,
+  [millions.slug]: millions,
+  [millionApartmentSale.slug]: millionApartmentSale,
+  [victorianGovernmentReleasesNewPlanning.slug]: victorianGovernmentReleasesNewPlanning,
+  [tooBigTooSmall.slug]: tooBigTooSmall,
+  [multiplexReaches.slug]: multiplexReaches,
+  [newAndImproved.slug]: newAndImproved,
+  [planGroupWrapsUp.slug]: planGroupWrapsUp,
+  [riverleeWinsApproval.slug]: riverleeWinsApproval,
+  [twoNewResdential.slug]: twoNewResdential,
+  [hinesSubmitsPlans.slug]: hinesSubmitsPlans,
+  [suspiciousMindsHowTrustIssues.slug]: suspiciousMindsHowTrustIssues,
+  [gurnerEntersTheWellness.slug]: gurnerEntersTheWellness,
+  [seventyMillionInDebt.slug]: seventyMillionInDebt,
+  [donaldCantWatts.slug]: donaldCantWatts,
+  [futureCommittee.slug]: futureCommittee,
+  [severalCbdTowers.slug]: severalCbdTowers,
+  [getYourEvpOn.slug]: getYourEvpOn,
+  [constructionComplete.slug]: constructionComplete,
+  [demolitionCommeces.slug]: demolitionCommeces,
+  [plansFiledForSite.slug]: plansFiledForSite,
+  [cityOfMelbourneApproves.slug]: cityOfMelbourneApproves,
+  [whyExitInterviews.slug]: whyExitInterviews,
+  [delwpApproves.slug]: delwpApproves,
+  [loweLivingSubmitsPlans.slug]: loweLivingSubmitsPlans,
+  [masterBuilders.slug]: masterBuilders,
+  [buildingEngineering.slug]: buildingEngineering,
+  [oreanaGroupSubmits.slug]: oreanaGroupSubmits,
+  [gurnerAdds.slug]: gurnerAdds,
+  [melbourneCity.slug]: melbourneCity,
+  [iconWinsConstruction.slug]: iconWinsConstruction,
+  [oneSizeDoesNotFit.slug]: oneSizeDoesNotFit,
+  [melbourneCityCouncil.slug]: melbourneCityCouncil,
+  [threeContractors.slug]: threeContractors,
+  [hinesDoublesDown.slug]: hinesDoublesDown,
+  [robertCoAwarded.slug]: robertCoAwarded,
+  [melbourneCityCouncilRejects.slug]: melbourneCityCouncilRejects,
+  [philanthropyTakesCentre.slug]: philanthropyTakesCentre,
+  [buildingEnvirons.slug]: buildingEnvirons,
+  [melbourneCouncilEndorses.slug]: melbourneCouncilEndorses,
+  [theThreeGhosts.slug]: theThreeGhosts,
+  [latestDevelopments.slug]: latestDevelopments,
+  [buildingTheRoad.slug]: buildingTheRoad,
+  [constructinoManagers.slug]: constructinoManagers,
+  [charterHallSnaps.slug]: charterHallSnaps,
+  [forwardThinking.slug]: forwardThinking,
+  [onboardingNewHires.slug]: onboardingNewHires,
+  [seeingDouble.slug]: seeingDouble,
+  [brookfieldLodges.slug]: brookfieldLodges,
+  [workOfficially.slug]: workOfficially,
+  [viclandLodges.slug]: viclandLodges,
+  [cityOfMelbourneEmbraces.slug]: cityOfMelbourneEmbraces,
+  [pomeroyPacific.slug]: pomeroyPacific,
+  [gurnerWins.slug]: gurnerWins,
+  [kaneConstructions.slug]: kaneConstructions,
+  [singaporeanFirm.slug]: singaporeanFirm,
+  [findingThePerfect.slug]: findingThePerfect,
+  [whyExclusivity.slug]: whyExclusivity,
+  [offeringFlexibility.slug]: offeringFlexibility,
+  [employeeValueProposition.slug]: employeeValueProposition,
+  [retainReTrain.slug]: retainReTrain,
+  [itsComing.slug]: itsComing,
+  [processOfRetained.slug]: processOfRetained,
+  [useImmigration.slug]: useImmigration,
+  [equalityDiscrimination.slug]: equalityDiscrimination,
+  [whyARetainedSearch.slug]: whyARetainedSearch,
+  [announcingBuilding.slug]: announcingBuilding,
+  [hasYourBusiness.slug]: hasYourBusiness,
+  [theProsAndCons.slug]: theProsAndCons,
+  [howToEngageWith.slug]: howToEngageWith,
+  [yourLinkedinProfile.slug]: yourLinkedinProfile,
+  [zoomInterviewTips.slug]: zoomInterviewTips,
+  [wantToKnow.slug]: wantToKnow,
+  [commensurateWithExperienceSo.slug]: commensurateWithExperienceSo,
+  [dontBaseYourDecisions.slug]: dontBaseYourDecisions,
 }

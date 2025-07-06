@@ -841,6 +841,876 @@
             "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/04/Heritage-controls-derail-Preston-Market-redevelopment-1.jpg",
             "imageAlt": "The Victorian state government has announced it will impose heritage controls on Preston Market, guaranteeing that historical assets are preserved in any proposed redevelopment.",
             "publishDate": "2023-04-01"
+        },
+        {
+            "id": "16331",
+            "order": 75,
+            "title": "Construction begins on Fitzroy vertical sports centre",
+            "slug": "construction-begins-on-fitzroy-vertical-sports-centre",
+            "excerpt": "Construction of a new $54.5 million sports facility in Fitzroy has begun – delivering Australia's first multi-use vertical indoor sports centre.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/04/Construction-begins-on-Fitzroy-vertical-sports-centre.jpg",
+            "imageAlt": "Construction of a new $54.5 million sports facility in Fitzroy has begun – delivering Australia's first multi-use vertical indoor sports centre.",
+            "publishDate": "2023-04-12"
+        },
+        {
+            "id": "16323",
+            "order": 76,
+            "title": "Victorian government releases advance tender notice for Eureka Stadium",
+            "slug": "victorian-government-releases-advance-tender-notice-for-eureka-stadium",
+            "excerpt": "An Advance Tender Notice (ATN) has been released for a main works contractor to complete upgrade works at Ballarat's Eureka Stadium.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/04/Victorian-government-releases-advance-tender-notice-for-Eureka-Stadium.jpg",
+            "imageAlt": "An Advance Tender Notice (ATN) has been released for a main works contractor to complete upgrade works at Ballarat's Eureka Stadium.",
+            "publishDate": "2023-04-25"
+        },
+        {
+            "id": "16316",
+            "order": 77,
+            "title": "Grimshaw and ASPECT Studios appointed for Twelve Apostles visitor centre design",
+            "slug": "grimshaw-and-aspect-studios-appointed-for-twelve-apostles-visitor-centre-design",
+            "excerpt": "The gateway to Victoria's iconic Great Ocean Road will be transformed following the appointment of Grimshaw and ASPECT Studios to the Twelve Apostles Visitor Experience Centre project.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/04/Grimshaw-and-ASPECT-Studios-appointed-for-Twelve-Apostles-visitor-centre-design.jpg",
+            "imageAlt": "The gateway to Victoria's iconic Great Ocean Road will be transformed following the appointment of Grimshaw and ASPECT Studios to the Twelve Apostles Visitor Experience Centre project.",
+            "publishDate": "2023-04-10"
+        },
+        {
+            "id": "16306",
+            "order": 78,
+            "title": "Avalon gets new motorsport precinct",
+            "slug": "avalon-gets-new-motorsport-precinct",
+            "excerpt": "The Victorian Government has announced plans for a new motorsports precinct adjacent to Avalon Airport.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/04/Avalon-gets-new-motorsport-precinct.jpg",
+            "imageAlt": "The Victorian Government has announced plans for a new motorsports precinct adjacent to Avalon Airport.",
+            "publishDate": "2023-04-22"
+        },
+        {
+            "id": "16202",
+            "order": 79,
+            "title": "It's time to re-think your reluctance to hire overseas talent",
+            "slug": "its-time-to-re-think-your-reluctance-to-hire-overseas-talent",
+            "excerpt": "Job vacancies in commercial construction are at an all-time high. Unfortunately, there isn't enough local talent to fill those roles. Hiring skilled migrants can help solve local staff shortages.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/04/Cover-photo-3.png",
+            "imageAlt": "It's time to re-think your reluctance to hire overseas talent",
+            "publishDate": "2023-04-08"
+        },
+        {
+            "id": "16162",
+            "order": 80,
+            "title": "Melbourne Council unanimously approves Carlton student tower",
+            "slug": "melbourne-council-unanimously-approves-carlton-student-tower",
+            "excerpt": "The City of Melbourne's Future Melbourne Committee has unanimously supported Brookfield's student accommodation project at 166-176 Bouverie Street and 183-187 Grattan Street, Carlton.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/03/Melbourne-Council-unanimously-approves-Carlton-student-tower.jpg",
+            "imageAlt": "The City of Melbourne's Future Melbourne Committee has unanimously supported Brookfield's student accommodation project at 166-176 Bouverie Street and 183-187 Grattan Street, Carlton.",
+            "publishDate": "2023-03-28"
+        },
+        {
+            "id": "16154",
+            "order": 81,
+            "title": "Time & Place partner with Corsair for $500 million Alphington project",
+            "slug": "time-place-partner-with-corsair-for-500-million-alphington-project",
+            "excerpt": "Developer Time & Place has partnered with the Buxton family-backed Corsair Investment Management to snag the largest – and final – lot at the old Alphington paper mill site.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/03/Time-Place-partner-with-Corsair-for-500-million-Alphington-project.jpg",
+            "imageAlt": "Developer Time & Place has partnered with the Buxton family-backed Corsair Investment Management to snag the largest – and final – lot at the old Alphington paper mill site.",
+            "publishDate": "2023-03-25"
+        },
+        {
+            "id": "16145",
+            "order": 82,
+            "title": "Epping Private Hospital reaches practical completion",
+            "slug": "epping-private-hospital-reaches-practical-completion",
+            "excerpt": "Epping's new Northern Private Hospital has hit structural completion and is on track to open in early 2024.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/03/Epping-Private-Hospital-reaches-practical-completion.jpg",
+            "imageAlt": "Epping's new Northern Private Hospital has hit structural completion and is on track to open in early 2024.",
+            "publishDate": "2023-03-25"
+        },
+        {
+            "id": "16111",
+            "order": 83,
+            "title": "Fairbrother appointed to deliver Werribee Zoo expansion",
+            "slug": "fairbrother-appointed-to-deliver-werribee-zoo-expansion",
+            "excerpt": "Australian company Fairbrother has been awarded the construction contract for Werribee Zoo's $88 million expansion.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/03/Fairbrother-appointed-to-deliver-Werribee-Zoo-expansion.jpg",
+            "imageAlt": "Australian company Fairbrother has been awarded the construction contract for Werribee Zoo's $88 million expansion.",
+            "publishDate": "2023-03-20"
+        },
+        {
+            "id": "16102",
+            "order": 84,
+            "title": "i2C and Ryder design City of Monash's first build-to-rent project",
+            "slug": "i2c-and-ryder-design-city-of-monashs-first-build-to-rent-project",
+            "excerpt": "Oakleigh will soon be home to the City of Monash's first build-to-rent (BTR) development, to be known as Fieldworks House.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/03/i2C-and-Ryder-design-City-of-Monashs-first-build-to-rent-project.jpg",
+            "imageAlt": "Oakleigh will soon be home to the City of Monash's first build-to-rent (BTR) development, to be known as Fieldworks House.",
+            "publishDate": "2023-03-22"
+        },
+        {
+            "id": "15981",
+            "order": 85,
+            "title": "Want better job offers? Here's how LinkedIn profile optimisation can help.",
+            "slug": "want-better-job-offers-heres-how-linkedin-profile-optimisation-can-help",
+            "excerpt": "If the best jobs aren't always advertised, how can you put yourself in the running for that next plum position? Optimising your LinkedIn profile is key.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/03/Cover-photo-2.png",
+            "imageAlt": "Want better job offers? Here's how LinkedIn profile optimisation can help.",
+            "publishDate": "2023-03-15"
+        },
+        {
+            "id": "15963",
+            "order": 86,
+            "title": "Terrace House wins ArchDaily 2023 Building of the Year Award for Housing",
+            "slug": "terrace-house-wins-archdaily-2023-building-of-the-year-award-for-housing",
+            "excerpt": "Austin Maynard Architects are celebrating this week after their Terrace House project was awarded a 2023 Building of the Year Award by ArchDaily.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/03/Terrace-House-wins-ArchDaily-2023-Building-of-the-Year-Award-for-Housing.jpg",
+            "imageAlt": "Austin Maynard Architects are celebrating this week after their Terrace House project was awarded a 2023 Building of the Year Award by ArchDaily.",
+            "publishDate": "2023-03-18"
+        },
+        {
+            "id": "15953",
+            "order": 87,
+            "title": "Multiplex awarded contract for Moderna mRNA facility",
+            "slug": "multiplex-awarded-contract-for-moderna-mrna-facility",
+            "excerpt": "Melbourne is one step closer to having a new mRNA vaccine manufacturing facility, after Multiplex was awarded the construction contract by Moderna.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/03/Multiplex-awarded-contract-for-Moderna-mRNA-facility.jpg",
+            "imageAlt": "Melbourne is one step closer to having a new mRNA vaccine manufacturing facility, after Multiplex was awarded the construction contract by Moderna.",
+            "publishDate": "2023-03-10"
+        },
+        {
+            "id": "15945",
+            "order": 88,
+            "title": "$900 million urban village set for Victoria Gardens",
+            "slug": "900-million-urban-village-set-for-victoria-gardens",
+            "excerpt": "Richmond's Victoria Gardens shopping centre is about to get a major upgrade, with co-owners Salta Properties and Vicinity Centres unveiling plans for a new urban village on the site.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/03/900-million-urban-village-set-for-Victoria-Gardens.jpg",
+            "imageAlt": "Richmond's Victoria Gardens shopping centre is about to get a major upgrade, with co-owners Salta Properties and Vicinity Centres unveiling plans for a new urban village on the site.",
+            "publishDate": "2023-03-15"
+        },
+        {
+            "id": "15937",
+            "order": 89,
+            "title": "$38 million apartment sale smashes Melbourne record",
+            "slug": "38-million-apartment-sale-smashes-melbourne-record",
+            "excerpt": "An apartment that won't be constructed for another five years has broken Melbourne property records, selling for $38 million to an international businessperson.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/03/38-million-apartment-sale-smashes-Melbourne-record.jpg",
+            "imageAlt": "An apartment that won't be constructed for another five years has broken Melbourne property records, selling for $38 million to an international businessperson.",
+            "publishDate": "2023-03-08"
+        },
+        {
+            "id": "15927",
+            "order": 90,
+            "title": "Victorian government releases new planning controls for Djilang (Geelong)",
+            "slug": "victorian-government-releases-new-planning-controls-for-djilang-geelong",
+            "excerpt": "Victorian Labor has released new planning controls for central Geelong this week, providing capacity for 60,000 jobs and 16,000 residents by 2050.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/03/Victorian-government-releases-new-planning-controls-for-Djilang-Geelong.jpg",
+            "imageAlt": "Victorian Labor has released new planning controls for central Geelong this week, providing capacity for 60,000 jobs and 16,000 residents by 2050.",
+            "publishDate": "2023-03-12"
+        },
+        {
+            "id": "15901",
+            "order": 91,
+            "title": "Too big, too small, or just right? 5 questions to help you decide which construction tier to work next.",
+            "slug": "too-big-too-small-or-just-right-5-questions-to-help-you-decide-which-construction-tier-to-work-next",
+            "excerpt": "Do you like to gaze at a Melbourne CBD icon – knowing that you helped build it? Or do you prefer to grow the fabric of your local community by building a childcare centre?",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/02/Cover-image-3.png",
+            "imageAlt": "Too big, too small, or just right? 5 questions to help you decide which construction tier to work next.",
+            "publishDate": "2023-02-28"
+        },
+        {
+            "id": "15878",
+            "order": 92,
+            "title": "Multiplex reaches practical completion of ANMF hotel – 5 weeks ahead of schedule",
+            "slug": "multiplex-reaches-practical-completion-of-anmf-hotel-5-weeks-ahead-of-schedule",
+            "excerpt": "Multiplex is celebrating their progress on the Australian Nursing and Midwifery Federation's (ANMF) hotel, achieving practical completion five weeks early.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/02/Multiplex-reaches-practical-completion-of-ANMF-hotel-–-5-weeks-ahead-of-schedule.png",
+            "imageAlt": "Multiplex is celebrating their progress on the Australian Nursing and Midwifery Federation's (ANMF) hotel, achieving practical completion five weeks early.",
+            "publishDate": "2023-02-28"
+        },
+        {
+            "id": "15869",
+            "order": 93,
+            "title": "New and improved Wonthaggi Hospital opens its doors.",
+            "slug": "new-and-improved-wonthaggi-hospital-opens-its-doors",
+            "excerpt": "Kane Constructions has put to bed another vital health project, with the updated Wonthaggi Hospital officially opening its doors this week.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/02/New-and-improved-Wonthaggi-Hospital-opens-its-doors..jpg",
+            "imageAlt": "Kane Constructions has put to bed another vital health project, with the updated Wonthaggi Hospital officially opening its doors this week.",
+            "publishDate": "2023-02-25"
+        },
+        {
+            "id": "15861",
+            "order": 94,
+            "title": "Plan Group wraps up construction of cardiac catheter lab at Royal Melbourne Hospital",
+            "slug": "plan-group-wraps-up-construction-of-cardiac-catheter-lab-at-royal-melbourne-hospital",
+            "excerpt": "Thousands more Victorians with heart conditions will receive urgent care at the Royal Melbourne Hospital (RMH) after Plan Group completed the refurbishment of a third cardiac catheter laboratory.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/02/Plan-Group-wraps-up-construction-of-cardiac-catheter-lab-at-Royal-Melbourne-Hospital.jpg",
+            "imageAlt": "Thousands more Victorians with heart conditions will receive urgent care at the Royal Melbourne Hospital (RMH) after Plan Group completed the refurbishment of a third cardiac catheter laboratory.",
+            "publishDate": "2023-02-25"
+        },
+        {
+            "id": "15851",
+            "order": 95,
+            "title": "Riverlee wins approval for $2 billion mini city in Epping",
+            "slug": "riverlee-wins-approval-for-2-billion-mini-city-in-epping",
+            "excerpt": "The City of Whittlesea has approved plans for a $2 billion-dollar, mixed-use development in Melbourne's north by local developer, Riverlee.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/02/Riverlee-wins-approval-for-2-billion-mini-city-in-Epping.png",
+            "imageAlt": "The City of Whittlesea has approved plans for a $2 billion-dollar, mixed-use development in Melbourne's north by local developer, Riverlee.",
+            "publishDate": "2023-02-20"
+        },
+        {
+            "id": "15842",
+            "order": 96,
+            "title": "Two new residential communities slated for Melbourne's north-west.",
+            "slug": "two-new-residential-communities-slated-for-melbournes-north-west",
+            "excerpt": "Melbourne's north-west will soon house almost 1,000 new families thanks to two residential developments in Craigieburn and Greenvale.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/02/Two-new-residential-communities-slated-for-Melbournes-north-west..jpg",
+            "imageAlt": "Melbourne's north-west will soon house almost 1,000 new families thanks to two residential developments in Craigieburn and Greenvale.",
+            "publishDate": "2023-02-22"
+        },
+        {
+            "id": "15833",
+            "order": 97,
+            "title": "Hines submits plans for build-to-rent tower in South Melbourne",
+            "slug": "hines-submits-plans-for-build-to-rent-tower-in-south-melbourne",
+            "excerpt": "Global investment manager Hines has lodged plans with the City of Port Phillip for an 18-story tower on Bank Street, South Melbourne. The new building will house 355 apartments and is the company's third build-to-rent (BTR) project in Melbourne.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/02/Hines-submits-plans-for-build-to-rent-tower-in-South-Melbourne.jpg",
+            "imageAlt": "Global investment manager Hines has lodged plans with the City of Port Phillip for an 18-story tower on Bank Street, South Melbourne. The new building will house 355 apartments and is the company's third build-to-rent (BTR) project in Melbourne.",
+            "publishDate": "2023-02-18"
+        },
+        {
+            "id": "15819",
+            "order": 98,
+            "title": "SUSPICIOUS MINDS: how trust issues are jeopardising workplace flexibility.",
+            "slug": "suspicious-minds-how-trust-issues-are-jeopardising-workplace-flexibility",
+            "excerpt": "Microsoft has released their research on hybrid work – and the stats aren't good, with trust levels at an all-time low. But with a bit of mindful manoeuvring, your workplace can enjoy more positive relationships – and better productivity.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2023/01/Cover-Image-SUSPICIOUS-MINDS.png",
+            "imageAlt": "Cover image for Suspicious Minds article",
+            "publishDate": "2023-01-28"
+        },
+        {
+            "id": "15744",
+            "order": 99,
+            "title": "Gurner enters the wellness market with Saint Haven concept",
+            "slug": "gurner-enters-the-wellness-market-with-saint-haven-concept",
+            "excerpt": "Developer Tim Gurner is entering the wellness space with a first-of-its-kind, multimillion-dollar health club concept, titled 'Saint Haven.'",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/12/Gurner-enters-the-wellness-market-with-Saint-Haven-concept.jpg",
+            "imageAlt": "Developer Tim Gurner is entering the wellness space with a first-of-its-kind, multimillion-dollar health club concept, titled 'Saint Haven.'",
+            "publishDate": "2022-12-15"
+        },
+        {
+            "id": "15736",
+            "order": 100,
+            "title": "$70 million in debt finance granted to Hines' T3 Collingwood project",
+            "slug": "70-million-in-debt-finance-granted-to-hines-t3-collingwood-project",
+            "excerpt": "The Clean Energy Finance Corporation (CEFC) has granted $70 million in debt finance to Hines' T3 project – making it the first project to be financed through the specialist CEFC Timber Building Program.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/12/70-million-in-debt-finance-granted-to-Hines-T3-Collingwood-project.jpg",
+            "imageAlt": "The Clean Energy Finance Corporation (CEFC) has granted $70 million in debt finance to Hines' T3 project – making it the first project to be financed through the specialist CEFC Timber Building Program.",
+            "publishDate": "2022-12-01"
+        },
+        {
+            "id": "15728",
+            "order": 101,
+            "title": "Donald Cant Watts Corke wins Melbourne University contract",
+            "slug": "donald-cant-watts-corke-wins-melbourne-university-contract",
+            "excerpt": "The University of Melbourne has appointed Donald Cant Watts Corke as Program and Project Manager for the development of their new campus at Fisherman's Bend.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/12/Donald-Cant-Watts-Corke-wins-Melbourne-University-contract.jpg",
+            "imageAlt": "The University of Melbourne has appointed Donald Cant Watts Corke as Program and Project Manager for the development of their new campus at Fisherman's Bend.",
+            "publishDate": "2022-12-10"
+        },
+        {
+            "id": "15720",
+            "order": 102,
+            "title": "Future Melbourne Committee approves nine storey towers behind Young & Jackson Hotel",
+            "slug": "future-melbourne-committee-approves-nine-storey-towers-behind-young-jackson-hotel",
+            "excerpt": "Lendlease has won unanimous approval from the City of Melbourne to construct an office and retail building on the corner of Flinders and Swanston Streets.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/12/Future-Melbourne-Committee-approves-nine-storey-towers-behind-Young-Jackson-Hotel.jpg",
+            "imageAlt": "Lendlease has won unanimous approval from the City of Melbourne to construct an office and retail building on the corner of Flinders and Swanston Streets.",
+            "publishDate": "2022-12-01"
+        },
+        {
+            "id": "15712",
+            "order": 103,
+            "title": "Several CBD towers win CTBUH awards",
+            "slug": "several-cbd-towers-win-ctbuh-awards",
+            "excerpt": "The Council on Tall Buildings and Urban Habitat have recognised multiple Melbourne CBD towers in their annual awards.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/12/Several-CBD-towers-win-CTBUH-awards.jpg",
+            "imageAlt": "The Council on Tall Buildings and Urban Habitat have recognised multiple Melbourne CBD towers in their annual awards.",
+            "publishDate": "2022-12-05"
+        },
+        {
+            "id": "15685",
+            "order": 104,
+            "title": "Get your EVP on",
+            "slug": "get-your-evp-on",
+            "excerpt": "A job for life. That concept is as extinct as John Howard's bowling career. So how do you recruit – and keep – the best people? The answer lies in your Employee Value Proposition.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/12/EVP-Cover-Image.png",
+            "imageAlt": "Employee Value Proposition concept illustration",
+            "publishDate": "2022-12-01"
+        },
+        {
+            "id": "15671",
+            "order": 105,
+            "title": "Construction complete on the Victorian Heart Hospital in Clayton",
+            "slug": "construction-complete-on-the-victorian-heart-hospital-in-clayton",
+            "excerpt": "Australia's first specialist, standalone cardiac hospital has reached a major milestone this month, with major construction now complete by builder, John Holland.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/11/Construction-complete-on-the-Victorian-Heart-Hospital-in-Clayton.jpg",
+            "imageAlt": "Australia's first specialist, standalone cardiac hospital has reached a major milestone this month, with major construction now complete by builder, John Holland.",
+            "publishDate": "2022-11-30"
+        },
+        {
+            "id": "15665",
+            "order": 106,
+            "title": "Demolition commences for the Aikenhead Centre for Medical Discovery (ACMD)",
+            "slug": "demolition-commences-for-the-aikenhead-centre-for-medical-discovery-acmd",
+            "excerpt": "Work on Australia's first collaborative, hospital-based biomedical engineering research centre has begun, with demolition of the existing site building starting this month.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/11/Demolition-commences-for-the-Aikenhead-Centre-for-Medical-Discovery-ACMD.jpg",
+            "imageAlt": "Work on Australia's first collaborative, hospital-based biomedical engineering research centre has begun, with demolition of the existing site building starting this month.",
+            "publishDate": "2022-11-01"
+        },
+        {
+            "id": "15659",
+            "order": 107,
+            "title": "Plans filed for site of the former Corkman Pub",
+            "slug": "plans-filed-for-site-of-the-former-corkman-pub",
+            "excerpt": "The developers who illegally demolished the Corkman Pub in 2016 have submitted a planning application for a new development at the Carlton site.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/11/Plans-filed-for-site-of-the-former-Corkman-Pub.jpg",
+            "imageAlt": "The developers who illegally demolished the Corkman Pub in 2016 have submitted a planning application for a new development at the Carlton site.",
+            "publishDate": "2022-11-25"
+        },
+        {
+            "id": "15646",
+            "order": 108,
+            "title": "City of Melbourne approves Bolte build-to-rent project",
+            "slug": "city-of-melbourne-approves-bolte-build-to-rent-project",
+            "excerpt": "The City of Melbourne has approved plans for a $152 million apartment tower at the foot of the Bolte Bridge.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/11/City-of-Melbourne-approves-Bolte-build-to-rent-project.jpg",
+            "imageAlt": "The City of Melbourne has approved plans for a $152 million apartment tower at the foot of the Bolte Bridge.",
+            "publishDate": "2022-11-01"
+        },
+        {
+            "id": "15624",
+            "order": 109,
+            "title": "Why exit interviews are important – and how to get them right.",
+            "slug": "why-exit-interviews-are-important-and-how-to-get-them-right",
+            "excerpt": "Received a resignation, or about to hand yours in? Let's explore why having a final word has never been more critical.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/11/Cover-Image.png",
+            "imageAlt": "Why exit interviews are important – and how to get them right.",
+            "publishDate": "2022-11-20"
+        },
+        {
+            "id": "15600",
+            "order": 110,
+            "title": "DELWP approves plans for Fitzroy Gasworks",
+            "slug": "delwp-approves-plans-for-fitzroy-gasworks",
+            "excerpt": "Development Victoria has officially gained approval from DELWP to develop the former Fitzroy Gasworks site into a sustainable, multi-purpose urban precinct. The project, expected to be completed by 2026, will set a new standard for sustainable and affordable urban renewal.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/10/DELWP-approves-plans-for-Fitzroy-Gasworks.jpg",
+            "imageAlt": "Development Victoria has officially gained approval from DELWP to develop the former Fitzroy Gasworks site into a sustainable, multi-purpose urban precinct. The project, expected to be completed by 2026, will set a new standard for sustainable and affordable urban renewal.",
+            "publishDate": "2022-10-01"
+        },
+        {
+            "id": "15594",
+            "order": 111,
+            "title": "Lowe Living submits plans for $160-million South Melbourne development",
+            "slug": "lowe-living-submits-plans-for-160-million-south-melbourne-development",
+            "excerpt": "Boutique developer Lowe Living has announced plans for a large-scale, 2,500-square-metre mixed-use project that will include luxury commercial and apartment space in South Melbourne.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/10/Lowe-Living-submits-plans-for-160-million-South-Melbourne-development.jpg",
+            "imageAlt": "Boutique developer Lowe Living has announced plans for a large-scale, 2,500-square-metre mixed-use project that will include luxury commercial and apartment space in South Melbourne.",
+            "publishDate": "2022-10-28"
+        },
+        {
+            "id": "15567",
+            "order": 112,
+            "title": "Master Builders Victoria kicks off post-covid research project.",
+            "slug": "master-builders-victoria-kicks-off-post-covid-research-project",
+            "excerpt": "Master Builders Victoria has launched an Australian-first research project to support Victoria's post-Covid building and construction industry.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/10/Master-Builders-Victoria-kicks-off-post-covid-research-project..jpg",
+            "imageAlt": "Master Builders Victoria has launched an Australian-first research project to support Victoria's post-Covid building and construction industry.",
+            "publishDate": "2022-10-01"
+        },
+        {
+            "id": "15561",
+            "order": 113,
+            "title": "Building Engineering & Donald Cant Watts Corke break ground at $40 million Melbourne Polytechnic project.",
+            "slug": "building-engineering-donald-cant-watts-corke-break-ground-at-40-million-melbourne-polytechnic-project",
+            "excerpt": "The redevelopment of Melbourne Polytechnic has kicked off this week with a groundbreaking ceremony at the Collingwood Campus.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/10/Donald-Cant-Watts-Corke-breaks-ground-at-40-million-Melbourne-Polytechnic-project..jpg",
+            "imageAlt": "The redevelopment of Melbourne Polytechnic has kicked off this week with a groundbreaking ceremony at the Collingwood Campus.",
+            "publishDate": "2022-10-25"
+        },
+        {
+            "id": "15553",
+            "order": 114,
+            "title": "Oreana Group submits plans for $250 million South Yarra development.",
+            "slug": "oreana-group-submits-plans-for-250-million-south-yarra-development",
+            "excerpt": "Oreana Group has submitted plans for a $250 million mixed-use development at 177 Toorak Road.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/10/Oreana-Group-submits-plans-for-250-million-South-Yarra-development..jpg",
+            "imageAlt": "Oreana Group has submitted plans for a $250 million mixed-use development at 177 Toorak Road.",
+            "publishDate": "2022-10-01"
+        },
+        {
+            "id": "15545",
+            "order": 115,
+            "title": "Gurner adds $1.75billion Dockland precinct to his portfolio.",
+            "slug": "gurner-adds-1-75billion-dockland-precinct-to-his-portfolio",
+            "excerpt": "Tim Gurner has added another jewel to his crown, joining forces with the Liberman family to develop a 1.8-hectare site at the Docklands.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/10/Gurner-adds-1.75billion-Dockland-precinct-to-his-portfolio..jpg",
+            "imageAlt": "Tim Gurner has added another jewel to his crown, joining forces with the Liberman family to develop a 1.8-hectare site at the Docklands.",
+            "publishDate": "2022-10-20"
+        },
+        {
+            "id": "15519",
+            "order": 116,
+            "title": "Melbourne City Council urges developers to contribute to net zero strategy.",
+            "slug": "melbourne-city-council-urges-developers-to-contribute-to-net-zero-strategy",
+            "excerpt": "Melbourne City Council has embarked on an ambitious strategy to reach net zero by 2040 – and they want developers and property owners to have their say about it.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/10/Melbourne-City-Council-urges-developers-to-contribute-to-net-zero-strategy..jpg",
+            "imageAlt": "Melbourne City Council has embarked on an ambitious strategy to reach net zero by 2040 – and they want developers and property owners to have their say about it.",
+            "publishDate": "2022-10-01"
+        },
+        {
+            "id": "15512",
+            "order": 117,
+            "title": "Icon wins construction contract for 600 Lonsdale.",
+            "slug": "icon-wins-construction-contract-for-600-lonsdale",
+            "excerpt": "Icon has won the construction contract for a new office building at 600 Lonsdale, beating tenders submitted by Multiplex and Hacer Group.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/10/Icon-wins-construction-contract-for-600-Lonsdale.jpg",
+            "imageAlt": "Icon has won the construction contract for a new office building at 600 Lonsdale, beating tenders submitted by Multiplex and Hacer Group.",
+            "publishDate": "2022-10-18"
+        },
+        {
+            "id": "15385", 
+            "order": 118,
+            "title": "One size does not fit all – contingent recruitment vs retained recruitment models.",
+            "slug": "one-size-does-not-fit-all-contingent-recruitment-vs-retained-recruitment-models",
+            "excerpt": "\"We need to hire…again.\" Sound familiar? Recruitment is a drag – unless, of course, you're a recruiter! And if you're reading this article, chances are you're tired of being the recruiting ringmaster at your workplace and are ready to bring in an external expert. But which option do you choose – contingent recruitment or retained…",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/06/Recruitment-Search-2022.jpg",
+            "imageAlt": "Contingent recruitment vs retained recruitment comparison",
+            "publishDate": "2022-10-06"
+        },
+        {
+            "id": "15319",
+            "order": 119,
+            "title": "Melbourne City Council approves plans for Acciona Geotech's new 31-storey headquarters",
+            "slug": "melbourne-city-council-approves-plans-for-acciona-geotechs-new-31-storey-headquarters",
+            "excerpt": "The City of Melbourne has given Acciona Geotech the go-ahead to construct their new 31-storey national headquarters at the Lorimer Precinct in Fisherman's Bend.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/09/rsz_melbourne_city_council_approves_plans_for_acciona_geotechs_new_31-storey_headquarters.jpg",
+            "imageAlt": "The City of Melbourne has given Acciona Geotech the go-ahead to construct their new 31-storey national headquarters at the Lorimer Precinct in Fisherman's Bend.",
+            "publishDate": "2022-09-30"
+        },
+        {
+            "id": "15313",
+            "order": 120,
+            "title": "Three contractors compete for Hawthorn FC Kennedy Centre contract",
+            "slug": "three-contractors-compete-for-hawthorn-fc-kennedy-centre-contract",
+            "excerpt": "ADCO, Kane constructions, and Hansen Yuncken have all thrown their hat into the construction ring in the hopes of becoming the chosen contractor for Hawthorn FC’s new headquarters at Dingley.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/09/Three-contractors-compete-for-Hawthorn-FC-Kennedy-Centre-contract.jpg",
+            "imageAlt": "ADCO, Kane constructions and Hansen Yuncken have all thrown their hat into the construction ring in the hopes of becoming the chosen contractor for Hawthorn FC’s new headquarters at Dingley.",
+            "publishDate": "2022-09-01"
+        },
+        {
+            "id": "15306",
+            "order": 121,
+            "title": "Hines doubles down on CBD office strategy announcing $1 billion tower at 600 Collins",
+            "slug": "hines-doubles-down-on-cbd-office-strategy-announcing-1-billion-tower-at-600-collins",
+            "excerpt": "Global investment firm Hines is adding to their portfolio of local office projects by announcing a new 180m tower in the heart of Melbourne’s CBD.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/09/Hines-doubles-down-on-CBD-office-strategy-announcing-1-billion-tower-at-600-Collins.jpg",
+            "imageAlt": "Global investment firm Hines is adding to their portfolio of local office projects by announcing a new 180m tower in the heart of Melbourne's CBD.",
+            "publishDate": "2022-09-01"
+        },
+        {
+            "id": "15301",
+            "order": 122,
+            "title": "Roberts Co awarded contract for $92 million Oasis Residences",
+            "slug": "roberts-co-awarded-contract-for-92-million-oasis-residences",
+            "excerpt": "Roberts Co has been appointed by Holder East to construct Oasis Residences at 1-13 Cobden Street, South Melbourne.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/09/Roberts-Co-awarded-contract-for-92-million-Oasis-Residences.jpg",
+            "imageAlt": "Roberts Co has been appointed by Holder East to construct Oasis Residences at 1-13 Cobden Street, South Melbourne.",
+            "publishDate": "2022-09-01"
+        },
+        {
+            "id": "15290",
+            "order": 123,
+            "title": "Melbourne City Council rejects development plans for former Cancer Council site",
+            "slug": "melbourne-city-council-rejects-development-plans-for-former-cancer-council-site",
+            "excerpt": "A planning application for an apartment tower on the corner of Rathdowne and Victoria Streets in Carlton has been denied by Melbourne City Council.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/09/Melbourne-City-Council-rejects-development-plans-for-former-Cancer-Council-site.jpg",
+            "imageAlt": "A planning application for an apartment tower on the corner of Rathdowne and Victoria Streets in Carlton has been denied by Melbourne City Council.",
+            "publishDate": "2022-09-01"
+        },
+        {
+            "id": "15283",
+            "order": 124,
+            "title": "Philanthropy takes centre stage as Hickory breaks ground at Melbourne Walk",
+            "slug": "philanthropy-takes-centre-stage-as-hickory-breaks-ground-at-melbourne-walk",
+            "excerpt": "Work has officially begun on Steadfast Capital’s Melbourne Walk, marking the start of a new ongoing partnership between Hickory Construction and The Salvation Army.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/09/Philanthropy-takes-centre-stage-as-Hickory-breaks-ground-at-Melbourne-Walk.jpg",
+            "imageAlt": "Work has officially begun on Steadfast Capital’s Melbourne Walk, marking the start of a new ongoing partnership between Hickory Construction and The Salvation Army.",
+            "publishDate": "2022-09-01"
+        },
+        {
+            "id": "15247",
+            "order": 125,
+            "title": "Building Environs and WIDAC partner for upcoming luncheon",
+            "slug": "building-environs-and-widac-partner-for-upcoming-luncheon",
+            "excerpt": "We’re proud to announce that we have partnered with Women in Design and Construction to deliver their next premium luncheon event in Melbourne.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/09/Building-Environs-and-WIDAC-partner-for-upcoming-luncheon.jpg",
+            "imageAlt": "We’re proud to announce that we have partnered with Women in Design and Construction to deliver their next premium luncheon event in Melbourne. Titled ‘Closing the gender pay gap in 2022,’ the event will equip attendees with the skill set to feel prepared and empowered for their next salary review.",
+            "publishDate": "2022-09-01"
+        },
+        {
+            "id": "15237",
+            "order": 126,
+            "title": "Melbourne Council endorses $300 million Greenline Project",
+            "slug": "melbourne-council-endorses-300-million-greenline-project",
+            "excerpt": "Melbourne Council’s Future Melbourne Committee has delivered a resounding endorsement for the Greenline Project – a $300 million transformation of the Yarra River’s North Bank.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/09/Melbourne-Council-endorses-300-million-Greenline-Project.jpg",
+            "imageAlt": "Melbourne Council’s Future Melbourne Committee has delivered a resounding endorsement for the Greenline Project – a $300 million transformation of the Yarra River’s North Bank.",
+            "publishDate": "2022-09-01"
+        },
+        {
+            "id": "15128",
+            "order": 127,
+            "title": "The three ghosts of recruitment: a cautionary tale",
+            "slug": "the-three-ghosts-of-recruitment-a-cautionary-tale",
+            "excerpt": "Just when you thought recruitment couldn’t get any more like dating, I bring you ghosting. It’s on the rise. And as my experience shows, the guilty parties are on all sides.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/09/The-three-ghosts-of-recruitment-a-cautionary-tale.jpg",
+            "imageAlt": "What is ghosting in recruitment? Ghosting is a sudden stop in communication between an employer, a candidate, or a recruiter.",
+            "publishDate": "2022-09-01"
+        },
+        {
+            "id": "14423",
+            "order": 128,
+            "title": "Latest Developments in the Greater Melbourne Commercial Construction and Property Sector",
+            "slug": "latest-developments-in-the-greater-melbourne-commercial-construction-and-property-sector",
+            "excerpt": "The purchase of 330 Collins Street was made with City Developments, another Singaporean firm. It’s a sign that despite anecdotal reports that demand for CBD office spaces is waning, global investors think otherwise.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/07/Singaporean-firm-HThree-City-buys-Melbourne-office-tower-for-236M.jpg",
+            "imageAlt": "HThree City Australia has purchased 330 Collins Street with co-investor City Developments Limited. It's a sign that despite anecdotal reports that demand for CBD office spaces is waning, global investors think otherwise.",
+            "publishDate": "2022-07-01"
+        },
+        {
+            "id": "15029",
+            "order": 129,
+            "title": "Building the road less travelled",
+            "slug": "building-the-road-less-travelled",
+            "excerpt": "It’s been quite the year for Kapitol Group. In the past month alone, they’ve won two annual Master Builders Association of Victoria Excellence in Construction Awards and the title of #1 Wrk+ 2022 Best Place to Work – the first time a construction company has ever topped the list.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/08/Kapitol-Group-Building-the-road-less-travelled.jpg",
+            "imageAlt": "It's been quite the year for Kapitol Group. In the past month alone, they've won two annual Master Builders Association of Victoria Excellence in Construction Awards and the title of #1 Wrk+ 2022 Best Place to Work - the first time a construction company has ever topped the list.",
+            "publishDate": "2022-08-01"
+        },
+        {
+            "id": "15400",
+            "order": 130,
+            "title": "Construction Managers and Civil Engineers top the list of most in-demand jobs",
+            "slug": "construction-managers-and-civil-engineers-top-the-list-of-most-in-demand-jobs",
+            "excerpt": "The Australian Government has released their top 10 most in-demand jobs for the next five years – and Construction Managers and Civil Engineering Professionals are at the top of the list. The line-up was released by Prime Minister Anthony Albanese ahead of the Jobs and Skills Summit, scheduled for 1-2 September. The forum brings together…",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/08/Construction-managers-and-civil-engineers-top-the-list-of-most-in-demand-jobs.jpg",
+            "imageAlt": "Construction Managers and Civil Engineers top the list of most in-demand jobs",
+            "publishDate": "2022-08-24"
+        },
+        {
+            "id": "14945",
+            "order": 131,
+            "title": "Charter Hall snaps up Collins Place in $65 million deal",
+            "slug": "charter-hall-snaps-up-collins-place-in-65-million-deal",
+            "excerpt": "Charter Hall has quietly secured the freehold to Collins Place, one of Melbourne's most prestigious addresses at the Paris end of Collins Street. The world-class office, entertainment, and hotel precinct first opened in 1981 and includes approximately 140,000m² of floor space across two towers.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/08/Charter-Hall-snaps-up-Collins-Place-in-65-million-deal.jpg",
+            "imageAlt": "Charter Hall has quietly secured the freehold to Collins Place, one of Melbourne's most prestigious addresses at the Paris end of Collins Street.",
+            "publishDate": "2022-08-01"
+        },
+        {
+            "id": "3768",
+            "order": 132,
+            "title": "Onboarding new hires: seven steps to getting it right (and one common mistake to avoid)",
+            "slug": "onboarding-new-hires-seven-steps-to-getting-it-right-and-one-common-mistake-to-avoid",
+            "excerpt": "Make sure your new staff feel like part of the team and are prepared to deliver their best work from the get-go with these seven tips for a winning onboarding plan. The interviews are over, and the acceptance letter is signed. Finally, your new staff member is ready to hit the ground running! Or are…",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/08/Onboarding-new-hires-1.jpg",
+            "imageAlt": "",
+            "publishDate": "2022-08-22"
+        },
+        {
+            "id": "14890",
+            "order": 133,
+            "title": "Forward-thinking 'solar skin' building by Cbus gets the go-ahead",
+            "slug": "forward-thinking-solar-skin-building-by-cbus-gets-the-go-ahead",
+            "excerpt": "The Department of Environment, Land, Water, and Planning has given the green light to Cbus Property's $1 billion commercial tower at 435 Bourke Street. Designed by internationally acclaimed Bates Smart, the 48-level tower will be one of the first in the world to incorporate a 'solar skin' façade.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/08/imgonline-com-ua-resize-uNTpMM0yuSxb58Z.jpg",
+            "imageAlt": "An artist's impression of 435 Bourke Street Melbourne",
+            "publishDate": "2022-08-15"
+        },
+        {
+            "id": "14879",
+            "order": 134,
+            "title": "Seeing double: The Victorian Government launches Digital Twin",
+            "slug": "seeing-double-the-victorian-government-launches-digital-twin",
+            "excerpt": "The Victorian Government has partnered with the CSIRO to build a digital replica of the state, known as Digital Twin. Digital twin connects masses of data and information to create 2D, 3D, and live data versions of the real world – with detail on buildings, roads, infrastructure, farmland, and natural environments.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/08/Seeing-double-The-Victorian-Government-launches-Digital-Twin.png",
+            "imageAlt": "Digital twin connects masses of data and information to create 2D, 3D, and live data versions of the real world – with detail on buildings, roads, infrastructure, farmland, and natural environments",
+            "publishDate": "2022-08-10"
+        },
+        {
+            "id": "14844",
+            "order": 135,
+            "title": "Brookfield lodges plans for 470-bed student accommodation tower in Carlton",
+            "slug": "brookfield-lodges-plans-for-470-bed-student-accommodation-tower-in-carlton",
+            "excerpt": "Canadian firm Brookfield has joined forces with Citiplan and Journal Student Living to formally lodge plans for their first joint venture on the corner of Grattan and Bouverie Streets in Carlton.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/08/Brookfield-lodges-plans-for-470-bed-student-accommodation-tower-in-Carlton.png",
+            "imageAlt": "Canadian firm Brookfield has joined forces with Citiplan and Journal Student Living to formally lodge plans for their first joint venture on the corner of Grattan and Bouverie Streets in Carlton.",
+            "publishDate": "2022-08-01"
+        },
+        {
+            "id": "14728",
+            "order": 136,
+            "title": "Work officially begins on the Melbourne Arts Precinct Project",
+            "slug": "work-officially-begins-on-the-melbourne-arts-precinct-project",
+            "excerpt": "Construction on Australia's largest arts and culture infrastructure project has officially begun this week. The Theatres Building is the first structure to receive an upgrade under the $1.7 billion precinct project.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/07/Work-officially-begins-on-the-Melbourne-Arts-Precinct-Project.jpg",
+            "imageAlt": "Construction on Australia's largest arts and culture infrastructure project has officially started this week",
+            "publishDate": "2022-07-15"
+        },
+        {
+            "id": "14715",
+            "order": 137,
+            "title": "Vicland lodges plans for 12-storey office building in Cremorne",
+            "slug": "vicland-lodges-plans-for-12-storey-office-building-in-cremorne",
+            "excerpt": "After purchasing 31 Cremorne Street last year for $53.5 million, Vicland has now revealed its plans to build a mid-rise commercial development on the site.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/07/Vicland-lodges-plans-for-12-storey-office-building-in-Cremorne.png",
+            "imageAlt": "Vicland has now revealed its plans to build a mid-rise commercial development at 31 Cremorne Street.",
+            "publishDate": "2022-07-01"
+        },
+        {
+            "id": "14705",
+            "order": 138,
+            "title": "City of Melbourne embraces the most ambitious planning policy since 'Melbourne 3000'",
+            "slug": "city-of-melbourne-embraces-the-most-ambitious-planning-policy-since-melbourne-3000",
+            "excerpt": "Melbourne is set to become the most populated city by 2026, and the City of Melbourne is embracing the challenge through their bold new Municipal Planning Strategy.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/07/City-of-Melbourne-embraces-the-most-ambitious-planning-policy-since-‘Melbourne-3000.jpg",
+            "imageAlt": "Melbourne becoming the most populated city by 2026, and the City of Melbourne is embracing the challenge through their bold new Municipal Planning Strategy.",
+            "publishDate": "2022-07-01"
+        },
+        {
+            "id": "14700",
+            "order": 139,
+            "title": "Pomeroy Pacific appointed to deliver 11 new government schools",
+            "slug": "pomeroy-pacific-appointed-to-deliver-11-new-government-schools",
+            "excerpt": "Pomeroy Pacific continues to go from strength to strength after its recent appointment by the Victorian School Building Authority to deliver 11 new government schools. The project includes the delivery of six primary schools, three secondary schools, and two co-located specialist schools.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/07/Pomeroy-Pacific-appointed-to-deliver-11-new-government-schools-1.jpg",
+            "imageAlt": "Pomeroy Pacific recently appointed by the Victorian School Building Authority to deliver 11 new government schools",
+            "publishDate": "2022-07-08"
+        },
+        {
+            "id": "14688",
+            "order": 140,
+            "title": "Gurner Wins Approval for $40m Club Maison Project",
+            "slug": "gurner-wins-approval-for-40m-club-maison-project",
+            "excerpt": "Situated at 145 – 151 High Street Prahran, the former bluestone church and Sunday school hall will be transformed into private residences under the Gurner club concept.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/07/Gurner-Wins-Approval-for-40m-Club-Maison-Project-1.jpg",
+            "imageAlt": "The former bluestone church and Sunday school hall at 145 – 151 High Street Prahran will be transformed into private residences under the Gurner club concept.",
+            "publishDate": "2022-07-01"
+        },
+        {
+            "id": "14588",
+            "order": 141,
+            "title": "Kane Constructions appointed to deliver the Paula Fox Melanoma and Cancer Centre",
+            "slug": "kane-constructions-appointed-to-deliver-the-paula-fox-melanoma-and-cancer-centre",
+            "excerpt": "Kane Constructions has been appointed by Alfred Health to deliver the Paula Fox Melanoma and Cancer Centre, located at 545 St Kilda Road. The striking new building is designed to resemble a skin graft, which is a common treatment used for skin cancers.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/07/Kane-Constructions-e1658720281256.jpg",
+            "imageAlt": "Kane Constructions has been appointed by Alfred Health to deliver the Paula Fox Melanoma",
+            "publishDate": "2022-07-05"
+        },
+        {
+            "id": "14580",
+            "order": 142,
+            "title": "Singaporean firm HThree City buys Melbourne office tower for $236M",
+            "slug": "singaporean-firm-hthree-city-buys-melbourne-office-tower-for-236m",
+            "excerpt": "HThree City Australia has purchased 330 Collins Street with co-investor City Developments Limited. It's a sign that despite anecdotal reports that demand for CBD office spaces is waning, global investors think otherwise.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/07/HThree-City-Australia-e1658721369586.jpg",
+            "imageAlt": "330 Collins street, commercial property acquisition",
+            "publishDate": "2022-07-01"
+        },
+        {
+            "id": "14435",
+            "order": 143,
+            "title": "Finding the perfect hybrid work arrangement for the construction industry",
+            "slug": "finding-the-perfect-hybrid-work-arrangement-for-the-construction-industry",
+            "excerpt": "How embracing flexibility on and off-site can help employers remain competitive in construction. According to our 2022 Commercial Construction Salary Report, some 68% of non-site-based construction staff want to work from home, at least some of the time.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/07/embracing-flexibility-on-and-off-site.png",
+            "imageAlt": "man in high vis vest on construction site with big buildings",
+            "publishDate": "2022-07-03"
+        },
+        {
+            "id": "13971",
+            "order": 144,
+            "title": "Why Exclusivity is Better?",
+            "slug": "why-exclusivity-is-better",
+            "excerpt": "Exclusivity in Permanent Recruitment In previous blogs, we've discussed the several factors that have led to the booming job market as we come out of the pandemic. With a record number of vacancies to fill and top talent looking for the best companies to work for, we now look at how you can work with…",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/06/exclusive.png",
+            "imageAlt": "",
+            "publishDate": "2022-03-25"
+        },
+        {
+            "id": "13972",
+            "order": 145,
+            "title": "Offering flexibility in the workplace (not Yoga related)",
+            "slug": "offering-flexibility-in-the-workplace-not-yoga-related",
+            "excerpt": "Article Employee Trust and respect – now measured in Flexibility Another blog all about keeping workers happy, and all more expense, you might be groaning? Well, the fact of the matter is FLEXIBILITY IN THE WORKPLACE SAVES MONEY. So keep reading! In previous blogs, we talked about how the pandemic has already begun rapidly tearing…",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/06/flexibility-on-offer.jpg",
+            "imageAlt": "flexibility-on-offer",
+            "publishDate": "2022-01-31"
+        },
+        {
+            "id": "13973",
+            "order": 146,
+            "title": "Get your EVP on!",
+            "slug": "employee-value-proposition-evp",
+            "excerpt": "Article Everyone running a successful company knows that staying ahead of the competition is about having the best people. In fact, Harvard Business Review details that your top performers are four times more productive than your average worker. So, how do you get and keep these people? Well, it starts with an \"Employee Value Proposition\" or (EVP)....",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/06/EVP-2022.webp",
+            "imageAlt": "EVP-2022",
+            "publishDate": "2021-12-16"
+        },
+        {
+            "id": "13974",
+            "order": 147,
+            "title": "Retention of high performers = Enticing high performers",
+            "slug": "retain-re-train-and-entice-the-best",
+            "excerpt": "Article Our last blog looked at how the Great Resignation could be coming to Australia in 2022. But even without this happening, there is still a current shortage of talent. For the past two years, we have had no incoming talent to Australia. And the interstate lockdown also means that no people from other states have been…",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/06/awnsome-2022.jpg",
+            "imageAlt": "awnsome-2022",
+            "publishDate": "2021-11-17"
+        },
+        {
+            "id": "13975",
+            "order": 148,
+            "title": "It's Coming……The Great Resignation of 2022",
+            "slug": "it-s-coming-the-great-resignation",
+            "excerpt": "Article The pandemic-driven Great Resignation has already begun to hit the UK and the US. And experts predict that Australia's is about to follow with resignations starting on mass in March 2022. In this post we look at: Changes in working lives – a background What is the Great Resignation? Who is being affected, and…",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/06/Resignation.jpg",
+            "imageAlt": "Resignation",
+            "publishDate": "2021-10-17"
+        },
+        {
+            "id": "13976",
+            "order": 149,
+            "title": "Our Process and Stages of Retained Assignments",
+            "slug": "process-of-retained-assignments",
+            "excerpt": "Article Statistics show that a retained search process increases the fill rate from the 15% to 20%, produced by a Contingent Recruitment model (no placement no fee) to 90% – 95% when delivered as a Retained Search Assignment. Reporting Our Retained Search process commences each assignment with a 'kickoff' meeting which includes all the key…",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/06/Process.jpg",
+            "imageAlt": "Process",
+            "publishDate": "2021-09-21"
+        },
+        {
+            "id": "13900",
+            "order": 150,
+            "title": "Use immigration to Solve Skills Shortages",
+            "slug": "use-immigration-to-solve-skills-shortages",
+            "excerpt": "Around the world, it is often the case that immigration is used to solve supply and demand in the labour market when facing significant staff shortages. For example, when the NHS failed to train and recruit enough UK nurses, it was easy enough for this vast employer to look overseas and hire qualified professionals on mass.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/06/immigration.jpg",
+            "imageAlt": "",
+            "publishDate": "2021-08-10"
+        },
+        {
+            "id": "13977",
+            "order": 151,
+            "title": "Equality, and Recruitment in Construction",
+            "slug": "equality-discrimination-in-the-recruitment-process",
+            "excerpt": "Does Discrimination Still Take Place in Recruitment, Could You Be Missing Out On Hiring Excellent Workers? When it comes to delivering equal pay and equal rights for all people regardless of race and sex, it's been a long road for minorities. Many people will happily conclude that great strides have been made, and we can…",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/06/Recruitment-2022-06.jpg",
+            "imageAlt": "Recruitment-2022-06",
+            "publishDate": "2021-07-06"
+        },
+        {
+            "id": "13856",
+            "order": 152,
+            "title": "Why a 'Retained Search' is the better solution for hiring",
+            "slug": "why-a-retained-search-is-the-better-solution-for-hiring",
+            "excerpt": "So, what is good about retained search; what precisely is special about it? Let's jog our memories: this type of recruitment search is a partnership between the client and the recruiter, undertaking a robust search process to identify and entice the ideal candidates.",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/06/better-solution.jpg",
+            "imageAlt": "Better solution for hiring",
+            "publishDate": "2021-03-26"
+        },
+        {
+            "id": "13978",
+            "order": 153,
+            "title": "Announcing: Building Environs Recruitment Partners with Headway DNA",
+            "slug": "announcing-building-environs-recruitment-headway-dna-partnership",
+            "excerpt": "Supporting our clients and Candidates For too long, we believe that hiring managers (often untrained in interviewing techniques) have been making 'gut instinct' decisions when seeking new employees. By partnering with Headway DNA, we are assisting our clients with removing the risk of 'gut feel' hiring. The Headway DNA assessment compares a candidate's Soft Skills with…",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/06/Announcing.png",
+            "imageAlt": "Announcing",
+            "publishDate": "2021-03-25"
+        },
+        {
+            "id": "13849",
+            "order": 154,
+            "title": "Has your business fully considered all elements of WFH?",
+            "slug": "has-your-business-fully-considered-all-elements-of-wfh",
+            "excerpt": "Working from home unlocks possibilities for businesses to restructure themselves, to make themselves more attractive to potential employees and be more cost effective. Before the coronavirus pandemic, working from home (WFH) was already on the rise. Many employers had spotted the advantages it could bring to their businesses and the opportunities it provides for their employees to enjoy a better work-life balance. With the outbreak...",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/06/wfh-2022.jpg",
+            "imageAlt": "Working from home considerations",
+            "publishDate": "2021-03-16"
+        },
+        {
+            "id": "13979",
+            "order": 155,
+            "title": "Contingent Recruitment – \"no placement, no fee\" – are you getting value for money?",
+            "slug": "the-pro-s-and-con-s-of-contingent-recruitment-no-placement-no-fee",
+            "excerpt": "There is no doubt that contingent recruitment can offer incredible value to employers. Basically, the recruiter takes all of the risks in committing time, money, and marketing/advertising resources to a candidate search process and undertakes the search as quickly as possible to fill the role. If the recruiter does not find the right candidate in…",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/06/Recruitment-2022.jpg",
+            "imageAlt": "Recruitment-2022",
+            "publishDate": "2021-01-20"
+        },
+        {
+            "id": "13842",
+            "order": 156,
+            "title": "How to engage with a recruiter during the pandemic",
+            "slug": "how-to-engage-with-a-recruiter-during-the-pandemic",
+            "excerpt": "I get it; you're gutted to be out of work and devastated that you need to speak to different recruiters to get help. I've been in the industry long enough to know what some (certainly not all) people think of recruiters. It's sometimes disappointing to garner opinions about what some people experience when engaging with...",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/06/How-to-engage-2022.jpg",
+            "imageAlt": "How to engage with a recruiter during the pandemic",
+            "publishDate": "2020-07-30"
+        },
+        {
+            "id": "13980",
+            "order": 157,
+            "title": "Your LinkedIn Profile – key items to assist with your job search",
+            "slug": "your-linkedin-profile-key-items-to-assist-with-your-job-search",
+            "excerpt": "I feel that LinkedIn is now, more than ever, one of the key areas of presenting yourself for a new role. Firstly, if anyone is actively looking for someone like you – you need to make sure they A) Find your profile, and B) think you're worth contacting. Why is LinkedIn so important? It's important…",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/06/LinkedIn-Profile-2022.jpg",
+            "imageAlt": "LinkedIn-Profile-2022",
+            "publishDate": "2020-07-29"
+        },
+        {
+            "id": "13841",
+            "order": 158,
+            "title": "Zoom interview tips",
+            "slug": "zoom-interview-tips",
+            "excerpt": "With more and more interviews and job offers being made online and as we move away from total reliance upon face to face meetings, how best should you prepare for a online interview? Whilst the normal considerations of having some well-considered questions prepared and a pen and note pad handy are still the go, here...",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/06/interview-2022.jpg",
+            "imageAlt": "Zoom interview tips",
+            "publishDate": "2020-07-26"
+        },
+        {
+            "id": "market-value-pandemic",
+            "order": 159,
+            "title": "Want to know you 'market value' in a pandemic?",
+            "slug": "want-to-know-you-market-value-in-a-pandemic",
+            "excerpt": "I'm prompted to write this off the back of a number of conversations I've had with prospective candidates (in construction, engineering and property sectors) over the last few weeks, particularly relating to their 'market value', as they seek a new job. Like everyone, this is my first experience of a pandemic so I'm no expert….",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/06/market-value-2022.jpg",
+            "imageAlt": "",
+            "publishDate": "2020-07-22"
+        },
+        {
+            "id": "13838",
+            "order": 160,
+            "title": "\"Commensurate with Experience\" – so what does it mean?",
+            "slug": "commensurate-with-experience-so-what-does-it-mean",
+            "excerpt": "I've noticed over the last 6 months or so whilst recruiting within the Melbourne construction industry, that there is a recurring statement from prospective employers that I'm hearing, almost daily……something like \"we will pay a salary package which is commensurate with experience\". This broad statement is sneaking its way into online job-board vernacular. You've probably...",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/06/Commensurate-with-Experience-2022.jpg",
+            "imageAlt": "Commensurate with Experience - salary discussion",
+            "publishDate": "2020-06-18"
+        },
+        {
+            "id": "13837",
+            "order": 161,
+            "title": "Don't base your decisions, on the advice of those who don't have to deal with the results",
+            "slug": "don-t-base-your-decisions-on-the-advice-of-those-who-don-t-have-to-deal-with-the-results",
+            "excerpt": "When I started my career in recruitment over 15 years ago, vast swathes of hiring managers perceived prolonged gaps between employment as 'questionable' at best, 'career suicide' at worst. Even further into the past, in a lot of industries your average worker would work with as few as one or two companies over the course...",
+            "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/06/your-decisions-blog-2022.jpg",
+            "imageAlt": "Making career decisions - don't base decisions on advice from those who don't deal with results",
+            "publishDate": "2020-06-15"
         }
     ]
   }
