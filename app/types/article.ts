@@ -1,15 +1,21 @@
 // app/types/article.ts
 export interface Article {
-  id: string;
+  // make everything that The Podcast JSON provides optional:
+  id?: string;
+  slug?: string;
+  excerpt?: string;
+  featuredImage?: string;
+  imageAlt?: string;
+
+  // keep these as required:
   title: string;
-  slug: string;
-  excerpt: string;
-  featuredImage: string;
-  imageAlt: string;
   publishDate: string;
   author: string;
+
+  // still optional
   category?: string;
   readTime?: string;
+
   content: {
     sections: ArticleSection[];
   };
@@ -18,6 +24,7 @@ export interface Article {
 // Keep this flexible to accept any string since we're adding new types
 export type SectionType =
   | 'hero_image'
+  | 'hero_banner'
   | 'heading'
   | 'paragraph'
   | 'bullet_list'
@@ -31,6 +38,7 @@ export type SectionType =
   | 'standalone_image'
   | 'italic_text'
   | 'contact_info'
+  | 'audio'
   | 'two_column'
   | string; // Allow any string for future extensibility
 
@@ -108,4 +116,21 @@ export interface BoldParagraphSection extends ArticleSection {
   type: 'bold_paragraph';
   content: string;
   layout: 'full_width';
+}
+
+export interface AudioSection extends ArticleSection {
+  type: 'audio';
+  audioUrl: string;
+  title?: string;        // override the default title shown above the player
+  subtitle?: string;     // e.g. podcast name
+  thumbnailUrl?: string; // cover art
+  duration?: string;     // human-readable, e.g. “01:15:50”
+}
+
+export interface HeroBannerSection extends ArticleSection {
+  type: 'hero_banner';
+  button: { text: string; url: string };
+  publishDate: string;
+  heading: string;
+  image: { src: string; alt: string };
 }

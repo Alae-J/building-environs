@@ -1,61 +1,87 @@
 // components/PodcastBannerLeft.tsx
-import React from 'react'
+"use client"
 
-const PodcastBannerLeft: React.FC = () => (
-  <div className="md:col-span-5 flex flex-col justify-center space-y-6">
-    {/* Title */}
-    <h2 className="text-3xl md:text-4xl font-bold text-white">
-      Building Talks Podcast
-    </h2>
+import { useState } from 'react'
 
-    {/* Subtitle — use white, md:text-xl */}
-    <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-      Talking to professionals in construction, property development, architecture, and beyond.
-    </p>
+const PodcastBannerLeft = () => {
+  const [email, setEmail] = useState('')
+  
+  const handleSubscribe = () => {
+    if (email) {
+      console.log('Subscribing email:', email)
+      setEmail('')
+    }
+  }
 
-    {/* Buttons — px-5 exactly */}
-    <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0">
-      <a
-        href="https://podcasts.apple.com/au/podcast/the-building-talks-podcast/id1586940334"
-        target="_blank"
-        rel="noopener"
-        className="px-5 py-2 border border-white rounded-full text-white text-sm hover:bg-white hover:text-black transition"
-      >
-        Apple Podcasts
-      </a>
-      <a
-        href="https://podcasts.google.com/u/1/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS8xODUwNTUyLnJzcw"
-        target="_blank"
-        rel="noopener"
-        className="px-5 py-2 border border-white rounded-full text-white text-sm hover:bg-white hover:text-black transition"
-      >
-        Google Podcasts
-      </a>
-      <a
-        href="https://open.spotify.com/show/0ImvHaKucIvMJOJpf2mna2"
-        target="_blank"
-        rel="noopener"
-        className="px-5 py-2 border border-white rounded-full text-white text-sm hover:bg-white hover:text-black transition"
-      >
-        Spotify
-      </a>
+  return (
+    <div className="w-[517px] h-[349px] absolute bottom-[11px] left-0 z-10">
+      {/* Title */}
+      <h1 className="block h-[44px] font-['Inter'] text-[30.3px] font-bold leading-[36.67px] text-[#252326] whitespace-nowrap z-30 mt-[24px] ml-[12px]">
+        Building Talks Podcast
+      </h1>
+      
+      {/* Subtitle */}
+      <p className="flex w-[451px] h-[99px] justify-start items-center font-['Inter'] text-[22.7px] font-normal leading-[30.661px] text-[#7a777c] overflow-hidden z-[29] mt-[19px] ml-[10.091px]">
+        Talking to professionals in construction,<br />
+        property development, architecture, and<br />
+        beyond.
+      </p>
+      
+      {/* Podcast Platform Buttons */}
+      <div className="w-[483px] h-[52px] relative z-[25] mt-[14px] ml-[11px]">
+        {/* Apple Podcasts */}
+        <div className="w-[173px] h-[52px] absolute bottom-0 left-0 z-[25]">
+          <div className="w-[168px] h-[44px] bg-[#fefefe] rounded-tr-[4px] rounded-br-[4px] relative z-[26] mt-[5px] ml-[5px]">
+            <span className="flex h-[18px] justify-start items-center font-['Inter'] text-[12.4px] font-bold leading-[15.007px] text-[#7c7a7e] absolute bottom-[14px] left-[15px] whitespace-nowrap z-[27]">
+              Apple Podcasts
+            </span>
+            <div className="w-[20px] h-[20px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-06/AbWXXxLT4O.png)] bg-cover bg-no-repeat absolute bottom-[12px] left-[15px] z-[28]" />
+          </div>
+        </div>
+        
+        {/* Google Podcasts */}
+        <div className="w-[183px] h-[52px] absolute bottom-0 left-[175px] z-[21]">
+          <div className="w-[176px] h-[44px] bg-[#fff] relative z-[22] mt-[5px] ml-[4px]">
+            <div className="w-[20px] h-[21px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-06/ALMDD5Bb4M.png)] bg-cover bg-no-repeat absolute bottom-[12px] left-[16px] z-[24]" />
+            <span className="flex h-[18px] justify-start items-center font-['Inter'] text-[12px] font-bold leading-[14.523px] text-[#7c7c81] absolute bottom-[14px] left-[41px] whitespace-nowrap z-[23]">
+              Google Podcasts
+            </span>
+          </div>
+        </div>
+        
+        {/* Spotify */}
+        <div className="w-[123px] h-[52px] absolute bottom-0 right-0 z-[17]">
+          <div className="w-[115px] h-[44px] bg-[#fff] relative z-[18] mt-[5px] ml-[5px]">
+            <span className="flex h-[18px] justify-start items-center font-['Inter'] text-[11.7px] font-bold leading-[14.16px] text-[#828185] absolute bottom-[14px] left-[35px] whitespace-nowrap z-[19]">
+              Spotify
+            </span>
+            <div className="w-[20px] h-[20px] bg-[url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-06/tGotaz7EP0.png)] bg-cover bg-no-repeat absolute bottom-[12px] left-[15px] z-20" />
+          </div>
+        </div>
+      </div>
+      
+      {/* Subscribe Form */}
+      <div className="flex w-[500px] h-[56px] justify-between items-center relative z-[14] mt-[21px] ml-[6px]">
+        <div className="w-[358px] h-[55px] shrink-0 relative z-[14]">
+          <input
+            type="email"
+            placeholder="Never miss an episode..."
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-[354px] h-[48px] bg-[#fefefe] rounded-tl-[4px] rounded-tr-[3px] rounded-bl-[4px] border border-[#f4f4fb] font-['Inter'] text-[13.3px] font-normal leading-[16.096px] text-[#dedcdd] pl-4 mt-[5px] ml-[4px] focus:outline-none"
+          />
+        </div>
+        <div className="w-[138px] h-[56px] shrink-0 relative z-[11]">
+          <button
+            onClick={handleSubscribe}
+            className="w-[134px] h-[48px] bg-[#282828] rounded-[3px] font-['Inter'] text-[14.1px] font-bold leading-[17.064px] text-[#bdbfbd] mt-[5px] ml-px hover:bg-[#333] transition-colors"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
     </div>
+  )
+}
 
-    {/* Subscribe form */}
-    <form className="mt-6 flex max-w-md">
-      <input
-        type="email"
-        placeholder="Never miss an episode..."
-        className="flex-1 px-4 py-2 rounded-l bg-white text-black placeholder-gray-500 focus:outline-none"
-      />
-      <button
-        type="submit"
-        className="px-6 py-2 bg-black text-white rounded-r hover:bg-gray-800 transition"
-      >
-        Subscribe
-      </button>
-    </form>
-  </div>
-)
-
-export default PodcastBannerLeft
+export default PodcastBannerLeft;

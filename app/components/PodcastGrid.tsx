@@ -1,3 +1,4 @@
+// components/PodcastGrid.tsx
 import React from 'react';
 import PodcastCard from './PodcastCard';
 
@@ -9,12 +10,14 @@ type Episode = {
   href: string;
 };
 
-interface PodcastGridProps { episodes: Episode[]; }
+interface PodcastGridProps { 
+  episodes: Episode[]; 
+}
 
 const PodcastGrid: React.FC<PodcastGridProps> = ({ episodes }) => (
-  <section className="py-12 bg-white">
-    <div className="max-w-6xl mx-auto px-4 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-      {episodes.map(ep => (
+  <section className="fl-module fl-module-post-grid vbc-podcast-grid py-12 bg-white">
+    <div className="fl-post-grid max-w-6xl mx-auto px-4 grid gap-8 grid-cols-1 lg:grid-cols-2">
+      {episodes.map((ep) => (
         <PodcastCard
           key={ep.id}
           title={ep.title}
@@ -25,6 +28,6 @@ const PodcastGrid: React.FC<PodcastGridProps> = ({ episodes }) => (
       ))}
     </div>
   </section>
-);
+)
 
 export default PodcastGrid;
