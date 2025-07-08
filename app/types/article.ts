@@ -28,6 +28,7 @@ export type SectionType =
   | 'heading'
   | 'paragraph'
   | 'bullet_list'
+  | 'emoji_bullet_list'  // NEW: For bullet lists with emoji bullets
   | 'ordered_list'
   | 'image_with_text'
   | 'text_with_image'
@@ -58,6 +59,9 @@ export interface ArticleSection {
   image?: ImageBlock;
   text?: TextBlock;
   items?: string[];
+  
+  // NEW: For emoji bullet lists
+  emoji?: string; // The emoji to use as bullet point
   
   // For two-column layouts
   left_column?: TextBlock | ImageBlock;
@@ -118,13 +122,21 @@ export interface BoldParagraphSection extends ArticleSection {
   layout: 'full_width';
 }
 
+// NEW: Emoji bullet list section
+export interface EmojiBulletListSection extends ArticleSection {
+  type: 'emoji_bullet_list';
+  items: string[];
+  emoji: string; // The emoji to use as bullet point (e.g., "✅")
+  layout: 'full_width';
+}
+
 export interface AudioSection extends ArticleSection {
   type: 'audio';
   audioUrl: string;
   title?: string;        // override the default title shown above the player
   subtitle?: string;     // e.g. podcast name
   thumbnailUrl?: string; // cover art
-  duration?: string;     // human-readable, e.g. “01:15:50”
+  duration?: string;     // human-readable, e.g. "01:15:50"
 }
 
 export interface HeroBannerSection extends ArticleSection {

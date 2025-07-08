@@ -15,19 +15,15 @@ interface PodcastGridProps {
 }
 
 const PodcastGrid: React.FC<PodcastGridProps> = ({ episodes }) => (
-  <section className="fl-module fl-module-post-grid vbc-podcast-grid py-12 bg-white">
-    <div className="fl-post-grid max-w-6xl mx-auto px-4 grid gap-8 grid-cols-1 lg:grid-cols-2">
-      {episodes.map((ep) => (
-        <PodcastCard
-          key={ep.id}
-          title={ep.title}
-          date={ep.date}
-          image={ep.image}
-          href={ep.href}
-        />
-      ))}
-    </div>
-  </section>
+  <section className="py-12">
+  <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center">
+    {episodes.map((ep) => (
+      <PodcastCard key={ep.id} {...ep} />
+    ))}
+  </div>
+</section>
+
+
 )
 
 export default PodcastGrid;

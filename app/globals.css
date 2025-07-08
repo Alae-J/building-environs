@@ -5,6 +5,14 @@
   --foreground: #171717;
 }
 
+/* Line clamp utilities for podcast slider */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

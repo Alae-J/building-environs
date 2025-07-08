@@ -1,6 +1,7 @@
 // components/ArticleRenderer.tsx
 import AudioPlayer from '@/app/components/AudioPlayer';
 import { Article, ArticleSection, AudioSection, HeroBannerSection } from '@/app/types/article';
+import { Podcast, PodcastSection } from '@/app/types/podcast';
 import Image from 'next/image';
 import React, { Fragment } from 'react';
 
@@ -8,9 +9,17 @@ interface ArticleRendererProps {
   article: Article;
 }
 
-export default function ArticleRenderer({ article }: ArticleRendererProps) {
+interface PodcastRendererProps {
+  podcast: Podcast;
+}
 
-  const sections = article.content.sections;
+type RendererProps = ArticleRendererProps | PodcastRendererProps;
+
+export default function ArticleRenderer(props: RendererProps) {
+  const isArticle = 'article' in props;
+  const content = isArticle ? props.article : props.podcast;
+  
+  const sections = content.content.sections;
   const isHeroFirst =
     sections.length > 0 && sections[0].type === 'hero_banner';
   // Parse Markdown links, bold (**text**) and italics (*text*) with configurable link style
@@ -18,46 +27,148 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
     text: string,
     linkClass = 'text-red-600 underline hover:text-red-700'
   ): React.ReactNode => {
-    // First, handle italic links specifically: *[text](url)*
-    const italicLinkRegex = /(\*\[[^\]]+\]\([^)]*\)\*)/g;
-    const italicLinkSegments = text.split(italicLinkRegex).filter(Boolean);
-    
-    return italicLinkSegments.map((seg, i) => {
-      // Check for italic link pattern: *[text](url)*
-      const italicLinkMatch = seg.match(/^\*(\[[^\]]+\]\([^)]*\))\*$/);
-      if (italicLinkMatch) {
-        const linkPart = italicLinkMatch[1];
-        const linkMatch = linkPart.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
-        if (linkMatch) {
-          const [, label, url] = linkMatch;
-          return (
-            <a
-              key={i}
-              href={url}
-              className={`${linkClass} italic`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {label}
-            </a>
-          );
-        }
+    // First, handle custom link formats
+    const customLinkRegex = /(\*\*\*\[[^\]]+\]\([^)]+\)\*\*\*|~\[[^\]]+\]\([^)]+\)~|\*\[[^\]]+\]\([^)]+\)\*|\^\[[^\]]+\]\([^)]+\)\^|\*\*\[[^\]]+\]\([^)]+\)\*\*|\+\[[^\]]+\]\([^)]+\)\+)/g;
+    const segments = text.split(customLinkRegex).filter(Boolean);
+  
+    return segments.map((seg, i) => {
+      // Handle ***[text](url)*** = italic + bold + red link
+      const boldItalicLinkMatch = seg.match(/^\*\*\*\[([^\]]+)\]\(([^)]+)\)\*\*\*$/);
+      if (boldItalicLinkMatch) {
+        const [, label, url] = boldItalicLinkMatch;
+        return (
+          <a
+            key={`bolditalic-link-${i}`}
+            href={url}
+            className="text-red-600 hover:text-red-700 italic font-bold"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {label}
+          </a>
+        );
       }
-      
-      // Handle bold FIRST, before processing links
-      const boldParts = seg.split(/(\*\*[^*]+(?:\*[^*]*\*[^*]*)*[^*]*\*\*)/g).filter(Boolean);
-      
-      return boldParts.map((boldPart, j) => {
-        if (/^\*\*.*\*\*$/.test(boldPart)) {
-          // This is bold text - extract content and handle links within it
-          const boldContent = boldPart.slice(2, -2);
+  
+      // Handle **[text](url)** = bold + red link
+      const boldLinkMatch = seg.match(/^\*\*\[([^\]]+)\]\(([^)]+)\)\*\*$/);
+      if (boldLinkMatch) {
+        const [, label, url] = boldLinkMatch;
+        return (
+          <a
+            key={`bold-link-${i}`}
+            href={url}
+            className="text-red-600 underline hover:text-red-700 font-bold"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {label}
+          </a>
+        );
+      }
+  
+      // Handle *[text](url)* = italic link
+      const italicLinkMatch = seg.match(/^\*\[([^\]]+)\]\(([^)]+)\)\*$/);
+      if (italicLinkMatch) {
+        const [, label, url] = italicLinkMatch;
+        return (
+          <a
+            key={`italic-link-${i}`}
+            href={url}
+            className={`${linkClass} italic`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {label}
+          </a>
+        );
+      }
+  
+      // Handle ^[text](url)^ = plain red link (no underline)
+      const plainRedMatch = seg.match(/^\^\[([^\]]+)\]\(([^)]+)\)\^$/);
+      if (plainRedMatch) {
+        const [, label, url] = plainRedMatch;
+        return (
+          <a
+            key={`plain-red-${i}`}
+            href={url}
+            className="text-red-600 hover:text-red-700 no-underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {label}
+          </a>
+        );
+      }
+  
+      // Handle +[text](url)+ = bold red link (no underline)
+      const boldRedNoUnderlineMatch = seg.match(/^\+\[([^\]]+)\]\(([^)]+)\)\+$/);
+      if (boldRedNoUnderlineMatch) {
+        const [, label, url] = boldRedNoUnderlineMatch;
+        return (
+          <a
+            key={`bold-red-nounderline-${i}`}
+            href={url}
+            className="text-red-600 hover:text-red-700 font-bold"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {label}
+          </a>
+        );
+      }
+  
+      // Handle ~[text](url)~ = italic + red (no underline)
+      const italicNoUnderlineMatch = seg.match(/^~\[([^\]]+)\]\(([^)]+)\)~$/);
+      if (italicNoUnderlineMatch) {
+        const [, label, url] = italicNoUnderlineMatch;
+        return (
+          <a
+            key={`italic-red-${i}`}
+            href={url}
+            className="text-red-600 hover:text-red-700 italic"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {label}
+          </a>
+        );
+      }
+  
+      // Now handle the remaining text with formatting (bold, italic, links)
+      return processTextFormatting(seg, i, linkClass);
+    });
+  };
+  
+  const processTextFormatting = (text: string, segmentIndex: number, linkClass: string): React.ReactNode => {
+    // Handle bold italic text: ***text***
+    const boldItalicRegex = /(\*\*\*[^*]+\*\*\*)/g;
+    const boldItalicSegments = text.split(boldItalicRegex).filter(Boolean);
+  
+    return boldItalicSegments.map((boldItalicSeg, i) => {
+      const boldItalicMatch = boldItalicSeg.match(/^\*\*\*([^*]+)\*\*\*$/);
+      if (boldItalicMatch) {
+        return (
+          <strong key={`${segmentIndex}-bolditalic-${i}`} className="italic">
+            {boldItalicMatch[1]}
+          </strong>
+        );
+      }
+  
+      // Handle bold text: **text**
+      const boldRegex = /(\*\*[^*]+\*\*)/g;
+      const boldSegments = boldItalicSeg.split(boldRegex).filter(Boolean);
+  
+      return boldSegments.map((boldSeg, j) => {
+        const boldMatch = boldSeg.match(/^\*\*([^*]+)\*\*$/);
+        if (boldMatch) {
+          const boldContent = boldMatch[1];
           
-          // Process links within bold content
+          // Check if bold content contains links
           const linkRegex = /(\[[^\]]+\]\([^)]*\))/g;
           const linkSegments = boldContent.split(linkRegex).filter(Boolean);
           
           return (
-            <strong key={`${i}-${j}`}>
+            <strong key={`${segmentIndex}-${i}-bold-${j}`}>
               {linkSegments.map((linkSeg, k) => {
                 const linkMatch = linkSeg.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
                 if (linkMatch) {
@@ -74,61 +185,64 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
                     </a>
                   );
                 }
-                // Handle italic within bold
-                const parts = linkSeg.split(/(\*[^*]+\*|\^[^^]+\^)/g).filter(Boolean);
-                return (
-                  <Fragment key={k}>
-                    {parts.map((part, l) => {
-                      if (/^\*[^*]+\*$/.test(part)) {
-                        return <em key={l}>{part.slice(1, -1)}</em>;
-                      }
-                      if (/^\^[^^]+\^$/.test(part)) {
-                        return <sup key={l}>{part.slice(1, -1)}</sup>;
-                      }
-                      return <Fragment key={l}>{part}</Fragment>;
-                    })}
-                  </Fragment>
-                );
+                return <Fragment key={k}>{processItalicAndLinks(linkSeg, linkClass)}</Fragment>;
               })}
             </strong>
           );
         }
-        
-        // Handle non-bold content - process links and other formatting
-        const linkRegex = /(\[[^\]]+\]\([^)]*\))/g;
-        const segments = boldPart.split(linkRegex).filter(Boolean);
-        
-        return segments.map((subSeg, k) => {
-          const linkMatch = subSeg.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
-          if (linkMatch) {
-            const [, label, url] = linkMatch;
-            return (
-              <a
-                key={`${i}-${j}-${k}`}
-                href={url}
-                className={linkClass}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {label}
-              </a>
-            );
-          }
   
-          const parts = subSeg.split(/(\*[^*]+\*|\^[^^]+\^)/g).filter(Boolean);
+        // Handle remaining text (italic, links, plain text)
+        return (
+          <Fragment key={`${segmentIndex}-${i}-${j}`}>
+            {processItalicAndLinks(boldSeg, linkClass)}
+          </Fragment>
+        );
+      });
+    });
+  };
+  
+  const processItalicAndLinks = (text: string, linkClass: string): React.ReactNode => {
+    // Handle italic text: *text*
+    const italicRegex = /(\*[^*]+\*)/g;
+    const italicSegments = text.split(italicRegex).filter(Boolean);
+  
+    return italicSegments.map((italicSeg, i) => {
+      const italicMatch = italicSeg.match(/^\*([^*]+)\*$/);
+      if (italicMatch) {
+        return <em key={`italic-${i}`}>{italicMatch[1]}</em>;
+      }
+  
+      // Handle regular links: [text](url)
+      const linkRegex = /(\[[^\]]+\]\([^)]*\))/g;
+      const linkSegments = italicSeg.split(linkRegex).filter(Boolean);
+  
+      return linkSegments.map((linkSeg, j) => {
+        const linkMatch = linkSeg.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (linkMatch) {
+          const [, label, url] = linkMatch;
           return (
-            <Fragment key={`${i}-${j}-${k}`}>
-              {parts.map((part, l) => {
-                if (/^\*[^*]+\*$/.test(part)) {
-                  return <em key={l}>{part.slice(1, -1)}</em>;
-                }
-                if (/^\^[^^]+\^$/.test(part)) {
-                  return <sup key={l}>{part.slice(1, -1)}</sup>;
-                }
-                return <Fragment key={l}>{part}</Fragment>;
-              })}
-            </Fragment>
+            <a
+              key={`${i}-link-${j}`}
+              href={url}
+              className={linkClass}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {label}
+            </a>
           );
+        }
+  
+        // Handle superscript: ^text^
+        const supRegex = /(\^[^^]+\^)/g;
+        const supSegments = linkSeg.split(supRegex).filter(Boolean);
+        
+        return supSegments.map((supSeg, k) => {
+          const supMatch = supSeg.match(/^\^([^^]+)\^$/);
+          if (supMatch) {
+            return <sup key={`${i}-${j}-sup-${k}`}>{supMatch[1]}</sup>;
+          }
+          return <Fragment key={`${i}-${j}-${k}`}>{supSeg}</Fragment>;
         });
       });
     });
@@ -158,61 +272,64 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
       );
     });
 
-  const renderSection = (section: ArticleSection, idx: number): React.ReactNode => {
-    switch (section.type) {
-      case 'hero_image': {
-        const figWidth = section.width || '800px'
-        const figHeight = section.height || '400px'
-        
-        let imgWidth = parseInt(figWidth, 10)
-        let imgHeight = parseInt(figHeight, 10)
-        
-        // Apply max width and height constraints
-        const maxWidth = 1020
-        const maxHeight = 720
-        
-        if (imgWidth > maxWidth || imgHeight > maxHeight) {
-          const widthRatio = maxWidth / imgWidth
-          const heightRatio = maxHeight / imgHeight
-          const ratio = Math.min(widthRatio, heightRatio)
+    const renderSection = (section: ArticleSection | PodcastSection, idx: number): React.ReactNode => {
+      // Handle type casting for specific sections that need it
+      const sectionWithEmoji = section as ArticleSection | PodcastSection;
+      switch (section.type) {
+        case 'hero_image': {
+          const figWidth = section.width || '800px'
+          const figHeight = section.height || '400px'
           
-          imgWidth = Math.round(imgWidth * ratio)
-          imgHeight = Math.round(imgHeight * ratio)
+          let imgWidth = parseInt(figWidth, 10)
+          let imgHeight = parseInt(figHeight, 10)
+          
+          // Apply max width and height constraints
+          const maxWidth = 1020
+          const maxHeight = 720
+          
+          if (imgWidth > maxWidth || imgHeight > maxHeight) {
+            const widthRatio = maxWidth / imgWidth
+            const heightRatio = maxHeight / imgHeight
+            const ratio = Math.min(widthRatio, heightRatio)
+            
+            imgWidth = Math.round(imgWidth * ratio)
+            imgHeight = Math.round(imgHeight * ratio)
+          }
+        
+          // Build a class string that only includes the
+          // border + background + padding if caption exists.
+          const baseClasses = 'mx-auto mb-8'
+          const captionBoxClasses = section.caption
+            ? 'bg-gray-100 border border-gray-300 px-2 py-2'
+            : ''
+        
+          return (
+            <figure
+              key={idx}
+              style={{ width: `${imgWidth}px` }}
+              className={`${baseClasses} ${captionBoxClasses}`}
+            >
+              <Image
+                src={section.src!}
+                alt={section.alt || ''}
+                width={imgWidth}
+                height={imgHeight}
+                className="w-full h-auto rounded-lg"
+              />
+        
+              {section.caption && (
+                <figcaption className="mt-1 text-xs text-gray-400 text-center">
+                  {section.caption}
+                </figcaption>
+              )}
+            </figure>
+          )
         }
-      
-        // Build a class string that only includes the
-        // border + background + padding if caption exists.
-        const baseClasses = 'mx-auto mb-8'
-        const captionBoxClasses = section.caption
-          ? 'bg-gray-100 border border-gray-300 px-2 py-2'
-          : ''
-      
-        return (
-          <figure
-            key={idx}
-            style={{ width: `${imgWidth}px` }}
-            className={`${baseClasses} ${captionBoxClasses}`}
-          >
-            <Image
-              src={section.src!}
-              alt={section.alt || ''}
-              width={imgWidth}
-              height={imgHeight}
-              className="w-full h-auto rounded-lg"
-            />
-      
-            {section.caption && (
-              <figcaption className="mt-1 text-xs text-gray-400 text-center">
-                {section.caption}
-              </figcaption>
-            )}
-          </figure>
-        )
-      }
 
       case 'hero_banner': {
         // cast to our HeroBannerSection for TS
         const s = section as HeroBannerSection;
+        
         return (
           <div key={idx} className="relative w-screen left-1/2 right-1/2 -translate-x-1/2 bg-gray-100 py-8 mb-12">
             <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 xl:px-12">
@@ -353,7 +470,7 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
 
       case 'bullet_list':
         return (
-          <ul key={idx} className="mb-6 space-y-3 list-none">
+          <ul key={idx} className="mb-6 space-y-1 list-none">
             {section.items?.map((item, i) => (
               <li key={i} className="flex">
                 <span className="inline-block w-1.5 h-1.5 bg-gray-600 rounded-full mt-2.5 mr-3 flex-shrink-0" />
@@ -367,6 +484,25 @@ export default function ArticleRenderer({ article }: ArticleRendererProps) {
             ))}
           </ul>
         );
+
+        case 'emoji_bullet_list':
+          return (
+            <ul key={idx} className="mb-6 space-y-1 list-none">
+              {sectionWithEmoji.items?.map((item, i) => (
+                <li key={i} className="flex">
+                  <span className="mr-3 flex-shrink-0 text-lg mt-0.5">
+                    {sectionWithEmoji.emoji || '•'}
+                  </span>
+                  <div className="leading-relaxed">
+                    {parseFormattedText(
+                      item,
+                      'text-red-600 underline hover:text-red-700'
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          );
 
       case 'ordered_list':
         return (

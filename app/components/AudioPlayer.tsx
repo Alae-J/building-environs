@@ -1,12 +1,14 @@
 'use client';
 
+import { formatSecondsToTime, parseDurationToSeconds } from '@/app/types/podcast';
 import { Pause, Play, Share } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react';
 
 interface AudioPlayerProps {
   title?: string;
   subtitle?: string;
-  thumbnailUrl?: string;
+  thumbnailUrl?: string; // Optional - falls back to episodeFeaturedImage
+  episodeFeaturedImage?: string; // Fallback thumbnail from hero_banner
   audioUrl?: string;
   duration?: string;
 }
@@ -14,23 +16,32 @@ interface AudioPlayerProps {
 const AudioPlayer: React.FC<AudioPlayerProps> = ({
   title = "Talking with Liam Carmody about Property Investment",
   subtitle = "The Building Talks Podcast",
-  thumbnailUrl = "/api/placeholder/120/120",
+  thumbnailUrl,
+  episodeFeaturedImage,
   audioUrl = "",
   duration = "01:15:50"
 }) => {
+    // Use thumbnailUrl if provided, otherwise fall back to episodeFeaturedImage
+    const displayThumbnail = thumbnailUrl || episodeFeaturedImage || "/api/placeholder/120/120";
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
-    const [totalDuration, setTotalDuration] = useState(0);
+    const [totalDuration, setTotalDuration] = useState(parseDurationToSeconds(duration));
     const [playbackRate, setPlaybackRate] = useState(1);
     const audioRef = useRef<HTMLAudioElement>(null);
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const animationRef = useRef<number>(null);
+    const [isLoading, setIsLoading] = useState(false);
 
-  // Generate waveform data
-  const generateWaveformData = () => {
+  // Generate waveform data based on episode duration
+  const generateWaveformData = (episodeDuration: number) => {
     const bars = 150;
+    // Use episode duration and title to create consistent waveform
+    const seed = (title?.length || 0) + episodeDuration;
+    
     return Array.from({ length: bars }, (_, i) => {
-      const baseHeight = Math.random() * 0.8 + 0.1;
+      // Create pseudo-random but consistent pattern based on seed
+      const pseudoRandom = Math.sin(seed * i * 0.1) * Math.cos(seed * i * 0.05);
+      const baseHeight = (Math.abs(pseudoRandom) % 0.8) + 0.1;
       const position = i / bars;
       
       let multiplier = 1;
@@ -44,73 +55,108 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
     });
   };
 
-  const [waveformData] = useState(generateWaveformData());
+  // Function to remove episode pattern
+  const cleanTitle = (title: string) => {
+    return title.replace(/^S\d+\.\s*Ep\s*\d+\.\s*/, '');
+  };
+
+  const [waveformData, setWaveformData] = useState(() => generateWaveformData(parseDurationToSeconds(duration)));
 
   const drawWaveform = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
+  
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
+  
     const { width, height } = canvas;
     ctx.clearRect(0, 0, width, height);
-
+  
     const barWidth = 2;
     const barSpacing = 1;
     const totalBarWidth = barWidth + barSpacing;
     const barsCount = Math.floor(width / totalBarWidth);
-    const progress = currentTime / totalDuration;
-
-    waveformData.slice(0, barsCount).forEach((amplitude, index) => {
-      const x = index * totalBarWidth;
+    
+    // Use actual audio duration if available
+    const actualDuration = audioRef.current?.duration || totalDuration;
+    // Only show progress if currentTime is greater than 0 AND we have a valid duration
+    const progress = (actualDuration > 0 && currentTime > 0) ? currentTime / actualDuration : 0;
+  
+    // Draw bars across the full width using all available bars
+    for (let i = 0; i < barsCount; i++) {
+      // Map waveform data to fill the entire width
+      const waveformIndex = Math.floor((i / barsCount) * waveformData.length);
+      const amplitude = waveformData[waveformIndex] || 0.5;
+      
+      const x = i * totalBarWidth;
       const barHeight = amplitude * (height - 8) + 4;
       const y = (height - barHeight) / 2;
       
-      const barProgress = index / barsCount;
+      // Progress is based on physical position in the canvas
+      const barProgress = i / barsCount;
       
-      if (barProgress <= progress) {
+      // Only color bars red if we actually have progress AND currentTime > 0
+      if (progress > 0 && barProgress <= progress) {
         ctx.fillStyle = '#ef4444';
       } else {
         ctx.fillStyle = '#e5e7eb';
       }
       
       ctx.fillRect(x, y, barWidth, barHeight);
-    });
+    }
   };
 
   const formatTime = (seconds: number) => {
-    const mins = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    return formatSecondsToTime(seconds);
   };
 
   const togglePlayPause = () => {
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
+        setIsPlaying(false);
       } else {
-        audioRef.current.play();
+        // Show loading animation first
+        setIsLoading(true);
+        
+        // Start audio after animation completes (300ms)
+        setTimeout(() => {
+          if (audioRef.current) {
+            audioRef.current.play();
+          }
+          setIsPlaying(true);
+          setIsLoading(false);
+        }, 300);
       }
-      setIsPlaying(!isPlaying);
     } else {
-      setIsPlaying(!isPlaying);
+      if (!isPlaying) {
+        // Show loading animation first
+        setIsLoading(true);
+        
+        // Set playing state after animation completes (300ms)
+        setTimeout(() => {
+          setIsPlaying(true);
+          setIsLoading(false);
+        }, 300);
+      } else {
+        setIsPlaying(false);
+      }
     }
   };
 
   const handleRewind = () => {
     if (audioRef.current) {
-      audioRef.current.currentTime = Math.max(0, audioRef.current.currentTime - 15);
-    } else {
-      setCurrentTime(Math.max(0, currentTime - 15));
+      const newTime = Math.max(0, audioRef.current.currentTime - 15);
+      audioRef.current.currentTime = newTime;
+      setCurrentTime(newTime); // Update state to sync with UI
     }
   };
 
   const handleFastForward = () => {
     if (audioRef.current) {
-      audioRef.current.currentTime = Math.min(audioRef.current.duration, audioRef.current.currentTime + 30);
-    } else {
-      setCurrentTime(Math.min(totalDuration, currentTime + 30));
+      const newTime = Math.min(audioRef.current.duration || totalDuration, audioRef.current.currentTime + 30);
+      audioRef.current.currentTime = newTime;
+      setCurrentTime(newTime); // Update state to sync with UI
     }
   };
 
@@ -156,15 +202,9 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
     </svg>
   );
 
-  // Animation loop for waveform
+  // Animation loop for waveform (only draws, doesn't update time)
   useEffect(() => {
     const animate = () => {
-      if (isPlaying) {
-        setCurrentTime(prev => {
-          const newTime = prev + 0.1;
-          return newTime >= totalDuration ? totalDuration : newTime;
-        });
-      }
       drawWaveform();
       animationRef.current = requestAnimationFrame(animate);
     };
@@ -176,7 +216,14 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [isPlaying, currentTime, totalDuration]);
+  }, [currentTime, totalDuration]); // Removed isPlaying dependency
+
+  // Update waveform when duration changes
+  useEffect(() => {
+    if (totalDuration > 0) {
+      setWaveformData(generateWaveformData(totalDuration));
+    }
+  }, [totalDuration, title]);
 
   // Handle canvas resize
   useEffect(() => {
@@ -199,44 +246,129 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
   }, []);
 
   return (
-    <div className="bg-white rounded-lg shadow-lg max-w-3xl mx-auto overflow-hidden">
+    <div className="bg-white rounded-lg border border-gray-200 max-w-6xl mx-auto overflow-hidden">
       <div className="flex p-4">
-        {/* Thumbnail - takes more horizontal space */}
-        <div className="flex-shrink-0 mr-6">
-          <div className="w-32 h-28 bg-gradient-to-br from-red-600 to-red-700 rounded-lg flex items-center justify-center relative">
-            <div className="text-white text-center">
-              <div className="text-xs font-bold bg-red-500 px-1 rounded mb-1">THE</div>
-              <div className="text-sm font-bold leading-tight">Building</div>
-              <div className="text-sm font-bold leading-tight">Talks</div>
-              <div className="text-xs mt-1">PODCAST</div>
+        {/* Thumbnail - centered in its container */}
+        <div className="flex-shrink-0 mr-6 flex items-center justify-center">
+          {displayThumbnail === "/api/placeholder/120/120" ? (
+            // Default podcast branding when no image available
+            <div className="w-36 h-36 bg-gradient-to-br from-red-600 to-red-700 rounded-lg flex items-center justify-center relative">
+              <div className="text-white text-center">
+                <div className="text-xs font-bold bg-red-500 px-1 rounded mb-1">THE</div>
+                <div className="text-sm font-bold leading-tight">Building</div>
+                <div className="text-sm font-bold leading-tight">Talks</div>
+                <div className="text-xs mt-1">PODCAST</div>
+              </div>
+              <div className="absolute bottom-1 right-1 w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                <div className="w-4 h-4 bg-gray-300 rounded-full"></div>
+              </div>
             </div>
-            <div className="absolute bottom-1 right-1 w-6 h-6 bg-white rounded-full flex items-center justify-center">
-              <div className="w-4 h-4 bg-gray-300 rounded-full"></div>
+          ) : (
+            // Episode-specific thumbnail
+            <div className="w-46 h-46 rounded-lg overflow-hidden">
+              <img
+                src={"https://www.buzzsprout.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCTzlSa0FJPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--2b4275e0e6b8e1aee8846b8e9e54bbe92005f4fc/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9MWm05eWJXRjBPZ2hxY0djNkUzSmxjMmw2WlY5MGIxOW1hV3hzV3docEFsZ0NhUUpZQW5zR09nbGpjbTl3T2d0alpXNTBjbVU2Q25OaGRtVnlld1k2REhGMVlXeHBkSGxwUVRvUVkyOXNiM1Z5YzNCaFkyVkpJZ2x6Y21kaUJqb0dSVlE9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--1924d851274c06c8fa0acdfeffb43489fc4a7fcc/The%20Building%20Talks%20Podcast%20Artwork%20(USE).jpeg"}
+                alt={`${title} episode thumbnail`}
+                className="w-full h-full object-cover"
+              />
             </div>
-          </div>
+          )}
         </div>
 
         {/* Main content area */}
         <div className="flex-1 min-w-0">
-          {/* Title and Subtitle */}
+          {/* Title and Subtitle with fade effect */}
           <div className="mb-3">
-            <h3 className="font-semibold text-gray-900 text-xl leading-tight mb-1">{title}</h3>
-            <p className="text-red-600 text-sm font-medium">{subtitle}</p>
+            {/* Title with single line and fade effect */}
+            <div className="relative overflow-hidden">
+              <h3 className="font-semibold text-gray-900 text-2xl leading-tight whitespace-nowrap">
+                {cleanTitle(title)}
+              </h3>
+              {/* Fade overlay */}
+              <div className="absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
+            </div>
+            <p className="text-red-600 text-sm font-medium mt-1">{subtitle}</p>
           </div>
 
           {/* Play button and waveform row */}
           <div className="flex items-center mb-3">
             {/* Large Play/Pause button */}
-            <button
-              onClick={togglePlayPause}
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-red-600 hover:bg-red-700 transition-colors mr-4 flex-shrink-0"
-            >
-              {isPlaying ? (
-                <Pause className="w-6 h-6 text-white fill-white" />
-              ) : (
-                <Play className="w-6 h-6 text-white fill-white ml-0.5" />
-              )}
-            </button>
+{/* Large Play/Pause button */}
+{/* Large Play/Pause button */}
+<button
+  onClick={togglePlayPause}
+  className="w-14 h-14 cursor-pointer flex items-center justify-center rounded-full bg-red-600 transition-colors mr-4 flex-shrink-0 group relative overflow-visible"
+>
+  {/* Slow wave animation - only show when playing */}
+  {isPlaying && (
+    <div 
+      className="absolute rounded-full bg-red-600"
+      style={{
+        width: '56px',
+        height: '56px',
+        top: '0',
+        left: '0',
+        animation: 'slowWave 4s cubic-bezier(0.4, 0, 0.2, 1) infinite',
+        animationDelay: '0.5s',
+        willChange: 'transform, opacity'
+      }}
+    ></div>
+  )}
+  
+  {/* Loading snakes - shows only when going from pause to play */}
+  {isLoading && (
+    <>
+{/* First snake - short arc */}
+<div 
+  className="absolute w-14 h-14 rounded-full"
+  style={{
+    border: '5px solid transparent',
+    borderTop: '5px solid white',
+    borderRadius: '50%',
+    animation: 'snakeRotate 0.6s linear',
+    zIndex: 5
+  }}
+></div>
+
+{/* Second snake - short arc, offset by 180 degrees */}
+<div 
+  className="absolute w-14 h-14 rounded-full"
+  style={{
+    border: '5px solid transparent',
+    borderBottom: '5px solid white',
+    borderRadius: '50%',
+    animation: 'snakeRotate 0.6s linear',
+    zIndex: 5
+  }}
+></div>
+    </>
+  )}
+  
+  {/* Play/Pause icons - always visible */}
+  {isPlaying ? (
+    <Pause className="w-8 h-8 text-white fill-white group-hover:text-red-100 group-hover:fill-red-100 transition-colors relative z-10" />
+  ) : (
+    <Play className="w-8 h-8 text-white fill-white group-hover:text-red-100 group-hover:fill-red-100 transition-colors ml-0.5 relative z-10" />
+  )}
+  
+  <style jsx>{`
+  @keyframes slowWave {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes snakeRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+`}</style>
+</button>
 
             {/* Waveform */}
             <div className="flex-1">
@@ -248,10 +380,13 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
                   const rect = e.currentTarget.getBoundingClientRect();
                   const clickX = e.clientX - rect.left;
                   const progress = clickX / rect.width;
-                  const newTime = progress * totalDuration;
-                  setCurrentTime(newTime);
+                  // Use actual audio duration if available, fallback to parsed duration
+                  const actualDuration = audioRef.current?.duration || totalDuration;
+                  const newTime = progress * actualDuration;
+                  
                   if (audioRef.current) {
                     audioRef.current.currentTime = newTime;
+                    // Don't manually set currentTime - let onTimeUpdate handle it
                   }
                 }}
               />
@@ -265,7 +400,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
               {/* Rewind 15s button */}
               <button
                 onClick={handleRewind}
-                className="w-7 h-7 flex items-center justify-center text-gray-600 hover:text-gray-800 transition-colors"
+                className="w-7 h-7 flex cursor-pointer items-center justify-center text-gray-600 hover:text-gray-800 transition-colors"
                 aria-label="Rewind 15 seconds"
               >
                 <RewindIcon />
@@ -274,7 +409,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
               {/* Forward 30s button */}
               <button
                 onClick={handleFastForward}
-                className="w-7 h-7 flex items-center justify-center text-gray-600 hover:text-gray-800 transition-colors"
+                className="w-7 h-7 cursor-pointer flex items-center justify-center text-gray-600 hover:text-gray-800 transition-colors"
                 aria-label="Forward 30 seconds"
               >
                 <ForwardIcon />
@@ -283,16 +418,16 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
               {/* Speed button */}
               <button
                 onClick={handleSpeedToggle}
-                className="px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 transition-colors text-sm font-medium text-gray-700"
+                className="px-3 py-1 cursor-pointer rounded hover:text-gray-800 transition-colors text-sm font-medium text-gray-700"
               >
                 {playbackRate}×
               </button>
 
               {/* More Info and Share buttons */}
-              <button className="text-gray-500 hover:text-gray-700 text-sm font-medium">
+              <button className="text-gray-500 cursor-pointer hover:text-gray-700 text-sm font-medium">
                 More Info
               </button>
-              <button className="flex items-center space-x-1 text-gray-500 hover:text-gray-700">
+              <button className="flex items-center cursor-pointer space-x-1 text-gray-500 hover:text-gray-700">
                 <Share className="w-4 h-4" />
                 <span className="text-sm font-medium">Share</span>
               </button>
@@ -300,7 +435,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
 
             {/* Time display */}
             <div className="text-sm text-gray-500 font-mono">
-              {formatTime(currentTime)} | {duration}
+              {formatTime(currentTime)} | {formatTime(totalDuration)}
             </div>
           </div>
         </div>
@@ -312,12 +447,24 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
           ref={audioRef}
           src={audioUrl}
           onTimeUpdate={() => {
-            if (audioRef.current) {
+            // Only update if audio is actually playing to avoid conflicts
+            if (audioRef.current && !isNaN(audioRef.current.currentTime)) {
               setCurrentTime(audioRef.current.currentTime);
             }
           }}
           onDurationChange={() => {
-            if (audioRef.current) {
+            if (audioRef.current && audioRef.current.duration) {
+              setTotalDuration(audioRef.current.duration);
+            }
+          }}
+          onLoadedMetadata={() => {
+            if (audioRef.current && audioRef.current.duration) {
+              setTotalDuration(audioRef.current.duration);
+            }
+          }}
+          onCanPlayThrough={() => {
+            // Ensure duration is set when audio is ready
+            if (audioRef.current && audioRef.current.duration) {
               setTotalDuration(audioRef.current.duration);
             }
           }}

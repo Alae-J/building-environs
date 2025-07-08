@@ -13,6 +13,7 @@ export interface BlogPost {
   excerpt: string;
   featuredImage: string;
   imageAlt: string;
+  category?: string;
 }
 
 interface FeaturedSliderProps {
