@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import PageLayout from './components/Layout/PageLayout'
-import PodcastCard from './components/PodcastCard'
 // Import the new components
 import PostsSlider, { BlogPost } from './components/PostsSlider'
 
@@ -202,11 +201,6 @@ export default function HomePage() {
                 </svg>
               </Link>
             </div>
-
-            <PodcastCard
-              {...latestPodcast}
-              variant="featured"
-            />
           </div>
         </div>
       </section>

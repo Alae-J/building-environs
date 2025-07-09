@@ -1,4 +1,5 @@
 import ArticleRenderer from '@/app/components/ArticleRenderer';
+import PageLayout from '@/app/components/Layout/PageLayout';
 import { articleMap } from '@/app/data/news'; // ← point at your barrel
 import index from '@/app/data/news/index.json';
 import { Article } from '@/app/types/article';
@@ -63,5 +64,9 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
   // ← use articleMap here
   const article = articleMap[params.slug] as Article
   if (!article) notFound()
-  return <ArticleRenderer article={article} />
+  return (
+    <PageLayout>
+      <ArticleRenderer content={article} />
+    </PageLayout>
+  )
 }

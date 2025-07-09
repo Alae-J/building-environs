@@ -1,15 +1,21 @@
-'use client'
-import ArticleRenderer from '@/app/components/ArticleRenderer'
-import PodcastBanner from '@/app/components/PodcastBanner'
-import PodcastSlider from '@/app/components/PodcastSlider'
-import type { Podcast } from '@/app/types/podcast'
+// app/podcasts/[slug]/EpisodeClient.tsx
+'use client';
 
-export default function EpisodeClient({ podcast }: { podcast: Podcast }) {
+import ArticleRenderer from '@/app/components/ArticleRenderer';
+import PodcastBanner from '@/app/components/PodcastBanner';
+import PodcastSlider from '@/app/components/PodcastSlider';
+import type { Podcast } from '@/app/types/podcast';
+
+interface Props {
+  podcast: Podcast;
+}
+
+export default function EpisodeClient({ podcast }: Props) {
   return (
     <>
-      <ArticleRenderer podcast={podcast} />
+      <ArticleRenderer content={podcast} />
       <PodcastBanner />
       <PodcastSlider excludeSlug={podcast.slug} />
     </>
-  )
+  );
 }

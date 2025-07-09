@@ -1,5 +1,6 @@
 "use client";
 
+import LoadMoreButton from '@/app/components/LoadMoreButton';
 import { useMemo, useState } from 'react';
 import ArticlesGrid from '../components/ArticlesGrid';
 import FeaturedSlider, { BlogPost } from '../components/FeaturedSlider';
@@ -11,6 +12,8 @@ import indexData from '../data/news/index.json';
 export default function NewsPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [page, setPage] = useState(1);
+  const pageSize = 9;
 
   const featured = useMemo(
     () =>
@@ -32,32 +35,37 @@ export default function NewsPage() {
     const keywords = searchTerm
       .toLowerCase()
       .split(' ')
-      .filter((word) => word.trim() !== '');
-  
+      .filter((w) => w.trim() !== '');
+
     return allArticles.filter((article) => {
       const title = article.title.toLowerCase();
       const excerpt = article.excerpt.toLowerCase();
-  
+
       const matchesSearch =
         keywords.length === 0 ||
         keywords.every((word) => title.includes(word) || excerpt.includes(word));
-  
+
       const matchesCategory =
         selectedCategories.length === 0 ||
         selectedCategories.includes(article.category?.toLowerCase() || 'uncategorized');
-  
+
       return matchesSearch && matchesCategory;
     });
   }, [searchTerm, selectedCategories, allArticles]);
-  
+
+  // only show up to page * pageSize articles
+  const visibleArticles = useMemo(
+    () => filteredArticles.slice(0, page * pageSize),
+    [filteredArticles, page]
+  );
 
   const toggleCategory = (category: string) => {
     setSelectedCategories((prev) =>
-      prev.includes(category)
-        ? prev.filter((c) => c !== category)
-        : [...prev, category]
+      prev.includes(category) ? prev.filter((c) => c !== category) : [...prev, category]
     );
   };
+
+  const loadMore = () => setPage((p) => p + 1);
 
   return (
     <PageLayout>
@@ -68,8 +76,16 @@ export default function NewsPage() {
         onSearchTermChange={setSearchTerm}
         onCategoryToggle={toggleCategory}
       />
+
       <FeaturedSlider posts={featured} />
-      <ArticlesGrid articles={filteredArticles} />
+
+      <ArticlesGrid articles={visibleArticles} />
+
+      {visibleArticles.length < filteredArticles.length && (
+        <div className="flex justify-center m-4">
+          <LoadMoreButton onClick={loadMore} />
+        </div>
+      )}
     </PageLayout>
   );
 }

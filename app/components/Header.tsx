@@ -39,12 +39,11 @@ export default function Header() {
           <Link href="/" className="flex-shrink-0">
             <Image
               loading="eager"
-              className="max-w-[190px]"
-              src="/logo_black.svg"
+              className="w-auto h-12 object-contain"
+              src="https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2022/05/logo_black.svg"
               alt="Building Environs Recruitment"
               width={190}
               height={48}
-              title=""
             />
           </Link>
 

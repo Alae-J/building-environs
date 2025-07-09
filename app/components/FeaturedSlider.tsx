@@ -76,7 +76,7 @@ const FeaturedSlider: React.FC<FeaturedSliderProps> = ({ posts }) => {
                             src={post.featuredImage}
                             alt={post.imageAlt}
                             fill
-                            className="object-cover transition-transform duration-300 hover:scale-105"
+                            className="object-cover"
                           />
                         </Link>
                       </div>

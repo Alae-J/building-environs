@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --af-fontFamily--primary: 'Manrope', sans-serif;
 }
 
 /* Line clamp utilities for podcast slider */

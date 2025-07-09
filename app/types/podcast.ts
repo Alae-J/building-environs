@@ -91,6 +91,9 @@ export interface PodcastEmojiBulletListSection extends PodcastSection {
 // Utility function to parse duration string to seconds
 // Only accepts HH:MM:SS format
 export function parseDurationToSeconds(duration: string): number {
+  if (!duration || !duration.includes(':')) {
+    return 0;
+  }  
   const hhmmssPattern = /^\d{2}:\d{2}:\d{2}$/;
   
   if (!hhmmssPattern.test(duration)) {

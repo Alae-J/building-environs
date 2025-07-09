@@ -1,0 +1,91 @@
+{
+    "id": "s3-ep-24-talking-with-simon-mcfadden-about-designing-building-and-other-considerations-that-go-into-creating-data-centres",
+    "title": "S3. Ep 24. Talking with Simon McFadden about Designing, Building and Other Considerations that go into Creating Data Centres",
+    "slug": "s3-ep-24-talking-with-simon-mcfadden-about-designing-building-and-other-considerations-that-go-into-creating-data-centres",
+    "excerpt": "Hey, Legends! In the latest episode of The Building Talks Podcast, we're venturing into the fascinating world of data centres, a booming asset class making waves in Australia's development landscape.",
+    "featuredImage": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/uploads/2024/01/Simon-McFadden.png",
+    "imageAlt": "Simon McFadden",
+    "publishDate": "30 Jan 2024",
+    "author": "Building Environs",
+    "category": "podcast",
+    "readTime": "55 min",
+    "content": {
+      "sections": [
+        {
+          "type": "hero_banner",
+          "button": {
+            "text": "Back to podcast",
+            "url": "/podcasts/"
+          },
+          "publishDate": "30 Jan 2024",
+          "heading": "S3. Ep 24. Talking with Simon McFadden about Designing, Building and Other Considerations that go into Creating Data Centres",
+          "image": {
+            "src": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/cache/bb-plugin/cache/Simon-McFadden-landscape-d4ad47e2db22c465aab30015fe6b03dd-a7k4eldhsqjy.png",
+            "alt": ""
+          }
+        },
+        {
+          "type": "paragraph",
+          "content": "Hey, Legends! In the latest episode of The Building Talks Podcast, we're venturing into the fascinating world of data centres, a booming asset class making waves in Australia's development landscape.",
+          "layout": "full_width"
+        },
+        {
+          "type": "paragraph",
+          "content": "To unravel the mysteries, I had the pleasure of chatting with +[Simon McFadden,](https://www.linkedin.com/in/simonmcfadden/)+ Industry Director at +[Aurecon,](https://www.aurecongroup.com/)+ the International Consulting Engineering firm. Simon, with his wealth of experience, shares insights into what data centres are, their growth drivers, and the unique challenges in constructing and delivering these tech hubs.",
+          "layout": "full_width"
+        },
+        {
+          "type": "paragraph",
+          "content": "If you're all about the Aussie construction scene and curious about the digital pulse shaping our cities, this episode is your golden ticket! Jump into The Building Talks Podcast with Simon, as we unravel the enigma of data centres. It's not just tech-speak; it's a guided tour into the dynamic core of Australia's evolving landscapes. Simon spills the secrets on what propels the growth of these tech hubs, the distinctive challenges they present, and why they're more than mere concrete structures. Whether you're a tech whiz or just intrigued by the changing face of our cities and the effect of IT, gaming and AI on the built environment, dive into a conversation that blends insights, humour, with a touch of Celtic flair.",
+          "layout": "full_width"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "content": "During our chat, we also dished about these intriguing topics:",
+          "layout": "full_width"
+        },
+        {
+          "type": "bullet_list",
+          "items": [
+            "Evolution of Data Centres: From Storage Hubs to Intelligent Processing",
+            "Demystifying Data Centres: Beyond Megawatts to Productivity and Efficiency",
+            "Decoding Data Centre Locations: Proximity, Power, and Connectivity",
+            "Beyond the Concrete Box: Navigating the Aesthetics of Data Centres",
+            "The Data Centre Boom Down Under: Unpacking Australia's Unexpected Capacity",
+            "Data Centre Lifespan and Future-Proofing: Navigating Design Considerations",
+            "Global Challenges in Data Centre Development: Standardisation, Talent Shortage, and Competitive Urgency",
+            "Future Trends in Data Centre Development: Larger Facilities, Higher Power Demands, and Innovations in Cooling Technology"
+          ],
+          "layout": "full_width"
+        },
+        {
+          "type": "paragraph",
+          "content": "Hope you enjoy the podcast!",
+          "layout": "full_width"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "content": "**Contact The Building Talks Podcast**",
+          "layout": "full_width"
+        },
+        {
+          "type": "bullet_list",
+          "items": [
+            "Follow us on [Linkedin](https://www.linkedin.com/company/84917882/admin/), [Facebook](https://www.facebook.com/BuildingEnvirons), and [Instagram](https://www.instagram.com/buildingenvirons/)",
+            "Email us at info@buildingenvirons.com.au"
+          ],
+          "layout": "full_width"
+        },
+        {
+          "type": "audio",
+          "audioUrl": "https://www.buzzsprout.com/1850552/episodes/14376225-talking-with-simon-mcfadden-about-designing-building-and-other-considerations-that-go-into-creating-data-centres.mp3",
+          "title": "S3. Ep 24. Talking with Simon McFadden about Designing, Building and Other Considerations that go into Creating Data Centres",
+          "subtitle": "The Building Talks Podcast",
+          "thumbnailUrl": "https://cdn-01.cms-ap-v2i.applyflow.com/building-environs/wp-content/cache/bb-plugin/cache/Simon-McFadden-landscape-d4ad47e2db22c465aab30015fe6b03dd-a7k4eldhsqjy.png",
+          "duration": ""
+        }
+      ]
+    }
+  }
