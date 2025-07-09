@@ -8,10 +8,10 @@ export default function HeroBanner({ section }: HeroBannerProps) {
   const { button, publishDate, heading, image } = section
 
   return (
-    <div className="relative w-screen left-1/2 right-1/2 -translate-x-1/2 bg-gray-100 py-8 mb-12">
+    <div className="relative w-screen left-1/2 right-1/2 -translate-x-1/2 bg-gray-100 py-8 -mt-8 mb-12">
       <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 xl:px-12">
         {/* Back button row */}
-        <div className="mb-8">
+        <div className="mt-8">
           <a
             href={button.url}
             className="inline-block bg-white text-gray-700 px-6 py-3 rounded-lg hover:bg-black hover:text-white transition-colors duration-200"
@@ -21,7 +21,7 @@ export default function HeroBanner({ section }: HeroBannerProps) {
         </div>
 
         {/* Two-column layout: text left, image right */}
-        <div className="flex flex-col lg:flex-row lg:items-start gap-12">
+        <div className="flex flex-col lg:flex-row lg:items-center gap-12">
           {/* Text column */}
           <div className="flex-1">
             <p className="text-sm uppercase text-gray-500 mb-4">

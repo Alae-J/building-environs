@@ -10,30 +10,24 @@ export default function Header() {
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   const handleMouseEnter = (menuKey: string) => {
-    if (dropdownTimeoutRef.current) {
-      clearTimeout(dropdownTimeoutRef.current)
-    }
+    if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current)
     setActiveDropdown(menuKey)
   }
 
   const handleMouseLeave = () => {
-    dropdownTimeoutRef.current = setTimeout(() => {
-      setActiveDropdown(null)
-    }, 150)
+    dropdownTimeoutRef.current = setTimeout(() => setActiveDropdown(null), 150)
   }
 
   useEffect(() => {
     return () => {
-      if (dropdownTimeoutRef.current) {
-        clearTimeout(dropdownTimeoutRef.current)
-      }
+      if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current)
     }
   }, [])
 
   return (
     <>
-      {/* Header wrapper with shadow and sticky positioning */}
-      <div className="bg-white shadow-sm sticky top-0 z-50 min-h-[80px] flex justify-center items-center px-5 lg:px-0">
+      {/* Header wrapper */}
+      <div className="bg-white shadow-sm sticky top-0 z-20 min-h-[80px] flex justify-center items-center px-5 lg:px-0">
         <header className="w-full max-w-[1280px] flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
@@ -47,11 +41,11 @@ export default function Header() {
             />
           </Link>
 
-          {/* Navigation - Hidden on mobile */}
-          <div className="hidden md:block lg:block">
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">
             <ul className="flex flex-row gap-12 list-none m-0 p-0 justify-end mr-6">
-              {/* Employers */}
-              <li 
+              {/** Employers */}
+              <li
                 className="relative"
                 onMouseEnter={() => handleMouseEnter('employers')}
                 onMouseLeave={handleMouseLeave}
@@ -65,22 +59,22 @@ export default function Header() {
                 {activeDropdown === 'employers' && (
                   <ul className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white shadow-lg border border-gray-200 rounded-md min-w-[250px] py-2 z-50">
                     <li>
-                      <Link href="/why-building-environs/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800 font-normal">
+                      <Link href="/why-building-environs/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800">
                         Why Building Environs
                       </Link>
                     </li>
                     <li>
-                      <Link href="/available-candidates/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800 font-normal">
+                      <Link href="/available-candidates/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800">
                         Available candidates
                       </Link>
                     </li>
                     <li>
-                      <Link href="/submit-vacancy/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800 font-normal">
+                      <Link href="/submit-vacancy/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800">
                         Submit Vacancy
                       </Link>
                     </li>
-                    <li className="relative group">
-                      <Link href="/recruitment-solutions/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800 font-normal">
+                    <li>
+                      <Link href="/recruitment-solutions/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800">
                         Recruitment solutions
                       </Link>
                     </li>
@@ -88,8 +82,8 @@ export default function Header() {
                 )}
               </li>
 
-              {/* Job seekers */}
-              <li 
+              {/** Job seekers */}
+              <li
                 className="relative"
                 onMouseEnter={() => handleMouseEnter('jobseekers')}
                 onMouseLeave={handleMouseLeave}
@@ -103,22 +97,22 @@ export default function Header() {
                 {activeDropdown === 'jobseekers' && (
                   <ul className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white shadow-lg border border-gray-200 rounded-md min-w-[250px] py-2 z-50">
                     <li>
-                      <Link href="/jobs/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800 font-normal">
+                      <Link href="/jobs/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800">
                         Latest Jobs
                       </Link>
                     </li>
                     <li>
-                      <Link href="/submit-cv/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800 font-normal">
+                      <Link href="/submit-cv/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800">
                         Submit your CV
                       </Link>
                     </li>
                     <li>
-                      <Link href="/construction-engineering-property-project-management-jobsbs/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800 font-normal">
+                      <Link href="/construction-engineering-property-project-management-jobsbs/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800">
                         Find work with Building Environs
                       </Link>
                     </li>
                     <li>
-                      <Link href="/user-login/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800 font-normal">
+                      <Link href="/user-login/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800">
                         Login to your profile
                       </Link>
                     </li>
@@ -126,8 +120,8 @@ export default function Header() {
                 )}
               </li>
 
-              {/* About */}
-              <li 
+              {/** About */}
+              <li
                 className="relative"
                 onMouseEnter={() => handleMouseEnter('about')}
                 onMouseLeave={handleMouseLeave}
@@ -141,27 +135,27 @@ export default function Header() {
                 {activeDropdown === 'about' && (
                   <ul className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white shadow-lg border border-gray-200 rounded-md min-w-[250px] py-2 z-50">
                     <li>
-                      <Link href="/about-us/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800 font-normal">
+                      <Link href="/about-us/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800">
                         About us
                       </Link>
                     </li>
                     <li>
-                      <Link href="/recruitment-solutions/construction-recruitment-jobs/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800 font-normal">
+                      <Link href="/recruitment-solutions/construction-recruitment-jobs/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800">
                         Construction Recruitment
                       </Link>
                     </li>
                     <li>
-                      <Link href="/about-us/property-recruitment-jobs/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800 font-normal">
+                      <Link href="/about-us/property-recruitment-jobs/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800">
                         Property Recruitment
                       </Link>
                     </li>
                     <li>
-                      <Link href="/about-us/engineering-recruitment-jobs/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800 font-normal">
+                      <Link href="/about-us/engineering-recruitment-jobs/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800">
                         Engineering Recruitment
                       </Link>
                     </li>
                     <li>
-                      <Link href="/meet-the-team/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800 font-normal">
+                      <Link href="/meet-the-team/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800">
                         Meet the team
                       </Link>
                     </li>
@@ -169,8 +163,8 @@ export default function Header() {
                 )}
               </li>
 
-              {/* Content */}
-              <li 
+              {/** Content */}
+              <li
                 className="relative"
                 onMouseEnter={() => handleMouseEnter('content')}
                 onMouseLeave={handleMouseLeave}
@@ -184,12 +178,12 @@ export default function Header() {
                 {activeDropdown === 'content' && (
                   <ul className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white shadow-lg border border-gray-200 rounded-md min-w-[250px] py-2 z-50">
                     <li>
-                      <Link href="/news/" aria-current="page" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800 font-normal">
+                      <Link href="/news/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800">
                         News & Articles
                       </Link>
                     </li>
                     <li>
-                      <Link href="/podcasts/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800 font-normal">
+                      <Link href="/podcasts/" className="block px-4 py-2 hover:bg-gray-50 text-sm text-gray-800">
                         Podcasts
                       </Link>
                     </li>
@@ -197,16 +191,16 @@ export default function Header() {
                 )}
               </li>
 
-              {/* Contact us */}
+              {/** Contact us */}
               <li>
-                <Link href="/contact-us/" className="text-gray-900 hover:text-red-600 font-extrabold text-sm leading-6 transition-colors">
+                <Link href="/contact-us/" className="text-gray-900 hover:text-red-600 font-extrabold text-sm leading-6">
                   Contact us
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Right side actions */}
+          {/* Right side actions & mobile toggle */}
           <div className="flex items-center gap-3">
             <Link
               href="/podcasts/"
@@ -220,8 +214,6 @@ export default function Header() {
             >
               Submit vacancy
             </Link>
-            
-            {/* Mobile menu button */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="md:hidden p-2 text-gray-600 hover:text-red-600 focus:outline-none"
@@ -235,27 +227,66 @@ export default function Header() {
         </header>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      {mobileOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden">
-          <div className="bg-white w-64 h-full p-4">
-            <button
-              onClick={() => setMobileOpen(false)}
-              className="mb-4 text-gray-700 hover:text-red-600 focus:outline-none"
-            >
-              Close
-            </button>
-            <ul className="space-y-3">
-              <li><Link href="/jobs/" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-900 hover:text-red-600">Latest Jobs</Link></li>
-              <li><Link href="/submit-cv/" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-900 hover:text-red-600">Submit your CV</Link></li>
-              <li><Link href="/about-us/" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-900 hover:text-red-600">About us</Link></li>
-              <li><Link href="/news/" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-900 hover:text-red-600">News & Articles</Link></li>
-              <li><Link href="/podcasts/" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-900 hover:text-red-600">Podcasts</Link></li>
-              <li><Link href="/contact-us/" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-900 hover:text-red-600">Contact us</Link></li>
-            </ul>
-          </div>
-        </div>
-      )}
+      {/* Mobile overlay */}
+      <div
+        className={`fixed inset-0 z-30 md:hidden transition-opacity duration-200 ${
+          mobileOpen ? 'opacity-50 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        } bg-black`}
+        onClick={() => setMobileOpen(false)}
+      />
+
+      {/* Mobile side panel */}
+<div
+  className={`fixed top-0 right-0 bottom-0 z-40 md:hidden bg-white w-full max-w-xs p-6 transform transition-transform duration-300 ${
+    mobileOpen ? 'translate-x-0' : 'translate-x-full'
+  }`}
+>
+  {/* Polished close icon button */}
+  <button
+    onClick={() => setMobileOpen(false)}
+    aria-label="Close menu"
+    className="absolute top-4 right-4 p-2 text-gray-600 hover:text-red-600 focus:outline-none"
+  >
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
+      <line x1="3" y1="3" x2="17" y2="17" strokeLinecap="round" />
+      <line x1="17" y1="3" x2="3" y2="17" strokeLinecap="round" />
+    </svg>
+  </button>
+
+  <ul className="space-y-4 mt-8">
+    <li>
+      <Link href="/jobs/" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-900 hover:text-red-600">
+        Latest Jobs
+      </Link>
+    </li>
+    <li>
+      <Link href="/submit-cv/" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-900 hover:text-red-600">
+        Submit your CV
+      </Link>
+    </li>
+    <li>
+      <Link href="/about-us/" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-900 hover:text-red-600">
+        About us
+      </Link>
+    </li>
+    <li>
+      <Link href="/news/" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-900 hover:text-red-600">
+        News &amp; Articles
+      </Link>
+    </li>
+    <li>
+      <Link href="/podcasts/" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-900 hover:text-red-600">
+        Podcasts
+      </Link>
+    </li>
+    <li>
+      <Link href="/contact-us/" onClick={() => setMobileOpen(false)} className="block py-2 text-gray-900 hover:text-red-600">
+        Contact us
+      </Link>
+    </li>
+  </ul>
+</div>
+
     </>
   )
 }

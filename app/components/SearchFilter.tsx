@@ -23,9 +23,12 @@ const SearchFilter: React.FC<SearchFilterProps> = ({
   return (
     <section className="py-12 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
-        <form onSubmit={handleSubmit}>
-          {/* Keywords Input */}
-          <div className="flex items-end gap-6 mb-4">
+        <form
+          onSubmit={handleSubmit}
+          className="border border-gray-200 p-4 rounded-lg sm:border-none sm:p-0"
+        >
+          {/* Keywords Input + Search Button */}
+          <div className="flex flex-col gap-4 mb-4 sm:flex-row sm:items-end sm:gap-6">
             <div className="flex-1 relative">
               <input
                 placeholder="Enter Keyword"
@@ -39,10 +42,11 @@ const SearchFilter: React.FC<SearchFilterProps> = ({
               </label>
             </div>
 
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 w-full sm:w-auto">
               <button
+                type="submit"
                 style={{ backgroundColor: '#1F1F1F' }}
-                className="px-16 py-4 text-white font-medium rounded-md cursor-pointer text-base"
+                className="w-full px-16 py-4 text-white font-medium rounded-md cursor-pointer text-base"
               >
                 Search
               </button>
@@ -50,7 +54,7 @@ const SearchFilter: React.FC<SearchFilterProps> = ({
           </div>
 
           {/* Category Filter */}
-          <div className="flex">
+          <div className="flex flex-col gap-2 sm:flex-row">
             <div
               className={`inline-flex items-center px-4 py-2 rounded-md transition-colors cursor-pointer ${
                 isUncategorizedSelected

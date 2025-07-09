@@ -17,7 +17,6 @@ import Paragraph from '@/app/components/ArticleRenderer/sections/Paragraph';
 import StandaloneImage from '@/app/components/ArticleRenderer/sections/StandaloneImage';
 import { TextWithImage } from '@/app/components/ArticleRenderer/sections/TextWithImage';
 import { UnknownSection } from '@/app/components/ArticleRenderer/sections/UnknownSection';
-import { parseFormattedText } from '@/app/lib/textFormatter';
 import { Article, ArticleSection, AudioSection, HeroBannerSection } from '@/app/types/article';
 import { Podcast, PodcastSection } from '@/app/types/podcast';
 import React from 'react';
@@ -27,142 +26,144 @@ interface ArticleRendererProps {
 }
 
 function isArticle(content: Article | Podcast): content is Article {
-  return 'content' in content; // Article has a `content` field with sections
+  return 'content' in content;
 }
 
-type RendererProps = ArticleRendererProps;
-
 export default function ArticleRenderer({ content }: ArticleRendererProps) {
-  if (!content) return null; // Prevents crashing if content is undefined
+  if (!content) return null;
+  if (!isArticle(content)) return null;
 
-  if (!isArticle(content)) {
-    return null; // or handle Podcast rendering here
-  }
+  const defaultFont = { fontFamily: 'var(--af-fontFamily--primary, "Manrope")' };
+  const bulletFont  = { fontFamily: 'var(--af-fontFamily--primary, "Avenir")' };
 
   const sections = content.content.sections;
-  const isHeroFirst =
-    sections.length > 0 && sections[0].type === 'hero_banner';
+  const isHeroFirst = sections[0]?.type === 'hero_banner';
 
-  // Render paragraphs and manual bullets (•)
-  const renderTextContent = (
-    content: string,
-    linkClass?: string
-  ): React.ReactNode =>
-    content.split('\n\n').map((block, i) => {
-      if (/^•\s+/.test(block)) {
-        const txt = block.replace(/^•\s+/, '');
-        return (
-          <div key={i} className="flex mb-4 last:mb-0">
-            <span className="inline-block w-1.5 h-1.5 bg-gray-600 rounded-full mt-2.5 mr-3 flex-shrink-0" />
-            <div className="leading-relaxed">
-              {parseFormattedText(txt, linkClass)}
-            </div>
-          </div>
-        );
-      }
-      return (
-        <p key={i} className="mb-4 last:mb-0">
-          {parseFormattedText(block, linkClass)}
-        </p>
-      );
-    });
+  const renderSection = (
+    section: ArticleSection | PodcastSection,
+    idx: number
+  ): React.ReactNode => {
+    // Choose Avenir for list types, Manrope otherwise
+    const style = ['bullet_list', 'emoji_bullet_list', 'ordered_list'].includes(section.type)
+      ? bulletFont
+      : defaultFont;
 
-    const renderSection = (section: ArticleSection | PodcastSection, idx: number): React.ReactNode => {
-      // Handle type casting for specific sections that need it
-      const sectionWithEmoji = section as ArticleSection | PodcastSection;
-      
-      switch (section.type) {
-        
-        case 'hero_image': 
-          return <HeroImage key={idx} section={section as ArticleSection} />
+    // Pick the right renderer
+    let SectionComponent: React.ReactNode;
+    switch (section.type) {
+      case 'hero_image':
+        SectionComponent = <HeroImage section={section as ArticleSection} />;
+        break;
+      case 'hero_banner':
+        SectionComponent = <HeroBanner section={section as HeroBannerSection} />;
+        break;
+      case 'standalone_image':
+        SectionComponent = <StandaloneImage section={section as ArticleSection} />;
+        break;
+      case 'heading':
+        SectionComponent = <Heading section={section as ArticleSection} />;
+        break;
+      case 'paragraph':
+        SectionComponent = <Paragraph section={section as ArticleSection} />;
+        break;
+      case 'italic_text':
+        SectionComponent = <ItalicText section={section as ArticleSection} />;
+        break;
+      case 'bullet_list':
+        SectionComponent = <BulletList section={section as ArticleSection} />;
+        break;
+      case 'emoji_bullet_list':
+        SectionComponent = <EmojiBulletList section={section as ArticleSection} />;
+        break;
+      case 'ordered_list':
+        SectionComponent = <OrderedList section={section as ArticleSection} />;
+        break;
+      case 'bold_text':
+        SectionComponent = <BoldText section={section as ArticleSection} />;
+        break;
+      case 'centered_italic':
+        SectionComponent = <CenteredItalic section={section as ArticleSection} />;
+        break;
+      case 'bold_paragraph':
+        SectionComponent = <BoldParagraph section={section as ArticleSection} />;
+        break;
+      case 'image_with_text':
+        SectionComponent = <ImageWithText section={section as ArticleSection} />;
+        break;
+      case 'text_with_image':
+        SectionComponent = <TextWithImage section={section as ArticleSection} />;
+        break;
+      case 'call_to_action':
+        SectionComponent = <CallToAction section={section as ArticleSection} />;
+        break;
+      case 'centered_content':
+        SectionComponent = <CenteredContent section={section as ArticleSection} />;
+        break;
+      case 'audio':
+        SectionComponent = <AudioSectionClient section={section as AudioSection} />;
+        break;
+      case 'contact_info':
+        SectionComponent = <ContactInfo section={section as ArticleSection} />;
+        break;
+      default:
+        SectionComponent = <UnknownSection section={section as ArticleSection} />;
+    }
 
-        case 'hero_banner': 
-          return <HeroBanner key={idx} section={section as HeroBannerSection} />
-
-        case 'standalone_image': 
-          return <StandaloneImage key={idx} section={section as ArticleSection} />
-      
-        case 'heading': 
-          return <Heading key={idx} section={section as ArticleSection} />
-
-        case 'paragraph':
-          return <Paragraph key={idx} section={section as ArticleSection} />;
-
-        case 'italic_text':
-          return <ItalicText key={idx} section={section as ArticleSection} />
-
-        case 'bullet_list':
-          return <BulletList key={idx} section={section as ArticleSection} />
-
-        case 'emoji_bullet_list':
-          return <EmojiBulletList key={idx} section={section as ArticleSection} />
-
-        case 'ordered_list':
-          return <OrderedList key={idx} section={section as ArticleSection} />
-
-        case 'bold_text':
-        return <BoldText key={idx} section={section as ArticleSection} />
-    
-        case 'centered_italic':
-          return <CenteredItalic key={idx} section={section as ArticleSection} />
-    
-        case 'bold_paragraph':
-          return <BoldParagraph  key={idx} section={section as ArticleSection} />
-      
-        case 'image_with_text':
-          return <ImageWithText key={idx} section={section as ArticleSection} />
-    
-        case 'text_with_image':
-          return <TextWithImage key={idx} section={section as ArticleSection} />
-    
-        case 'call_to_action':
-          return <CallToAction key={idx} section={section as ArticleSection} />
-    
-        case 'centered_content':
-          return <CenteredContent key={idx} section={section as ArticleSection} />
-      
-          case 'audio':
-            return (
-              <AudioSectionClient
-                key={idx}
-                section={section as AudioSection}
-              />
-            )          
-        
-         case 'contact_info':
-           return <ContactInfo     key={idx} section={section as ArticleSection} />
-        
-         default:
-           return <UnknownSection  key={idx} section={section as ArticleSection} />
-       }
+    // Wrap with the chosen font style
+    return (
+      <div key={idx} style={style}>
+        {SectionComponent}
+      </div>
+    );
   };
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       {!isHeroFirst && (
-        <header className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+        <header className="mb-8 px-4 sm:px-0">
+          {/* Title */}
+          <h1
+            className="
+              text-3xl sm:text-4xl md:text-5xl 
+              font-bold text-gray-900 
+              leading-tight
+              mb-4
+            "
+          >
             {content.title}
           </h1>
-          <div className="flex items-center text-gray-500 text-sm mb-6">
+
+          {/* Meta info */}
+          <div
+            className="
+              flex flex-wrap items-center 
+              text-gray-500 
+              text-xs sm:text-sm 
+              gap-x-2 gap-y-1
+              mb-6
+            "
+          >
             <span>{content.publishDate}</span>
-            <span className="mx-2">•</span>
+            <span aria-hidden="true">•</span>
             <span>{content.author}</span>
+
             {content.category && (
               <>
-                <span className="mx-2">•</span>
+                <span aria-hidden="true">•</span>
                 <span className="capitalize">{content.category}</span>
               </>
             )}
+
             {content.readTime && (
               <>
-                <span className="mx-2">•</span>
+                <span aria-hidden="true">•</span>
                 <span>{content.readTime}</span>
               </>
             )}
           </div>
         </header>
       )}
+
 
       <div className="prose prose-lg max-w-none text-gray-700">
         {sections.map(renderSection)}
