@@ -1,168 +1,130 @@
-'use client';
+'use client'
 
-import { getAllPodcasts } from '@/app/lib/podcasts';
-import { stripEpisodePrefix } from '@/app/types/podcast';
-import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
-import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { getAllPodcasts } from '@/app/lib/podcasts'
+import { stripEpisodePrefix } from '@/app/types/podcast'
+import useEmblaCarousel from 'embla-carousel-react'
+import { Play } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useCallback, useEffect, useState } from 'react'
 
-interface PodcastSliderProps {
-  excludeSlug?: string; // Exclude current episode from slider
-}
+export default function PodcastSlider({ excludeSlug }: { excludeSlug?: string }) {
+  // Grab latest 15 (excluding current)
+  const episodes = getAllPodcasts()
+    .filter((p) => p.slug !== excludeSlug)
+    .slice(0, 15)
 
-export default function PodcastSlider({ excludeSlug }: PodcastSliderProps) {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isClient, setIsClient] = useState(false);
-  const sliderRef = useRef<HTMLDivElement>(null);
+  // Embla setup
+  const [emblaRef, emblaApi] = useEmblaCarousel({ skipSnaps: false })
+  const [canPrev, setCanPrev] = useState(false)
+  const [canNext, setCanNext] = useState(false)
 
-  // Get all podcasts except the current one
-  const allPodcasts = getAllPodcasts();
-  const podcasts = excludeSlug 
-    ? allPodcasts.filter(podcast => podcast.slug !== excludeSlug)
-    : allPodcasts;
-
-  const slidesToShow = 3;
-  const maxSlide = Math.max(0, podcasts.length - slidesToShow);
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return
+    setCanPrev(emblaApi.canScrollPrev())
+    setCanNext(emblaApi.canScrollNext())
+  }, [emblaApi])
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
+    if (!emblaApi) return
+    onSelect()
+    emblaApi.on('select', onSelect)
+  }, [emblaApi, onSelect])
 
-  const goToSlide = (slide: number) => {
-    const newSlide = Math.max(0, Math.min(slide, maxSlide));
-    setCurrentSlide(newSlide);
-  };
+  const scrollPrev = () => emblaApi && emblaApi.scrollPrev()
+  const scrollNext = () => emblaApi && emblaApi.scrollNext()
 
-  const nextSlide = () => {
-    goToSlide(currentSlide + 1);
-  };
-
-  const prevSlide = () => {
-    goToSlide(currentSlide - 1);
-  };
-
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-AU', {
+  const formatDate = (d: string) =>
+    new Date(d).toLocaleDateString('en-AU', {
       day: '2-digit',
-      month: '2-digit', 
-      year: 'numeric'
-    });
-  };
-
-  if (!isClient) {
-    return null; // Prevent hydration mismatch
-  }
+      month: 'short',
+      year: 'numeric',
+    })
 
   return (
     <section className="py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
-        <div className="flex justify-between items-start mb-12">
-          <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Check out some of the latest episodes
-            </h2>
-          </div>
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="text-3xl font-bold">Check out some of the latest episodes</h2>
           <Link
             href="/podcasts"
-            className="inline-flex items-center px-6 py-3 bg-white border border-black rounded-lg text-black font-medium hover:bg-black hover:text-white transition-colors"
+            className="px-6 py-3 border rounded-lg hover:bg-black hover:text-white transition"
           >
             See all podcasts
           </Link>
         </div>
 
-        {/* Slider Container */}
-        <div className="relative">
-          {/* Previous Arrow */}
-          <button
-            onClick={prevSlide}
-            disabled={currentSlide === 0}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 bg-white rounded-full flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-            aria-label="Previous"
-          >
-            <ChevronLeft className="w-6 h-6 text-red-600" />
-          </button>
-
-          {/* Next Arrow */}
-          <button
-            onClick={nextSlide}
-            disabled={currentSlide >= maxSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 bg-white rounded-full flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-            aria-label="Next"
-          >
-            <ChevronRight className="w-6 h-6 text-red-600" />
-          </button>
-
-          {/* Slider Track */}
-          <div className="overflow-hidden">
-            <div
-              ref={sliderRef}
-              className="flex transition-transform duration-300 ease-in-out"
-              style={{
-                transform: `translateX(-${currentSlide * (100 / slidesToShow)}%)`,
-                width: `${(podcasts.length / slidesToShow) * 100}%`
-              }}
-            >
-              {podcasts.map((podcast) => (
+        {/* Carousel wrapper—overflow-visible so arrows can sit outside */}
+        <div className="relative overflow-visible">
+          {/* Track—this one hides overflow */}
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex gap-6">
+              {episodes.map((p) => (
                 <div
-                  key={podcast.id}
-                  className="w-full px-3"
-                  style={{ width: `${100 / podcasts.length}%` }}
+                  key={p.slug}
+                  className="flex-[0_0_auto] w-[33.3333%] max-w-[520px]"
                 >
-                  <div className="relative w-94 h-66 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    {/* Background Image */}
-                    <img
-                      src={podcast.featuredImage}
-                      alt={podcast.imageAlt}
-                      className="w-full h-full object-contain"
-                    />
-                    
-                    {/* Dark overlay for text readability */}
-                    <div className="absolute inset-0 bg-black/60" />
-
-                    {/* Date, Title and Listen Button - bottom left */}
-                    <div className="absolute bottom-4 left-4 max-w-[70%]">
-                      <div className="text-white text-sm mb-2">
-                        {formatDate(podcast.publishDate)}
+                  {/* Outer “frame” as a thick border */}
+                  <div className="border-4 border-[#c4c4c4] rounded-lg">
+                    <div className="relative aspect-[10/9] rounded-md overflow-hidden">
+                      <Image
+                        src={p.featuredImage}
+                        alt={p.title}
+                        fill
+                        className="object-cover brightness-75"
+                      />
+                      <div className="absolute inset-0 bg-black/60 p-6 flex flex-col justify-end text-white">
+                        <div className="text-sm mb-2">{formatDate(p.publishDate)}</div>
+                        <Link href={`/podcasts/${p.slug}`}>
+                          <h3 className="font-bold text-lg mb-3 leading-tight">
+                            {stripEpisodePrefix(p.title)}
+                          </h3>
+                        </Link>
+                        <Link href={`/podcasts/${p.slug}`}>
+                          <div className="inline-flex items-center px-4 py-2 border border-white rounded-lg hover:border-red-600 hover:text-red-600 transition">
+                            <Play className="w-4 h-4 mr-2" /> Listen
+                          </div>
+                        </Link>
                       </div>
-                      
-                      <Link href={`/podcasts/${podcast.slug}`}>
-                        <h3 className="text-white font-bold text-lg mb-3 leading-tight hover:text-red-300 transition-colors cursor-pointer">
-                          {stripEpisodePrefix(podcast.title)}
-                        </h3>
-                      </Link>
-                      
-                      <Link href={`/podcasts/${podcast.slug}`}>
-                        <div className="inline-flex items-center px-4 py-2 bg-transparent border border-white text-white rounded-lg hover:border-red-600 hover:text-red-600 transition-colors font-medium cursor-pointer">
-                          <Play className="w-4 h-4 mr-2 fill-current" />
-                          Listen
-                        </div>
-                      </Link>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-        </div>
 
-        {/* Dots Indicator */}
-        {maxSlide > 0 && (
-          <div className="flex justify-center mt-8 space-x-2">
-            {Array.from({ length: maxSlide + 1 }, (_, i) => (
-              <button
-                key={i}
-                onClick={() => goToSlide(i)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  currentSlide === i ? 'bg-red-600' : 'bg-gray-300'
-                }`}
-                aria-label={`Go to slide ${i + 1}`}
-              />
-            ))}
-          </div>
-        )}
+          {/* Prev arrow—positioned fully outside */}
+          <button
+            onClick={scrollPrev}
+            disabled={!canPrev}
+            aria-label="Previous"
+            className="
+              absolute left-0 top-1/2 
+              -translate-y-1/2 -translate-x-full 
+              w-12 h-12 bg-white rounded-full shadow 
+              disabled:opacity-50 transition
+            "
+          >
+            ‹
+          </button>
+
+          {/* Next arrow */}
+          <button
+            onClick={scrollNext}
+            disabled={!canNext}
+            aria-label="Next"
+            className="
+              absolute right-0 top-1/2 
+              -translate-y-1/2 translate-x-full 
+              w-12 h-12 bg-white rounded-full shadow 
+              disabled:opacity-50 transition
+            "
+          >
+            ›
+          </button>
+        </div>
       </div>
     </section>
-  );
+  )
 }
