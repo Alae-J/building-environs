@@ -26,7 +26,7 @@ export default function PodcastCard({
 
   return (
     // Slightly wider than tall: using 10:9 aspect ratio, max width, and equal margins
-    <div className="relative w-full max-w-[520px] aspect-[10/9] mx-6 my-4">
+    <div className="relative w-full max-w-[520px] aspect-[10/9] mx-6 mt-4 mb-0">
       {/* Gray background offset layer */}
       <div className="absolute top-4 left-4 w-full h-full bg-[#c4c4c4] rounded-lg z-0" />
 

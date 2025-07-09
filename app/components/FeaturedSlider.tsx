@@ -55,7 +55,7 @@ const FeaturedSlider: React.FC<FeaturedSliderProps> = ({ posts }) => {
   const currentPost = posts[currentIndex];
 
   return (
-    <section className="py-8">
+    <section className="py-8 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <div className="relative overflow-hidden">
@@ -70,7 +70,7 @@ const FeaturedSlider: React.FC<FeaturedSliderProps> = ({ posts }) => {
                   <div className="bg-white rounded-lg overflow-hidden">
                     <div className="flex flex-col lg:flex-row">
                       {/* Image */}
-                      <div className="lg:w-1/2 relative h-48 lg:h-64">
+                      <div className="lg:w-1/2 relative h-48 lg:h-64 rounded-lg overflow-hidden">
                         <Link href={`/news/${post.slug}`} title={post.title}>
                           <Image
                             src={post.featuredImage}

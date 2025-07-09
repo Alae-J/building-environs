@@ -1,14 +1,15 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+// components/HorizontalArticleCard.tsx
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 
 interface HorizontalArticleCardProps {
-  id: string
-  title: string
-  slug: string
-  excerpt: string
-  featuredImage: string
-  imageAlt: string
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  featuredImage: string;
+  imageAlt: string;
 }
 
 const HorizontalArticleCard: React.FC<HorizontalArticleCardProps> = ({
@@ -19,10 +20,10 @@ const HorizontalArticleCard: React.FC<HorizontalArticleCardProps> = ({
   imageAlt,
 }) => {
   const truncateText = (text: string, maxWords: number = 45) => {
-    const words = text.split(' ')
-    if (words.length <= maxWords) return text
-    return words.slice(0, maxWords).join(' ') + '...'
-  }
+    const words = text.split(' ');
+    if (words.length <= maxWords) return text;
+    return words.slice(0, maxWords).join(' ') + '...';
+  };
 
   return (
     <article className="flex flex-col md:flex-row items-stretch rounded-xl border border-gray-100 bg-white overflow-hidden min-h-[280px]">
@@ -42,10 +43,7 @@ const HorizontalArticleCard: React.FC<HorizontalArticleCardProps> = ({
 
       {/* Text Content */}
       <div className="flex flex-col justify-center py-6 pr-6 pl-2 flex-1">
-        <h3
-          className="text-2xl font-semibold text-gray-900 mb-3 leading-snug"
-          style={{ fontFamily: 'var(--af-fontFamily--primary, "Manrope")' }}
-        >
+        <h3 className="text-2xl font-semibold text-gray-900 mb-3 leading-snug [font-family:var(--af-fontFamily--primary,'Manrope')]">
           <Link
             href={`/news/${slug}`}
             title={title}
@@ -54,15 +52,12 @@ const HorizontalArticleCard: React.FC<HorizontalArticleCardProps> = ({
             {title}
           </Link>
         </h3>
-        <p
-          className="text-gray-700 text-base leading-relaxed"
-          style={{ fontFamily: 'var(--af-fontFamily--primary, "Manrope")' }}
-        >
+        <p className="text-gray-700 text-base leading-relaxed [font-family:var(--af-fontFamily--primary,'Manrope')]">
           {truncateText(excerpt)}
         </p>
       </div>
     </article>
-  )
-}
+  );
+};
 
-export default HorizontalArticleCard
+export default HorizontalArticleCard;

@@ -82,7 +82,7 @@ export default function NewsPage() {
       <ArticlesGrid articles={visibleArticles} />
 
       {visibleArticles.length < filteredArticles.length && (
-        <div className="flex justify-center m-4">
+        <div className="flex justify-center bg-gray-50">
           <LoadMoreButton onClick={loadMore} />
         </div>
       )}
